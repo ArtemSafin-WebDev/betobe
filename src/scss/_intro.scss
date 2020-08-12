@@ -1,5 +1,9 @@
 .intro {
     padding: 5rem 0;
+    @include breakpoint(mobile) {
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+    }
 }
 
 .intro__row {
@@ -12,6 +16,10 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        margin-right: 1rem;
+        flex-basis: 20rem;
+    }
 }
 
 .intro__logo-image {
@@ -20,6 +28,9 @@
     flex-shrink: 0;
     display: block;
     opacity: 0.15;
+    @include breakpoint(mobile) {
+        width: 21.2rem;
+    }
 }
 
 .intro__logo-slogan {
@@ -28,6 +39,14 @@
     line-height: 120%;
     margin-left: 6.5rem;
     margin-top: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-left: 3.2rem;
+       
+    }
 }
 
 .intro__features {
@@ -43,12 +62,29 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include breakpoint(mobile) {
+        &:not(:first-child) {
+            display: none;
+        }
+
+        &:first-child {
+            .intro__features-item-text {
+                display: none;
+            }
+        }
+    }
 }
 
 .intro__features-item-image {
     width: 9rem;
     flex-shrink: 0;
     margin-right: 3rem;
+    @include breakpoint(mobile) {
+        width: 5.7rem;
+        margin: 0;
+        flex-shrink: 1;
+    }
 }
 
 .intro__features-item-text {

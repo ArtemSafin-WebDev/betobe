@@ -9,9 +9,14 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, #FFFFFF 0%, #DCEAFF 143.88%);
+        background: linear-gradient(180deg, #ffffff 0%, #dceaff 143.88%);
         z-index: -1;
         pointer-events: none;
+    }
+
+
+    @include breakpoint(mobile) {
+        padding: 1.7rem 0;
     }
 }
 
@@ -21,28 +26,29 @@
         width: 33.5rem;
         display: flex;
         flex-direction: column;
-    }
 
+        @include breakpoint(mobile) {
+            width: 20rem;
+        }
+    }
 
     .swiper-container {
         overflow: visible;
     }
-
 
     .swiper-wrapper {
         transition-timing-function: linear !important;
     }
 }
 
-
 .populars__slider-arrow {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%;
-    background-color: rgba(white, .7);
+    background-color: rgba(white, 0.7);
     z-index: 100;
     position: absolute;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     svg {
         position: absolute;
         left: 50%;
@@ -51,7 +57,7 @@
         width: 1.5rem;
         height: 1.5rem;
         fill: black;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &--prev {
@@ -65,13 +71,16 @@
         transform: translateY(-50%);
     }
 
-
     &:hover {
         background-color: var(--primary-color);
 
         svg {
             fill: white;
         }
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -97,6 +106,14 @@
             transform: scale(1.05);
         }
     }
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem 2.1rem;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        min-height: 11rem;
+    }
 }
 
 .populars__slider-card-image {
@@ -107,7 +124,7 @@
     height: 100%;
     @include objectFitCover();
     z-index: -1;
-    transition: transform .3s;
+    transition: transform 0.3s;
 }
 
 .populars__slider-card-text {
@@ -115,4 +132,8 @@
     font-size: 2.3rem;
     line-height: 120%;
     flex-basis: 50%;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
 }

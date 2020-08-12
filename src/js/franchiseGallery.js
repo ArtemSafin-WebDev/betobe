@@ -1,5 +1,6 @@
 import { Swiper, Autoplay, Navigation } from 'swiper';
 
+
 Swiper.use([Autoplay, Navigation]);
 
 export default function FranchiseGallery() {
@@ -17,5 +18,8 @@ export default function FranchiseGallery() {
                 prevEl: element.querySelector('.franchise-catalog__card-details-gallery-slider-arrow--prev')
             }
         });
+
+
+       
     });
 }
