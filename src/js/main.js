@@ -4,6 +4,7 @@ import PopularsSlider from './popularsSlider';
 import CustomSelects from './customSelects';
 import SelectorRing from './selectorRing';
 import ShowHiddenCheckboxes from './showHiddenCheckboxes';
+import FranchiseGallery from './franchiseGallery';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     CustomSelects();
     SelectorRing();
     ShowHiddenCheckboxes();
+    FranchiseGallery();
 });
 
 window.addEventListener('load', function() {
