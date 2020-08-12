@@ -6,6 +6,7 @@ import SelectorRing from './selectorRing';
 import ShowHiddenCheckboxes from './showHiddenCheckboxes';
 import FranchiseGallery from './franchiseGallery';
 import FilterTabs from './filterTabs';
+import CatalogAccordions from './catalogAccordions';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ShowHiddenCheckboxes();
     FranchiseGallery();
     FilterTabs();
+    CatalogAccordions();
 });
 
 window.addEventListener('load', function() {

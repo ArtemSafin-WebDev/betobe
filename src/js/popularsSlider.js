@@ -43,6 +43,9 @@ export default function PopularsSlider() {
                     autoDisabled = true;
                     slider.params.speed = 500;
                     slider.update(true);
+                    const parent = container.closest('.populars__slider');
+
+                    if (parent) parent.classList.add('normal-mode');
                 } else {
                     slider.slideNext();
                 }
@@ -54,6 +57,10 @@ export default function PopularsSlider() {
                     autoDisabled = true;
                     slider.params.speed = 500;
                     slider.update(true);
+
+                    const parent = container.closest('.populars__slider');
+
+                    if (parent) parent.classList.add('normal-mode');
                 } else {
                     slider.slidePrev();
                 }

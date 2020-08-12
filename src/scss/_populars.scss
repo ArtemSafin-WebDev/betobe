@@ -36,9 +36,15 @@
         overflow: visible;
     }
 
-    .swiper-wrapper {
+    
+}
+
+
+.populars__slider:not(.normal-mode) .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
         transition-timing-function: linear !important;
     }
+   
 }
 
 .populars__slider-arrow {

@@ -514,6 +514,11 @@
         flex-shrink: 0;
         margin-right: 0.9rem;
     }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }
 
 .filters__selector-ring-categories-names-left-col,
