@@ -1,0 +1,107 @@
+.populars {
+    padding: 2.2rem 0;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #FFFFFF 0%, #DCEAFF 143.88%);
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+.populars__slider {
+    position: relative;
+    .swiper-slide {
+        width: 33.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .swiper-container {
+        overflow: visible;
+    }
+
+
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+}
+
+
+.populars__slider-arrow {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: rgba(white, .7);
+    z-index: 100;
+    position: absolute;
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: black;
+    }
+
+    &--prev {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &--next {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.populars__slider-card {
+    display: block;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    min-height: 19.3rem;
+    flex-grow: 1;
+    padding: 2.6rem 3.1rem;
+    display: flex;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        .populars__slider-card-image {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.populars__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+    z-index: -1;
+    transition: transform .3s;
+}
+
+.populars__slider-card-text {
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 120%;
+    flex-basis: 50%;
+}

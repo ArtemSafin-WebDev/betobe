@@ -1,0 +1,58 @@
+.intro {
+    padding: 5rem 0;
+}
+
+.intro__row {
+    display: flex;
+    align-items: center;
+}
+
+.intro__logo {
+    margin-right: 7rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro__logo-image {
+    width: 42.3rem;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+    opacity: 0.15;
+}
+
+.intro__logo-slogan {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 120%;
+    margin-left: 6.5rem;
+    margin-top: 0.5rem;
+}
+
+.intro__features {
+    display: flex;
+    align-items: center;
+}
+
+.intro__features-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 6rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.intro__features-item-image {
+    width: 9rem;
+    flex-shrink: 0;
+    margin-right: 3rem;
+}
+
+.intro__features-item-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 120%;
+}
