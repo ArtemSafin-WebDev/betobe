@@ -1,0 +1,131 @@
+.franchise-components {
+    padding: 5rem 0;
+
+    @include breakpoint(mobile) {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.franchise-components__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.franchise-components__content {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.franchise-components__image {
+    width: 21rem;
+    height: auto;
+    margin-left: 4rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        max-width: 21rem;
+        margin: 0 auto;
+        
+    }
+}
+
+.franchise-components__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.franchise-components__text {
+    font-size: 2rem;
+    line-height: 120%;
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 3rem;
+    }
+}
+
+.franchise-components__list {
+    padding: 4rem 5rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 0.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
+    grid-row-gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 0;
+    }
+}
+
+.franchise-components__list-item {
+    position: relative;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.2;
+
+    &::before {
+        content: '';
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        right: 100%;
+        top: 0.8rem;
+        margin-right: 1rem;
+
+        @include breakpoint(mobile) {
+            width: 0.5rem;
+            height: 0.5rem;
+            flex-shrink: 0;
+            margin: 1.2rem;
+            position: static;
+            margin-top: 0.9rem;
+            margin-left: 0;
+        }
+
+
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 140%;
+        display: flex;
+        align-items: flex-start;
+    }
+}

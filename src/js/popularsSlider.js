@@ -42,6 +42,7 @@ export default function PopularsSlider() {
                     slider.autoplay.stop();
                     autoDisabled = true;
                     slider.params.speed = 500;
+                    slider.params.allowTouchMove = true;
                     slider.update(true);
                     const parent = container.closest('.populars__slider');
 
@@ -56,6 +57,7 @@ export default function PopularsSlider() {
                     slider.autoplay.stop();
                     autoDisabled = true;
                     slider.params.speed = 500;
+                    slider.params.allowTouchMove = true;
                     slider.update(true);
 
                     const parent = container.closest('.populars__slider');

@@ -5,6 +5,12 @@
     padding: 0 var(--content-padding);
 }
 
+
+.inner-container {
+    max-width: 112rem;
+    margin: 0 auto;
+}
+
 .page-content {
     flex-grow: 1;
     display: flex;

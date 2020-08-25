@@ -30,6 +30,22 @@
 }
 
 
+@mixin noScrollbar {
+    &::-webkit-scrollbar * {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
 @mixin fullpageBG {
     position: relative;
     background: none;

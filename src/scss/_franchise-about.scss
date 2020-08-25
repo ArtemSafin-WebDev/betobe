@@ -1,0 +1,126 @@
+.franchise-about {
+    padding-top: 6.2rem;
+    padding-bottom: 6.2rem;
+
+    @include breakpoint(mobile) {
+        padding: 3.2rem 0;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.franchise-about__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.franchise-about__description {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 120%;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 3rem;
+    }
+}
+
+.franchise-about__features-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3.2rem;
+    margin-bottom: 5.2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.franchise-about__features-card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 0.4rem;
+    transition: border-color 0.2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        border-color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.franchise-about__features-card-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
+}
+
+.franchise-about__features-card-title-image {
+    width: 4.7rem;
+    height: 4.7rem;
+    flex-shrink: 0;
+    margin-right: 2.2rem;
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        margin-right: 1.8rem;
+    }
+}
+
+.franchise-about__features-card-text {
+    font-size: 1.8rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}
+
+.franchise-about__text-content {
+    font-size: 2rem;
+    line-height: 120%;
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}

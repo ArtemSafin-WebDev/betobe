@@ -253,6 +253,9 @@
     .choices__list--dropdown .choices__list {
         max-height: 28rem;
 
+
+      
+
         -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
@@ -276,6 +279,7 @@
 
         @include breakpoint(mobile) {
             max-height: 15rem;
+            max-height: none;
         }
     }
 

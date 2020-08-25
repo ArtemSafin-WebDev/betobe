@@ -1,0 +1,200 @@
+.franchise-company {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 0;
+    }
+}
+
+.franchise-company__row {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.franchise-company__left-col {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.franchise-company__right-col {
+    width: 19.2rem;
+    flex-shrink: 0;
+    margin-left: 7.8rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+
+        display: none;
+    }
+}
+
+.franchise-company__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 1.2;
+    margin-bottom: 3.7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.franchise-company__logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.franchise-company__title {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 200%;
+        margin-bottom: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+.franchise-company__title-logo {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+        width: 8.2rem;
+        height: 8.2rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        @include objectFitContain();
+    }
+}
+
+.franchise-company__description {
+    font-size: 2rem;
+    line-height: 120%;
+    margin-bottom: 3.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
+}
+
+.franchise-company__summary {
+    margin-bottom: 3.5rem;
+
+    table,
+    td,
+    td,
+    thead,
+    tbody {
+        display: block;
+    }
+
+    th,
+    td {
+        font-size: 2rem;
+        line-height: 160%;
+        text-align: left;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+    }
+
+    tr {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    th {
+        display: flex;
+        align-items: baseline;
+        font-weight: 400;
+        width: 50%;
+        flex-grow: 1;
+        &::after {
+            content: '';
+            width: 1px;
+            height: 1px;
+            flex-grow: 1;
+            background: #f0f0f0;
+            margin: 0 1rem;
+        }
+    }
+
+    td {
+        text-align: right;
+
+        @include breakpoint(mobile) {
+            white-space: nowrap;
+        }
+    }
+
+    a {
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.franchise-company__link {
+    display: inline-flex;
+    padding: 1.5rem 3.2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: white;
+    background-color: var(--primary-color);
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 0.4rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: black;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        padding: 1.3rem 2.4rem;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -7,6 +7,11 @@ import ShowHiddenCheckboxes from './showHiddenCheckboxes';
 import FranchiseGallery from './franchiseGallery';
 import FilterTabs from './filterTabs';
 import CatalogAccordions from './catalogAccordions';
+import FranchiseIntro from './franchiseIntro';
+import FranchiseGeography from './franchiseGeography';
+import AnchorLinks from './anchorLinks';
+import StickyNav from './stickyNav';
+import MosaicSlider from './mosaicSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -18,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
     FranchiseGallery();
     FilterTabs();
     CatalogAccordions();
+    FranchiseIntro();
+    FranchiseGeography();
+    AnchorLinks();
+    StickyNav();
+    MosaicSlider();
 });
 
 window.addEventListener('load', function() {
