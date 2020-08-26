@@ -1,4 +1,5 @@
 import { Swiper, Autoplay, Navigation } from 'swiper';
+import { MOBILE_WIDTH } from './constants';
 
 
 Swiper.use([Autoplay, Navigation]);
@@ -12,6 +13,7 @@ export default function FranchiseGallery() {
         new Swiper(container, {
             watchOverflow: true,
             spaceBetween: 18,
+            autoHeight: window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches ? true : false,
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.franchise-catalog__card-details-gallery-slider-arrow--next'),
@@ -19,7 +21,6 @@ export default function FranchiseGallery() {
             }
         });
 
-
-       
+        
     });
 }

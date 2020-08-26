@@ -1,0 +1,191 @@
+.franchise-how-we-work {
+    padding: 5rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-top: 1.5rem;
+    }
+}
+
+.franchise-how-we-work__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 3rem;
+    }
+}
+
+.franchise-how-we-work__slider {
+    .swiper-slide {
+        @include breakpointMF(small-tablet) {
+            display: block;
+            margin-bottom: 1.6rem;
+            &:last-child {
+                margin-bottom: 0;
+                .franchise-how-we-work__card-number-arrow {
+                    display: none;
+                }
+            }
+        }
+
+
+        @include breakpoint(mobile) {
+            width: 25rem;
+            &:last-child {
+                margin-bottom: 0;
+                .franchise-how-we-work__card-number-arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        @include breakpointMF(small-tablet) {
+            display: block;
+        }
+    }
+
+    .swiper-container {
+        @include breakpointMF(small-tablet) {
+            overflow: visible;
+        }
+
+
+        @include breakpoint(mobile) {
+            overflow: visible;
+        }
+    }
+}
+
+.franchise-how-we-work__card {
+    display: flex;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        flex-grow: 0;
+    }
+}
+
+.franchise-how-we-work__card-number {
+    flex-shrink: 0;
+    margin-right: 3.4rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.7rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.franchise-how-we-work__card-content {
+    width: 50%;
+    flex-grow: 1;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.franchise-how-we-work__card-number-circle {
+    width: 4.4rem;
+    height: 4.4rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    background-color: var(--primary-color);
+    color: white;
+
+    @include breakpoint(mobile) {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-right: 1.4rem;
+        flex-shrink: 0;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+}
+
+.franchise-how-we-work__card-number-arrow {
+    width: 1px;
+    height: 1px;
+    background: #c2cfdc;
+    flex-grow: 1;
+
+    position: relative;
+
+    margin-top: 1.8rem;
+    align-self: center;
+
+    &::before {
+        content: '';
+        background-image: url('../img/arrowhead.svg');
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1.2rem;
+
+        @include breakpoint(mobile) {
+            left: auto;
+            right: -.1rem;
+            bottom: auto;
+            transform: translateY(-50%) rotate(-90deg);
+            top: 50%;
+            background-position: left center;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        align-self: initial;
+    }
+}
+
+.franchise-how-we-work__card-stage-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+}
+
+.franchise-how-we-work__card-stage-text {
+    font-size: 2rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}

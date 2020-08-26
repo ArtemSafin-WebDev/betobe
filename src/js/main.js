@@ -12,6 +12,12 @@ import FranchiseGeography from './franchiseGeography';
 import AnchorLinks from './anchorLinks';
 import StickyNav from './stickyNav';
 import MosaicSlider from './mosaicSlider';
+import ProfitSlider from './profitSlider';
+import PhoneMask from './phoneMask';
+import FranchiseReviews from './franchiseReviews';
+import MediaSlider from './mediaSlider';
+import HowWeWork from './howWeWork';
+import FaqAccordions from './faqAccordions';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -28,6 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
     AnchorLinks();
     StickyNav();
     MosaicSlider();
+    ProfitSlider();
+    PhoneMask();
+    FranchiseReviews();
+    MediaSlider();
+    HowWeWork();
+    FaqAccordions();
 });
 
 window.addEventListener('load', function() {

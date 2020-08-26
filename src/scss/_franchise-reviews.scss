@@ -1,0 +1,252 @@
+.franchise-reviews {
+    padding-top: 8.4rem;
+    padding-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.franchise-reviews__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
+}
+
+.franchise-reviews__text {
+    font-size: 2rem;
+    line-height: 120%;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}
+
+.franchise-reviews__slider {
+    position: relative;
+    .swiper-container {
+        @include breakpointMF(small-tablet) {
+            overflow: visible;
+        }
+    }
+
+    .swiper-slide {
+        width: 85.8rem;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.franchise-reviews__slider-card {
+    display: block;
+    position: relative;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .swiper-slide-active & {
+        opacity: 1;
+    }
+
+    @include breakpoint(mobile) {
+        opacity: 1;
+        border-radius: 0;
+        color: black;
+        background: transparent;
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
+}
+
+.franchise-reviews__slider-card-image-container {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 56.25%;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #000000 -37.47%, rgba(0, 0, 0, 0) 74.03%);
+        z-index: 30;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+        border-radius: 0.4rem;
+        height: 18.9rem;
+        overflow: hidden;
+    }
+}
+
+.franchise-reviews__slider-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/play.svg');
+    z-index: 40;
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.franchise-reviews__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.franchise-reviews__slider-card-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 11rem;
+    align-content: flex-end;
+
+    z-index: 100;
+
+    @include breakpoint(mobile) {
+        position: relative;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2.2rem;
+        padding: 0;
+        height: auto;
+    }
+}
+
+.franchise-reviews__slider-card-title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}
+
+.franchise-reviews__slider-card-text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+}
+
+.franchise-reviews__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: rgba(white, 0.9);
+    color: black;
+    transition: color 0.2s, opacity 0.2s, background-color 0.2s;
+    z-index: 80;
+    &--prev {
+        left: 0;
+
+        @include breakpoint(mobile) {
+            left: 1.1rem;
+        }
+    }
+
+    &--next {
+        right: 0;
+
+
+        @include breakpoint(mobile) {
+            right: 1.1rem;
+        }
+    }
+    svg {
+        width: 1.1rem;
+        height: 1.8rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include breakpoint(mobile) {
+            width: 0.8rem;
+            height: 1.2rem;
+        }
+    }
+
+    &:not(.swiper-button-disabled) {
+        &:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+        transform: none; top: 8rem;
+    }
+}

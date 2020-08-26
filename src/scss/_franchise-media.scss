@@ -1,0 +1,135 @@
+.franchise-media {
+    padding: 5rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.franchise-media__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 3.4rem;
+    }
+}
+
+.franchise-media__slider {
+    position: relative;
+
+    .swiper-slide {
+        @include breakpoint(mobile) {
+            width: 25rem;
+        }
+    }
+
+
+    .swiper-container {
+        @include breakpoint(mobile) {
+            overflow: visible;
+        }
+    }
+}
+
+.franchise-media__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    transition: color 0.2s, opacity 0.2s;
+    svg {
+        width: 1.1rem;
+        height: 1.8rem;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    &--prev {
+        left: 0;
+    }
+
+    &--next {
+        right: 0;
+    }
+
+    &:not(.swiper-button-disabled) {
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.franchise-media__slider-card {
+    display: flex;
+    flex-direction: column;
+
+    &:link,
+    &:visited {
+        color: black;
+    }
+}
+
+.franchise-media__slider-card-logo-container {
+    margin-bottom: 4.2rem;
+    position: relative;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        height: 4rem;
+        margin-bottom: 2.2rem;
+    }
+}
+
+.franchise-media__slider-card-logo {
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 15rem;
+    height: 100%;
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        max-width: 9rem;
+    }
+}
+
+.franchise-media__slider-card-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 120%;
+    margin-bottom: 1.8rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+}
+
+.franchise-media__slider-card-text {
+    font-size: 1.8rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+}

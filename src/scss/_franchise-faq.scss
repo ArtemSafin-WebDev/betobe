@@ -1,0 +1,115 @@
+.franchise-faq {
+    padding: 5rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.franchise-faq__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.franchise-faq__accordion {
+    border-top: 1px solid #ccdae9;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 0.6rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        transform: scaleY(0);
+        pointer-events: none;
+        transition: transform 0.3s;
+        transform-origin: center top;
+
+        @include breakpoint(mobile) {
+            height: 0.3rem;
+        }
+    }
+    &.active {
+        &::before {
+            transform: scaleY(1);
+        }
+    }
+}
+
+.franchise-faq__accordion-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 2.2rem;
+    padding: 2.4rem 0;
+    padding-right: 2rem;
+    cursor: pointer;
+    user-select: none;
+    svg {
+        width: 4rem;
+        height: 4rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        transition: transform 0.3s;
+
+        @include breakpoint(mobile) {
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        padding-right: 1rem;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+.franchise-faq__accordion.active svg {
+    transform: rotate(45deg);
+}
+
+.franchise-faq__accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+}
+
+.franchise-faq__accordion-text {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    line-height: 120%;
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+        padding: 0;
+        padding-bottom: 2.8rem;
+        padding-top: 0.5rem;
+    }
+}
