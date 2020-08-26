@@ -1,0 +1,155 @@
+.franchise-founders {
+    padding: 5rem 0;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-bottom: 6rem;
+    }
+}
+
+.franchise-founders__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 120%;
+    margin-bottom: 6.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 120%;
+        margin-bottom: 2.6rem;
+    }
+}
+
+.franchise-founders__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.franchise-founders__item {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        align-items: flex-start;
+    }
+}
+
+.franchise-founders__item-photo-container {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 25rem;
+    flex-shrink: 0;
+    margin-right: 3.2rem;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        margin-right: 2rem;
+    }
+}
+
+.franchise-founders__item-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.franchise-founders__item-content {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.franchise-founders__item-name {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 0;
+    }
+}
+
+.franchise-founders__item-role {
+    font-size: 1.8rem;
+    line-height: 160%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 160%;
+        margin-bottom: 1rem;
+    }
+}
+
+.franchise-founders__item-text {
+    font-size: 1.8rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.franchise-founders__item-socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.franchise-founders__item-social-link {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-right: 2rem;
+    transition: color 0.2s;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        color: black;
+    }
+
+
+    @include breakpoint(mobile) {
+        margin-right: 1.6rem;
+    }
+}

@@ -99,7 +99,7 @@
         background-position: left center;
         background-size: auto 100%;
         background-repeat: no-repeat;
-
+        margin-left: -1px;
         @include breakpoint(mobile) {
             height: 2rem;
             width: 1rem;
