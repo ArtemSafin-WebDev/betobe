@@ -14,7 +14,7 @@
     --text-color: black;
     --gotham: 'Gotham Pro Narrow', sans-serif;
     @include breakpoint(mobile) {
-        --content-padding: 2rem;
+        --content-padding: 2.6rem;
     }
 }
 
@@ -42,7 +42,7 @@ html {
     }
 
     @include breakpoint(mobile) {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     @include breakpoint(supersmall-mobile) {

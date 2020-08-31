@@ -14,6 +14,7 @@ export default function FranchiseReviews() {
             spaceBetween: 18,
             centeredSlides: true,
             loop: true,
+            slideToClickedSlide: true,
             speed: 700,
             navigation: {
                 nextEl: element.querySelector('.franchise-reviews__slider-arrow--next'),

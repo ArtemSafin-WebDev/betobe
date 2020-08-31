@@ -20,6 +20,7 @@ import HowWeWork from './howWeWork';
 import FaqAccordions from './faqAccordions';
 import BurgerMenu from './burgerMenu';
 import FiltersButtonActivity from './filtersButtonActivity';
+import MediaModals from './mediaModals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     FaqAccordions();
     BurgerMenu();
     FiltersButtonActivity();
+    MediaModals();
 });
 
 window.addEventListener('load', function() {

@@ -264,8 +264,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mapInstance.setCenter(centerCoords);
 
+        let infoWindows = [];
+
         dummyData.forEach(function(item) {
-            new google.maps.Marker({
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div class="franchise-geography__local-franchisers">
+                        <div class="franchise-geography__local-franchisers-top-row">
+                            <div class="franchise-geography__local-franchisers-city">
+                                г. Казань
+                            </div>
+                            <div class="franchise-geography__local-franchisers-count">
+                                5 франчайзи
+                            </div>
+                        </div>
+                        <ul class="franchise-geography__local-franchisers-list">
+                            <li class="franchise-geography__local-franchisers-list-item">
+                                <a href="#" class="franchise-geography__local-franchisers-link">
+                                    <div class="franchise-geography__local-franchisers-link-photo-container">
+                                        <img src="img/members/1.jpg" alt=""
+                                            class="franchise-geography__local-franchisers-link-photo">
+                                    </div>
+                                    Егор Алафузов
+                                </a>
+                            </li>
+                            <li class="franchise-geography__local-franchisers-list-item">
+                                <a href="#" class="franchise-geography__local-franchisers-link">
+                                    <div class="franchise-geography__local-franchisers-link-photo-container">
+                                        <img src="img/members/2.jpg" alt=""
+                                            class="franchise-geography__local-franchisers-link-photo">
+                                    </div>
+                                    Гвидон Вишневский
+                                </a>
+                            </li>
+                            <li class="franchise-geography__local-franchisers-list-item">
+                                <a href="#" class="franchise-geography__local-franchisers-link">
+                                    <div class="franchise-geography__local-franchisers-link-photo-container">
+                                        <img src="img/members/1.jpg" alt=""
+                                            class="franchise-geography__local-franchisers-link-photo">
+                                    </div>
+                                    Сергей Миронов
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                `,
+                maxWidth: 350
+            });
+            const marker = new google.maps.Marker({
                 position: {
                     lat: item.lat,
                     lng: item.lng
@@ -273,32 +319,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 map: mapInstance,
                 icon: {
                     url: item.open ? element.getAttribute('data-open-pin') : element.getAttribute('data-pin'),
-                    size: new google.maps.Size(37, 37),
+                    size: item.open ? new google.maps.Size(37, 37) : new google.maps.Size(23, 23),
                     origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(37 / 2, 37 / 2)
+                    anchor: item.open ? new google.maps.Point(37 / 2, 37 / 2) : new google.maps.Point(23 / 2, 23 / 2)
                 }
 
                 // icon: rootURL + '/img/icon_Brownfield.svg'
             });
+
+            infoWindows.push(infoWindow);
+
+            marker.addListener('click', () => {
+                infoWindow.open(mapInstance, marker);
+                infoWindows.forEach(element => {
+                    if (infoWindow !== element) {
+                        element.close();
+                    }
+                });
+            });
         });
-
-
-        var franchisersLinks = Array.prototype.slice.call(document.querySelectorAll('.franchise-geography__local-franchisers-link'));
-
-        franchisersLinks.forEach(function(link, linkIndex) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                var pinToSelect = dummyData[linkIndex];
-
-                if (pinToSelect) {
-                    mapInstance.setZoom(14);
-                    mapInstance.panTo({
-                        lat: pinToSelect.lat,
-                        lng: pinToSelect.lng
-                    });
-                }
-            })
-        })
     });
 });
