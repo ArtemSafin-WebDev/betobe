@@ -381,7 +381,8 @@
             fill: #adcdff;
         }
 
-        &.checked {
+        &.checked,
+        &.preview-checked {
             &:nth-child(1) {
                 fill: #b4d3ff;
             }
@@ -398,6 +399,25 @@
                 fill: #4893ff;
             }
         }
+
+
+        // &.preview-unchecked {
+        //     &:nth-child(1) {
+        //         fill: #ebf3ff !important;
+        //     }
+        //     &:nth-child(2) {
+        //         fill: #d9e8ff !important;
+        //     }
+        //     &:nth-child(3) {
+        //         fill: #c9deff !important;
+        //     }
+        //     &:nth-child(4) {
+        //         fill: #bad5ff !important;
+        //     }
+        //     &:nth-child(5) {
+        //         fill: #adcdff !important;
+        //     }
+        // }
     }
 }
 

@@ -2522,15 +2522,15 @@ select:-webkit-autofill:focus {
     fill: #bad5ff; }
   .filters__selector-ring-category path:nth-child(5) {
     fill: #adcdff; }
-  .filters__selector-ring-category path.checked:nth-child(1) {
+  .filters__selector-ring-category path.checked:nth-child(1), .filters__selector-ring-category path.preview-checked:nth-child(1) {
     fill: #b4d3ff; }
-  .filters__selector-ring-category path.checked:nth-child(2) {
+  .filters__selector-ring-category path.checked:nth-child(2), .filters__selector-ring-category path.preview-checked:nth-child(2) {
     fill: #85b7ff; }
-  .filters__selector-ring-category path.checked:nth-child(3) {
+  .filters__selector-ring-category path.checked:nth-child(3), .filters__selector-ring-category path.preview-checked:nth-child(3) {
     fill: #66a5ff; }
-  .filters__selector-ring-category path.checked:nth-child(4) {
+  .filters__selector-ring-category path.checked:nth-child(4), .filters__selector-ring-category path.preview-checked:nth-child(4) {
     fill: #539aff; }
-  .filters__selector-ring-category path.checked:nth-child(5) {
+  .filters__selector-ring-category path.checked:nth-child(5), .filters__selector-ring-category path.preview-checked:nth-child(5) {
     fill: #4893ff; }
 
 .filters__selector-ring-inputs {

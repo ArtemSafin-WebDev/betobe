@@ -33,7 +33,27 @@ export default function SelectorRing() {
 
                     console.log(`Rating in category ${categoryName} is ${steps.length - stepIndex}`);
                 });
+                step.addEventListener('mouseenter', event => {
+                    event.preventDefault();
+                    steps.forEach((otherStep, otherStepIndex) => {
+                        if (otherStepIndex >= stepIndex) {
+                            otherStep.classList.add('preview-checked');
+                            otherStep.classList.remove('preview-unchecked')
+                        } else {
+                            otherStep.classList.remove('preview-checked');
+                            otherStep.classList.add('preview-unchecked')
+                        }
+                    });
+                });
             });
+
+
+            category.addEventListener('mouseleave', () => {
+                steps.forEach(step => {
+                    step.classList.remove('preview-checked')
+                    step.classList.remove('preview-unchecked')
+                });
+            })
         });
 
 
