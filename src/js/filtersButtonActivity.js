@@ -11,7 +11,24 @@ export default function FiltersButtonActivity() {
 
         inputs.forEach(input => {
             input.addEventListener('change', () => {
-                submitBtn.removeAttribute('disabled');
+                
+                const filledInputs = inputs.filter(element => {
+                    if (element.matches('select')) {
+                        return element.value
+                    } else if (element.matches('input[type="checkbox"], input[type="radio"]')) {
+                        return element.checked
+                    } else {
+                        return element.value && element.value != 0;
+                    }
+                });
+
+                if (filledInputs.length) {
+                    submitBtn.removeAttribute('disabled');
+                } else {
+                    submitBtn.setAttribute('disabled', "");
+                }
+
+                console.log('Filled inputs', filledInputs)
             })
         })
     }

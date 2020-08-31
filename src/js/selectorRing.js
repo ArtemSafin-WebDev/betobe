@@ -71,7 +71,12 @@ export default function SelectorRing() {
             if (resetBtn) {
                 resetBtn.addEventListener('click', event => {
                     event.preventDefault();
-                    inputs.forEach(input => (input.value = 0));
+                    inputs.forEach(input => {
+                        input.value = 0;
+                        const changeEvent = new Event('change');
+
+                        input.dispatchEvent(changeEvent);
+                    });
                     categoriesNames.forEach(name => name.classList.remove('active'));
                     Array.from(ring.querySelectorAll('.filters__selector-ring-category path')).forEach(element =>
                         element.classList.remove('checked')
@@ -87,7 +92,6 @@ export default function SelectorRing() {
                 const scoreBtns = Array.from(category.querySelectorAll('.filters__selector-ring-categories-name-score-btn'));
 
                 const setScore = score => {
-
                     if (score > 5) {
                         score = 5;
                     }
@@ -129,20 +133,15 @@ export default function SelectorRing() {
 
                 if (handle) {
                     var hammertime = new Hammer(handle);
-                    // console.log('One section width', scoreBtns[0].offsetWidth)
 
                     let startX = 0;
                     hammertime.on('panstart', function(event) {
                         startX = handle.offsetLeft;
                     });
                     hammertime.on('panmove', function(event) {
-                        // console.log('Delta X', event.deltaX);
-                        // console.log('Start x', startX)
-
                         const score = Math.floor((startX + event.deltaX) / scoreBtns[0].offsetWidth);
-                        // console.log('Current score', score)
 
-                        setScore(score)
+                        setScore(score);
                     });
                 }
             });

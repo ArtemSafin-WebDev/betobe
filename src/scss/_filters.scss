@@ -729,3 +729,12 @@
         }
     }
 }
+
+
+
+.filters__select--only-mobile {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
