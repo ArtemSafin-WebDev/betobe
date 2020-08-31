@@ -18,6 +18,7 @@ import FranchiseReviews from './franchiseReviews';
 import MediaSlider from './mediaSlider';
 import HowWeWork from './howWeWork';
 import FaqAccordions from './faqAccordions';
+import BurgerMenu from './burgerMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     MediaSlider();
     HowWeWork();
     FaqAccordions();
+    BurgerMenu();
 });
 
 window.addEventListener('load', function() {
