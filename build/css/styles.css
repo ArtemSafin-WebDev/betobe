@@ -1483,7 +1483,10 @@ select:-webkit-autofill:focus {
       grid-area: actions;
       margin: 0;
       align-self: initial;
-      padding: 0 0.5rem; } }
+      padding: 0 0.5rem;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .page-header__actions-link {
   font-weight: bold;
@@ -1551,11 +1554,7 @@ select:-webkit-autofill:focus {
           -ms-flex-pack: center;
               justify-content: center; }
       .page-header__actions-link:link, .page-header__actions-link:visited {
-        color: #8a8a8a; }
-      .page-header__actions-link:last-child {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1; } }
+        color: #8a8a8a; } }
 
 .page-header__user {
   display: -webkit-box;
@@ -3055,12 +3054,17 @@ select:-webkit-autofill:focus {
       padding-bottom: 2rem; } }
 
 .franchise-catalog__list-item {
-  margin-bottom: 7.8rem; }
+  padding-bottom: 3.2rem;
+  padding-top: 3.2rem;
+  border-bottom: 1px solid #D5D5D5; }
+  .franchise-catalog__list-item:first-child {
+    padding-top: 0; }
   .franchise-catalog__list-item:last-child {
-    margin-bottom: 0; }
+    border-bottom: none;
+    padding-bottom: 0; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__list-item {
-      margin-bottom: 3rem; } }
+      padding: 1.5rem 0; } }
 
 @media only screen and (max-width: 767px) {
   .franchise-catalog__card {

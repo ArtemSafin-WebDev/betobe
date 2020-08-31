@@ -292,6 +292,7 @@
         margin: 0;
         align-self: initial;
         padding: 0 0.5rem;
+        justify-content: center;
     }
 }
 
@@ -361,9 +362,7 @@
         &:visited {
             color: #8a8a8a;
         }
-        &:last-child {
-            flex-grow: 1;
-        }
+       
     }
 }
 

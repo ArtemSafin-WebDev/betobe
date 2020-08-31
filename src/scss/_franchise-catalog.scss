@@ -9,13 +9,20 @@
 }
 
 .franchise-catalog__list-item {
-    margin-bottom: 7.8rem;
+    padding-bottom: 3.2rem;
+    padding-top: 3.2rem;
+    border-bottom: 1px solid#D5D5D5;
+
+    &:first-child {
+        padding-top: 0;
+    }
     &:last-child {
-        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: 3rem;
+        padding: 1.5rem 0;
     }
 }
 
