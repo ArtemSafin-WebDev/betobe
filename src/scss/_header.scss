@@ -160,8 +160,10 @@
 }
 
 .page-header__logo-menu-navigation {
-    padding-bottom: 2.8rem;
-    border-bottom: 1px solid #f0f0f0;
+    @include breakpoint(mobile) {
+        padding-bottom: 2.8rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
 }
 
 .page-header__logo-menu-contacts {
@@ -362,7 +364,6 @@
         &:visited {
             color: #8a8a8a;
         }
-       
     }
 }
 
@@ -488,12 +489,11 @@
     @include objectFitCover();
 }
 
-
 .page-header__logo-menu-social {
     display: none;
 
     @include breakpoint(mobile) {
-        border-top: 1px solid #F0F0F0;
+        border-top: 1px solid #f0f0f0;
         padding: 2.8rem 0;
         display: flex;
         align-items: center;
@@ -501,7 +501,6 @@
         margin-top: 2.8rem;
     }
 }
-
 
 .page-header__logo-menu-social-link {
     color: var(--primary-color);

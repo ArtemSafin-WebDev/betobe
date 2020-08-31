@@ -1358,9 +1358,10 @@ select:-webkit-autofill:focus {
       .page-header__logo-menu-dropdown-link:last-child {
         margin-bottom: 0; } }
 
-.page-header__logo-menu-navigation {
-  padding-bottom: 2.8rem;
-  border-bottom: 1px solid #f0f0f0; }
+@media only screen and (max-width: 767px) {
+  .page-header__logo-menu-navigation {
+    padding-bottom: 2.8rem;
+    border-bottom: 1px solid #f0f0f0; } }
 
 .page-header__logo-menu-contacts {
   display: none;
@@ -1671,7 +1672,7 @@ select:-webkit-autofill:focus {
   display: none; }
   @media only screen and (max-width: 767px) {
     .page-header__logo-menu-social {
-      border-top: 1px solid #F0F0F0;
+      border-top: 1px solid #f0f0f0;
       padding: 2.8rem 0;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2720,10 +2721,15 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.8rem;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  -webkit-transition: background-color 0.2s, opacity .2s, color .2s;
+  transition: background-color 0.2s, opacity .2s, color .2s; }
   .filters__submit:hover {
     background-color: black; }
+  .filters__submit[disabled] {
+    cursor: default;
+    background-color: #ebf3ff;
+    color: var(--primary-color);
+    opacity: .7; }
   @media only screen and (max-width: 767px) {
     .filters__submit {
       font-weight: 500;
@@ -4137,12 +4143,47 @@ select:-webkit-autofill:focus {
       .franchise-catalog__card-details-btn:link, .franchise-catalog__card-details-btn:visited {
         color: var(--primary-color); } }
 
-@media only screen and (max-width: 767px) {
-  .franchise-catalog__card-details-content {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height .4s;
-    transition: max-height .4s; } }
+.franchise-catalog__card-details-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .4s;
+  transition: max-height .4s; }
+
+.franchise-catalog__card-actions-accordion-toggle {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem; }
+  @media only screen and (max-width: 767px) {
+    .franchise-catalog__card-actions-accordion-toggle {
+      display: none; } }
+
+.franchise-catalog__card-actions-accordion-toggle-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 24px; }
+  .franchise-catalog__card-actions-accordion-toggle-content > span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-bottom: 5px;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s; }
+    .franchise-catalog__card-actions-accordion-toggle-content > span:last-child {
+      margin-bottom: 0; }
+  .franchise-catalog__list-item.active .franchise-catalog__card-actions-accordion-toggle-content > span:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg); }
+  .franchise-catalog__list-item.active .franchise-catalog__card-actions-accordion-toggle-content > span:nth-child(2) {
+    opacity: 0; }
+  .franchise-catalog__list-item.active .franchise-catalog__card-actions-accordion-toggle-content > span:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg); }
 
 .franchise-intro {
   position: relative;

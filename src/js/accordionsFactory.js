@@ -51,13 +51,19 @@ export default function(accordionElements, openFirst = false) {
             console.log('Content', content)
 
             const handler = function(event) {
-                event.preventDefault();
+                
                 if (animating) return;
-                if (event.relatedTarget) {
-                    event.relatedTarget.focus();
-                } else {
-                    event.currentTarget.blur();
+
+
+                if (event) {
+                    event.preventDefault();
+                    if (event.relatedTarget) {
+                        event.relatedTarget.focus();
+                    } else {
+                        event.currentTarget.blur();
+                    }
                 }
+                
                 
             
                 if (!element.classList.contains('active')) {

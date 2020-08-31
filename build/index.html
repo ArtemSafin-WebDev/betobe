@@ -363,7 +363,7 @@
                     </div>
                 </section>
 
-                <section class="filters">
+                <section class="filters js-filters">
                     <form action="/" method="POST" class="filters__form js-filter-tabs">
                         <div class="container">
                             <div class="filters__tab-nav">
@@ -751,7 +751,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="filters__submit">
+                        <button type="submit" class="filters__submit" disabled>
                             Показать 126 франшиз
                         </button>
                     </form>
@@ -867,6 +867,13 @@
                                                 </div>
                                             </div>
                                             <div class="franchise-catalog__card-btns">
+                                                <button class="franchise-catalog__card-actions-accordion-toggle">
+                                                    <span class="franchise-catalog__card-actions-accordion-toggle-content">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </span>
+                                                </button>
                                                 <div class="franchise-catalog__card-actions">
                                                     <div class="franchise-catalog__card-actions-btn">
                                                         <svg width="20" height="5" aria-hidden="true" class="icon-dots">
@@ -901,6 +908,213 @@
                                                         <use xlink:href="#star"></use>
                                                     </svg>
                                                 </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="franchise-catalog__card-details">
+                                    <div class="franchise-catalog__card-details-btn js-accordion-btn">
+                                        Показать
+                                    </div>
+                                    <div class="franchise-catalog__card-details-content js-accordion-content">
+                                        <div class="franchise-catalog__card-details-grid">
+                                            <div class="franchise-catalog__card-details-left-col">
+                                                <div class="franchise-catalog__card-details-social-block">
+                                                    <a href="#" class="franchise-catalog__card-website">
+                                                        chio-chio.ru
+                                                        <svg width="12" height="12" aria-hidden="true" class="icon-link-simple">
+                                                            <use xlink:href="#link-simple"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="franchise-catalog__card-details-social-links">
+                                                        <a href="#" class="franchise-catalog__card-details-social-link">
+                                                            <svg width="15" height="15" aria-hidden="true" class="icon-instagram">
+                                                                <use xlink:href="#instagram"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="franchise-catalog__card-details-social-link">
+                                                            <svg width="15" height="15" aria-hidden="true" class="icon-facebook">
+                                                                <use xlink:href="#facebook"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="franchise-catalog__card-details-social-link">
+                                                            <svg width="15" height="15" aria-hidden="true" class="icon-youtube">
+                                                                <use xlink:href="#youtube"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="franchise-catalog__card-details-social-link">
+                                                            <svg width="15" height="15" aria-hidden="true" class="icon-vk">
+                                                                <use xlink:href="#vk"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="franchise-catalog__card-details-place-ratings">
+                                                        <a href="#" class="franchise-catalog__card-details-place-rating">
+                                                            <img
+                                                                src="img/2gis.png"
+                                                                alt=""
+                                                                class="franchise-catalog__card-details-place-rating-logo"
+                                                            />
+                                                            <span class="franchise-catalog__card-details-place-rating-score">
+                                                                7,8
+                                                            </span>
+                                                        </a>
+                                                        <a href="#" class="franchise-catalog__card-details-place-rating">
+                                                            <img
+                                                                src="img/yandex.png"
+                                                                alt=""
+                                                                class="franchise-catalog__card-details-place-rating-logo"
+                                                            />
+                                                            <span class="franchise-catalog__card-details-place-rating-score">
+                                                                8,2
+                                                            </span>
+                                                        </a>
+                                                        <a href="#" class="franchise-catalog__card-details-place-rating">
+                                                            <img
+                                                                src="img/google.png"
+                                                                alt=""
+                                                                class="franchise-catalog__card-details-place-rating-logo"
+                                                            />
+                                                            <span class="franchise-catalog__card-details-place-rating-score">
+                                                                8,2
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="franchise-catalog__card-details-description-block">
+                                                    <div class="franchise-catalog__card-details-description">
+                                                        <p>
+                                                            Чио Чио является самой быстрорастущей сетью в салонном бизнесе. Ежемесячно запускается
+                                                            40-50 парикмахерских. За первый год масштабирования Чио Чио обогнала всех лидеров отрасли
+                                                            эконом- парикмахерских, которые работают на этом рынке уже 10 лет.
+                                                        </p>
+                                                    </div>
+                                                    <div class="franchise-catalog__card-details-table">
+                                                        <table>
+                                                            <tr>
+                                                                <th>
+                                                                    Средний чек
+                                                                </th>
+                                                                <td>
+                                                                    1 500 Р
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    География работы и продаж франшизы
+                                                                </th>
+                                                                <td>
+                                                                    РФ и СНГ
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Есть ли франчбук
+                                                                </th>
+                                                                <td>
+                                                                    Да
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Кол-во своих точек
+                                                                </th>
+                                                                <td>
+                                                                    5
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Кол-во точек по франшизе
+                                                                </th>
+                                                                <td>
+                                                                    120
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="franchise-catalog__card-details-learn-more">
+                                                        <div class="franchise-catalog__card-details-founder">
+                                                            <div class="franchise-catalog__card-details-founder-photo-container">
+                                                                <img
+                                                                    src="img/ilnaz.jpg"
+                                                                    alt=""
+                                                                    class="franchise-catalog__card-details-founder-photo"
+                                                                />
+                                                            </div>
+                                                            <div class="franchise-catalog__card-details-founder-content">
+                                                                <div class="franchise-catalog__card-details-founder-title">
+                                                                    Основатель:
+                                                                </div>
+                                                                <div class="franchise-catalog__card-details-founder-name">
+                                                                    Ильназ Набиуллин
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="franchise-catalog__card-details-learn-more-links">
+                                                            <a href="#" class="franchise-catalog__card-details-learn-more-comments">
+                                                                <svg width="22" height="22" aria-hidden="true" class="icon-question">
+                                                                    <use xlink:href="#question"></use>
+                                                                </svg>
+
+                                                                13
+                                                            </a>
+                                                            <a href="#" class="franchise-catalog__card-details-learn-more-link">
+                                                                Узнать больше
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="franchise-catalog__card-details-right-col">
+                                                <div class="franchise-catalog__card-details-gallery-slider js-franchise-gallery-slider">
+                                                    <button
+                                                        class="franchise-catalog__card-details-gallery-slider-arrow franchise-catalog__card-details-gallery-slider-arrow--prev"
+                                                    >
+                                                        <svg width="12" height="18" aria-hidden="true" class="icon-arrow-left">
+                                                            <use xlink:href="#arrow-left"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="swiper-container">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <div class="franchise-catalog__card-details-gallery-slider-card">
+                                                                    <img
+                                                                        src="img/franchise/gallery.jpg"
+                                                                        alt=""
+                                                                        class="franchise-catalog__card-details-gallery-slider-card-image"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <div class="franchise-catalog__card-details-gallery-slider-card">
+                                                                    <img
+                                                                        src="img/franchise/gallery.jpg"
+                                                                        alt=""
+                                                                        class="franchise-catalog__card-details-gallery-slider-card-image"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <div class="franchise-catalog__card-details-gallery-slider-card">
+                                                                    <img
+                                                                        src="img/franchise/gallery.jpg"
+                                                                        alt=""
+                                                                        class="franchise-catalog__card-details-gallery-slider-card-image"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <button
+                                                        class="franchise-catalog__card-details-gallery-slider-arrow franchise-catalog__card-details-gallery-slider-arrow--next"
+                                                    >
+                                                        <svg width="12" height="18" aria-hidden="true" class="icon-arrow-right">
+                                                            <use xlink:href="#arrow-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1158,6 +1372,13 @@
                                                 </div>
                                             </div>
                                             <div class="franchise-catalog__card-btns">
+                                                <button class="franchise-catalog__card-actions-accordion-toggle">
+                                                    <span class="franchise-catalog__card-actions-accordion-toggle-content">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </span>
+                                                </button>
                                                 <div class="franchise-catalog__card-actions">
                                                     <div class="franchise-catalog__card-actions-btn">
                                                         <svg width="20" height="5" aria-hidden="true" class="icon-dots">

@@ -615,9 +615,17 @@
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 2.8rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, opacity .2s, color .2s;
     &:hover {
         background-color: black;
+    }
+
+
+    &[disabled] {
+        cursor: default;
+        background-color: #ebf3ff;
+        color: var(--primary-color);
+        opacity: .7;
     }
 
     @include breakpoint(mobile) {

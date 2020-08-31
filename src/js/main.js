@@ -19,6 +19,7 @@ import MediaSlider from './mediaSlider';
 import HowWeWork from './howWeWork';
 import FaqAccordions from './faqAccordions';
 import BurgerMenu from './burgerMenu';
+import FiltersButtonActivity from './filtersButtonActivity';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     HowWeWork();
     FaqAccordions();
     BurgerMenu();
+    FiltersButtonActivity();
 });
 
 window.addEventListener('load', function() {

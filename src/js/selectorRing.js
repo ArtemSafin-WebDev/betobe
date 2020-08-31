@@ -26,8 +26,19 @@ export default function SelectorRing() {
 
                     const categoryName = category.getAttribute('data-cat');
 
-                    inputs.find(element => element.name === categoryName).value = steps.length - stepIndex;
+                    const input = inputs.find(element => element.name === categoryName);
+
+                    if (input) {
+                        input.value = steps.length - stepIndex;
+
+                        const event = new Event('change');
+
+                        input.dispatchEvent(event);
+                    }
+
                     const name = categoriesNames.find(element => element.getAttribute('data-cat') === categoryName);
+
+
 
                     if (name) name.classList.add('active');
 

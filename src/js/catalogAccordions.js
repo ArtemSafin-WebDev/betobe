@@ -23,5 +23,35 @@ export default function CatalogAccordions() {
                 
             })
         })
+    } else {
+        const accordions = accordionsFactory(catalogCards);
+        accordions.init();
+
+        const instances = accordions.getInstances();
+
+
+        console.log('Instances', instances)
+
+
+        instances.forEach(instance => {
+            const element = instance.element;
+            const handler = instance.handler;
+
+
+            element.addEventListener('click', event => {
+                console.log('Event', event)
+                if (event.target.matches('.franchise-catalog__card-title-heading') && event.target.closest('.franchise-catalog__card-title-heading')) {
+                    return;
+                    
+                } else {
+                    
+                    event.preventDefault();
+                    handler();
+                }
+            })
+        })
+
+
+
     }
 }
