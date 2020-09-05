@@ -1,12 +1,15 @@
 .page-footer__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas: 'blue black' 'panel panel';
+    // display: grid;
+    // grid-template-columns: repeat(2, minmax(0, 1fr));
+    // grid-template-areas: 'blue black' 'panel panel';
 
-    @include breakpoint(mobile) {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        grid-template-areas: 'blue' 'black' 'panel';
-    }
+    // @include breakpoint(mobile) {
+    //     grid-template-columns: repeat(1, minmax(0, 1fr));
+    //     grid-template-areas: 'blue' 'black' 'panel';
+    // }
+
+
+    border-top: 1px solid #D5D5D5;
 }
 
 .page-footer__action {
