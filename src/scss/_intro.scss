@@ -77,13 +77,15 @@
 }
 
 .intro__features-item-image {
-    width: 9rem;
+    width: auto;
+    height: 12rem;
     flex-shrink: 0;
-    margin-right: 3rem;
+    margin-right: 1rem;
     @include breakpoint(mobile) {
         width: 5.7rem;
         margin: 0;
         flex-shrink: 1;
+        height: auto;
     }
 }
 

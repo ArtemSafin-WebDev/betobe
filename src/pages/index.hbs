@@ -12,19 +12,19 @@
             </div>
             <ul class="intro__features">
                 <li class="intro__features-item">
-                    <img src="img/intro/1.png" alt="Особенность" width="90" class="intro__features-item-image">
+                    <img src="img/illustrations/1.svg" alt="Особенность" width="90" class="intro__features-item-image">
                     <p class="intro__features-item-text">
                         Изучай
                     </p>
                 </li>
                 <li class="intro__features-item">
-                    <img src="img/intro/1.png" alt="Особенность" width="90" class="intro__features-item-image">
+                    <img src="img/illustrations/2.svg" alt="Особенность" width="90" class="intro__features-item-image">
                     <p class="intro__features-item-text">
                         Сравнивай<br>по скиллам
                     </p>
                 </li>
                 <li class="intro__features-item">
-                    <img src="img/intro/1.png" alt="Особенность" width="90" class="intro__features-item-image">
+                    <img src="img/illustrations/3.svg" alt="Особенность" width="90" class="intro__features-item-image">
                     <p class="intro__features-item-text">
                         Общайся <br>
                         в одно окно
@@ -283,7 +283,296 @@
                             </button>
                         </div>
                         <div class="filters__selects">
-                            <div class="filters__select filters__select--only-mobile">
+                            <div class="filters__select-group filters__select-group--only-mobile js-filters-dropdown">
+                                <div class="filters__select-group-btn">
+                                    Сфера деятельности
+                                    <div class="filters__select-group-btn-cross">
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-arrow-down">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="filters__select-group-dropdown">
+                                    <div class="filters__select-group-dropdown-inner">
+                                        <div class="filters__select-group-checkboxes">
+                                            <div class="filters__select-group-checkboxes-search">
+                                                <input type="text" class="filters__select-group-checkboxes-search-input"
+                                                    placeholder="Поиск...">
+                                                <button class="filters__select-group-checkboxes-search-submit">
+                                                    <svg width="12" height="12" aria-hidden="true" class="icon-search">
+                                                        <use xlink:href="#search"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" value="auto"
+                                                    class="filters__select-group-checkbox-input" checked>
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Автоуслуги
+                                                </span>
+                                            </label>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filters__select-group js-filters-dropdown">
+                                <div class="filters__select-group-btn">
+                                    Паушальный взнос
+                                    <div class="filters__select-group-btn-cross">
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-arrow-down">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="filters__select-group-dropdown">
+                                    <div class="filters__select-group-dropdown-inner">
+                                        <div class="filters__select-group-range js-filters-range" data-min="0"
+                                            data-max="700000" data-step="1000">
+                                            <div class="filters__select-group-range-inputs">
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="from-contribution"
+                                                        class="filters__select-group-range-input" value="0">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <span class="filters__select-group-range-divider">
+
+                                                </span>
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="to-contribution"
+                                                        class="filters__select-group-range-input" value="700 000">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="filters__select-group-range-slider">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__select-group js-filters-dropdown">
+                                <div class="filters__select-group-btn">
+                                    Роялти
+                                    <div class="filters__select-group-btn-cross">
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-arrow-down">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="filters__select-group-dropdown">
+                                    <div class="filters__select-group-dropdown-inner">
+                                        <div class="filters__select-group-range js-filters-range" data-min="0"
+                                            data-max="15000000" data-step="100000">
+                                            <div class="filters__select-group-range-inputs">
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="from-royalty"
+                                                        class="filters__select-group-range-input" value="0">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <span class="filters__select-group-range-divider">
+
+                                                </span>
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="to-royalty"
+                                                        class="filters__select-group-range-input" value="15 000 000">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="filters__select-group-range-slider">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__select-group js-filters-dropdown">
+                                <div class="filters__select-group-btn">
+                                    Всего инвестиций
+                                    <div class="filters__select-group-btn-cross">
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-arrow-down">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="filters__select-group-dropdown">
+                                    <div class="filters__select-group-dropdown-inner">
+                                        <div class="filters__select-group-range js-filters-range" data-min="0"
+                                            data-max="15000000" data-step="100000">
+                                            <div class="filters__select-group-range-inputs">
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="from-invest"
+                                                        class="filters__select-group-range-input" value="0">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <span class="filters__select-group-range-divider">
+
+                                                </span>
+                                                <div class="filters__select-group-range-input-wrapper">
+                                                    <div class="filters__select-group-range-input-currency">
+                                                        ₽
+                                                    </div>
+                                                    <input type="tel" name="to-invest"
+                                                        class="filters__select-group-range-input" value="15 000 000">
+                                                    <button type="button"
+                                                        class="filters__select-group-range-input-clear">
+                                                        <svg width="12" height="12" aria-hidden="true"
+                                                            class="icon-cross">
+                                                            <use xlink:href="#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="filters__select-group-range-slider">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__select-group js-filters-dropdown">
+                                <div class="filters__select-group-btn">
+                                    Город
+                                    <div class="filters__select-group-btn-cross">
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-arrow-down">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                        <svg width="12" height="12" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="filters__select-group-dropdown">
+                                    <div class="filters__select-group-dropdown-inner">
+                                        <div class="filters__select-group-checkboxes">
+                                            <div class="filters__select-group-checkboxes-search">
+                                                <input type="text" class="filters__select-group-checkboxes-search-input"
+                                                    placeholder="Введите город...">
+                                                <button class="filters__select-group-checkboxes-search-submit">
+                                                    <svg width="12" height="12" aria-hidden="true" class="icon-search">
+                                                        <use xlink:href="#search"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" name="city" value="moscow"
+                                                    class="filters__select-group-checkbox-input" checked>
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Москва
+                                                </span>
+                                            </label>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" name="city" value="peter"
+                                                    class="filters__select-group-checkbox-input">
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Санкт-Петербург
+                                                </span>
+                                            </label>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" name="city" value="kazan"
+                                                    class="filters__select-group-checkbox-input">
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Казань
+                                                </span>
+                                            </label>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" name="city" value="samara"
+                                                    class="filters__select-group-checkbox-input">
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Самара
+                                                </span>
+                                            </label>
+                                            <label class="filters__select-group-checkbox">
+                                                <input type="checkbox" name="city" value="ekaterinburg"
+                                                    class="filters__select-group-checkbox-input">
+                                                <span class="filters__select-group-checkbox-mark">
+
+                                                </span>
+                                                <span class="filters__select-group-checkbox-text">
+                                                    Екатеринбург
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            {{!-- <div class="filters__select filters__select--only-mobile">
                                 <select name="select" class="js-custom-select">
                                     <option value="" placeholder>Сфера деятельности</option>
                                     <option value="value1">Значение 1</option>
@@ -337,7 +626,7 @@
                                     <option value="value3">Значение 5</option>
                                     <option value="value3">Значение 6</option>
                                 </select>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

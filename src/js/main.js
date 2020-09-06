@@ -21,6 +21,8 @@ import FaqAccordions from './faqAccordions';
 import BurgerMenu from './burgerMenu';
 import FiltersButtonActivity from './filtersButtonActivity';
 import MediaModals from './mediaModals';
+import FilterDropdowns from './filterDropdowns';
+import FilterRangeInputs from './rangeInputs';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,8 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
     HowWeWork();
     FaqAccordions();
     BurgerMenu();
-    FiltersButtonActivity();
+   
     MediaModals();
+    FilterDropdowns();
+    FilterRangeInputs();
+
+    FiltersButtonActivity();
 });
 
 window.addEventListener('load', function() {
