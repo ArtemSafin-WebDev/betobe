@@ -1,11 +1,15 @@
 import { lockScroll, unlockScroll } from './scrollBlocker';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { MOBILE_WIDTH } from './constants';
 
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function BurgerMenu() {
+
+    if (!window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) return;
+
     const mobileMenuBurger = document.querySelector('.page-header__burger');
 
     const mobileMenuScrollContainer = document.querySelector('.page-header__logo-menu-dropdown');

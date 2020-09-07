@@ -1,5 +1,6 @@
 .intro {
     padding: 5rem 0;
+    padding-bottom: 2.5rem;
     @include breakpoint(mobile) {
         padding-top: 2.5rem;
         padding-bottom: 0;

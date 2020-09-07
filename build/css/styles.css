@@ -2265,7 +2265,8 @@ select:-webkit-autofill:focus {
         bottom: -.4rem; } }
 
 .intro {
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  padding-bottom: 2.5rem; }
   @media only screen and (max-width: 767px) {
     .intro {
       padding-top: 2.5rem;
