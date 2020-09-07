@@ -82,7 +82,7 @@
     display: flex;
     align-items: flex-start;
     position: relative;
-   
+
     &:link,
     &:visited {
         color: inherit;
@@ -161,7 +161,7 @@
     font-size: 1.6rem;
     line-height: 2.5rem;
     color: #818181;
-
+    margin-bottom: 1.5rem;
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 120%;
@@ -179,7 +179,6 @@
         flex-direction: column;
         align-items: initial;
         padding: 0;
-       
     }
 }
 
@@ -289,8 +288,6 @@
         flex-direction: column;
         align-items: center;
         margin: 0;
-
-        
     }
 }
 
@@ -312,7 +309,6 @@
         width: 3rem;
         margin: 0;
         margin-bottom: 1rem;
-        
     }
 }
 
@@ -392,14 +388,12 @@
 .franchise-catalog__card-actions {
     position: relative;
     margin-bottom: 2rem;
-   
-   
-   
+
     &:hover {
         .franchise-catalog__card-actions-dropdown {
             opacity: 1;
             visibility: visible;
-            transition: opacity 0.3s ease .2s, visibility 0.3s ease .2s;
+            transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
         }
     }
 
@@ -541,8 +535,6 @@
         margin-top: 2.5rem;
     }
 }
-
-
 
 .franchise-catalog__card-details-grid {
     padding: 5rem 0;
@@ -1108,19 +1100,13 @@
     }
 }
 
-
-
 .franchise-catalog__card-details-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .4s;
-   
-   
+    transition: max-height 0.4s;
 }
 
-
 .franchise-catalog__card-actions-accordion-toggle {
-   
     margin-bottom: 2rem;
     margin-top: 0.5rem;
     @include breakpoint(mobile) {
@@ -1128,24 +1114,21 @@
     }
 }
 
-
 .franchise-catalog__card-actions-accordion-toggle-content {
     display: flex;
     flex-direction: column;
     width: 24px;
-    
+
     & > span {
         width: 100%;
         height: 3px;
         background-color: var(--primary-color);
         margin-bottom: 5px;
-        transition: transform .3s, opacity .3s;
+        transition: transform 0.3s, opacity 0.3s;
         &:last-child {
             margin-bottom: 0;
         }
-       
     }
-
 
     .franchise-catalog__list-item.active & {
         & > span {
@@ -1160,4 +1143,45 @@
             }
         }
     }
+}
+
+.franchise-catalog__card-open-close {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+
+    font-size: 1.4rem;
+    line-height: 1.2;
+    svg {
+        width: 1.2rem;
+        height: 0.6rem;
+        flex-shrink: 0;
+        margin-left: 1.1rem;
+        transition: transform .3s;
+    }
+
+    .franchise-catalog__list-item.active & svg {
+        transform: rotate(180deg);
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+
+.franchise-catalog__card-open-close-text {
+    &.closed {
+        display: none;
+    }
+    .franchise-catalog__list-item.active & {
+        &.closed {
+            display: block;
+        }
+
+        &.opened {
+            display: none;
+        }
+    }
+
 }

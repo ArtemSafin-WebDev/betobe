@@ -3967,7 +3967,8 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  color: #818181; }
+  color: #818181;
+  margin-bottom: 1.5rem; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-title-description {
       font-size: 1.2rem;
@@ -4208,8 +4209,8 @@ select:-webkit-autofill:focus {
   .franchise-catalog__card-actions:hover .franchise-catalog__card-actions-dropdown {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity 0.3s ease .2s, visibility 0.3s ease .2s;
-    transition: opacity 0.3s ease .2s, visibility 0.3s ease .2s; }
+    -webkit-transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
+    transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-actions {
       margin-bottom: 0; } }
@@ -4910,8 +4911,8 @@ select:-webkit-autofill:focus {
 .franchise-catalog__card-details-content {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height .4s;
-  transition: max-height .4s; }
+  -webkit-transition: max-height 0.4s;
+  transition: max-height 0.4s; }
 
 .franchise-catalog__card-actions-accordion-toggle {
   margin-bottom: 2rem;
@@ -4934,10 +4935,10 @@ select:-webkit-autofill:focus {
     height: 3px;
     background-color: var(--primary-color);
     margin-bottom: 5px;
-    -webkit-transition: opacity .3s, -webkit-transform .3s;
-    transition: opacity .3s, -webkit-transform .3s;
-    transition: transform .3s, opacity .3s;
-    transition: transform .3s, opacity .3s, -webkit-transform .3s; }
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s; }
     .franchise-catalog__card-actions-accordion-toggle-content > span:last-child {
       margin-bottom: 0; }
   .franchise-catalog__list-item.active .franchise-catalog__card-actions-accordion-toggle-content > span:nth-child(1) {
@@ -4948,6 +4949,42 @@ select:-webkit-autofill:focus {
   .franchise-catalog__list-item.active .franchise-catalog__card-actions-accordion-toggle-content > span:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg); }
+
+.franchise-catalog__card-open-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  line-height: 1.2; }
+  .franchise-catalog__card-open-close svg {
+    width: 1.2rem;
+    height: 0.6rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 1.1rem;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s; }
+  .franchise-catalog__list-item.active .franchise-catalog__card-open-close svg {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  @media only screen and (max-width: 767px) {
+    .franchise-catalog__card-open-close {
+      display: none; } }
+
+.franchise-catalog__card-open-close-text.closed {
+  display: none; }
+
+.franchise-catalog__list-item.active .franchise-catalog__card-open-close-text.closed {
+  display: block; }
+
+.franchise-catalog__list-item.active .franchise-catalog__card-open-close-text.opened {
+  display: none; }
 
 .franchise-intro {
   position: relative;
