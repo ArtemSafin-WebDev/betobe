@@ -2,7 +2,6 @@
     background: #ebf3ff;
     padding: 8.5rem 0;
 
-
     &--with-bg {
         background-color: var(--primary-color);
         color: white;
@@ -12,7 +11,6 @@
         background-repeat: no-repeat;
         background-position: center;
         background-image: url('../img/contact-bg.jpg');
-
 
         @include breakpoint(mobile) {
             background-image: url('../img/contact-mobile-bg.jpg');
@@ -62,46 +60,49 @@
     }
 }
 
-.franchise-contact__list {
-}
+.franchise-contact__left-col {
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 2rem;
+            line-height: 120%;
 
-.franchise-contact__list-item {
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-left: 2rem;
-    font-size: 2rem;
-    line-height: 120%;
+            &:last-child {
+                margin-bottom: 0;
+            }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                top: 0.8rem;
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 0.8rem;
-        height: 0.8rem;
-        border-radius: 50%;
-        background-color: var(--primary-color);
-        top: 0.8rem;
+                @include breakpoint(mobile) {
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    top: 1rem;
+                }
+            }
 
-        @include breakpoint(mobile) {
-            width: 0.6rem;
-            height: 0.6rem;
-            top: 1rem;
+            @include breakpoint(mobile) {
+                font-size: 1.4rem;
+                line-height: 120%;
+                padding-left: 1.6rem;
+                &::before {
+                    top: 0.4rem;
+                }
+            }
         }
     }
-
-    @include breakpoint(mobile) {
-        font-size: 1.4rem;
-        line-height: 120%;
-        padding-left: 1.6rem;
-        &::before {
-            top: 0.4rem;
-        }
-    }
 }
+
+
 
 .franchise-contact__form {
     background: #ffffff;
@@ -111,7 +112,6 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 3rem;
-
 
     .franchise-contact--with-bg & {
         box-shadow: none;
