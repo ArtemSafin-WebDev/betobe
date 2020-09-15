@@ -117,6 +117,12 @@
     position: relative;
     cursor: pointer;
     user-select: none;
+
+    &:hover {
+        .filters__area-checkbox-text {
+            color: var(--primary-color);
+        }
+    }
 }
 
 .filters__area:not(.show-hidden) .filters__area-checkbox--hidden {

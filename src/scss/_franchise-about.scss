@@ -61,9 +61,7 @@
         color: inherit;
     }
 
-    &:hover {
-        border-color: var(--primary-color);
-    }
+   
 
     @include breakpoint(mobile) {
         padding: 2rem;

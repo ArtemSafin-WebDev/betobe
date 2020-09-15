@@ -2637,6 +2637,8 @@ select:-webkit-autofill:focus {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+  .filters__area-checkbox:hover .filters__area-checkbox-text {
+    color: var(--primary-color); }
 
 .filters__area:not(.show-hidden) .filters__area-checkbox--hidden {
   border: 0;
@@ -4597,8 +4599,6 @@ select:-webkit-autofill:focus {
       font-size: 1.6rem;
       line-height: 2.6rem;
       text-align: right;
-      -webkit-text-decoration-line: underline;
-              text-decoration-line: underline;
       color: var(--primary-color); }
       @media only screen and (max-width: 767px) {
         .franchise-catalog__card-details-table table td {
@@ -5946,8 +5946,6 @@ select:-webkit-autofill:focus {
   transition: border-color 0.2s; }
   .franchise-about__features-card:link, .franchise-about__features-card:visited {
     color: inherit; }
-  .franchise-about__features-card:hover {
-    border-color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
     .franchise-about__features-card {
       padding: 2rem; } }
