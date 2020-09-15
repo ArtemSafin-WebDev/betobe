@@ -309,6 +309,44 @@
                                 Работа с людьми
                             </div>
                         </div>
+                        <div class="franchise-description__competencies-item">
+                            <div class="franchise-description__competencies-item-icon-container">
+                                <img src="img/franchise/marketing.png" alt=""
+                                    class="franchise-description__competencies-item-icon-image">
+                                <div class="franchise-description__competencies-item-amount">
+                                    5
+                                </div>
+                            </div>
+                            <div class="franchise-description__competencies-item-title">
+                                Маркетинг
+                            </div>
+                        </div>
+                        <div class="franchise-description__competencies-item">
+                            <div class="franchise-description__competencies-item-icon-container">
+                                <img src="img/franchise/sales.png" alt=""
+                                    class="franchise-description__competencies-item-icon-image">
+
+                                <div class="franchise-description__competencies-item-amount">
+                                    3
+                                </div>
+                            </div>
+                            <div class="franchise-description__competencies-item-title">
+                                Продажи
+                            </div>
+                        </div>
+                        <div class="franchise-description__competencies-item">
+                            <div class="franchise-description__competencies-item-icon-container">
+                                <img src="img/franchise/reviews.png" alt=""
+                                    class="franchise-description__competencies-item-icon-image">
+
+                                <div class="franchise-description__competencies-item-amount">
+                                    4
+                                </div>
+                            </div>
+                            <div class="franchise-description__competencies-item-title">
+                                Работа с людьми
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="franchise-description__buttons">
@@ -326,26 +364,26 @@
 <section class="sticky-nav js-sticky-nav">
     <div class="container">
         <div class="sticky-nav__row">
-            <div class="sticky-nav__links">
-                <a href="#to-product" class="sticky-nav__link">
+            <div class="sticky-nav__links js-sections-menu">
+                <a href="#to-product" class="sticky-nav__link js-sections-menu-link">
                     продукт
                 </a>
-                <a href="#to-components" class="sticky-nav__link">
+                <a href="#to-components" class="sticky-nav__link js-sections-menu-link">
                     состав франшизы
                 </a>
-                <a href="#to-geography" class="sticky-nav__link">
+                <a href="#to-geography" class="sticky-nav__link js-sections-menu-link">
                     география
                 </a>
-                <a href="#to-financial" class="sticky-nav__link">
+                <a href="#to-financial" class="sticky-nav__link js-sections-menu-link">
                     финансовые условия
                 </a>
-                <a href="#to-reviews" class="sticky-nav__link">
+                <a href="#to-reviews" class="sticky-nav__link js-sections-menu-link">
                     отзывы
                 </a>
-                <a href="#to-faq" class="sticky-nav__link">
+                <a href="#to-faq" class="sticky-nav__link js-sections-menu-link">
                     вопрос-ответ
                 </a>
-                <a href="#to-founders" class="sticky-nav__link">
+                <a href="#to-founders" class="sticky-nav__link js-sections-menu-link">
                     основатель
                 </a>
                 <div class="sticky-nav__more">
@@ -370,7 +408,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="sticky-nav__contact">
+            <a href="#contact-modal" class="sticky-nav__contact js-modal-open">
                 связаться
 
             </a>
@@ -1003,20 +1041,20 @@
                     </ul>
                 </div>
                 <div class="franchise-contact__right-col">
-                    <form action="/" method="POST" class="franchise-contact__form">
+                    <form action="/" method="POST" class="franchise-contact__form" data-need-validation>
                         <div class="franchise-contact__form-group">
-                            <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя">
+                            <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя" required>
                         </div>
                         <div class="franchise-contact__form-group">
-                            <input type="email" class="franchise-contact__form-input" placeholder="Ваш e-mail">
+                            <input type="email" class="franchise-contact__form-input" placeholder="Ваш e-mail" required>
                         </div>
                         <div class="franchise-contact__form-group">
                             <input type="tel" class="franchise-contact__form-input js-phone-input"
-                                placeholder="Телефон">
+                                placeholder="Телефон" data-parsley-phone required>
                         </div>
                         <div class="franchise-contact__form-group">
                             <label class="franchise-contact__form-checkbox">
-                                <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input">
+                                <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input" required>
                                 <span class="franchise-contact__form-checkbox-mark">
 
                                 </span>
@@ -1626,20 +1664,20 @@
                     </ul>
                 </div>
                 <div class="franchise-contact__right-col">
-                    <form action="/" method="POST" class="franchise-contact__form">
+                    <form action="/" method="POST" class="franchise-contact__form" data-need-validation="">
                         <div class="franchise-contact__form-group">
-                            <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя">
+                            <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя" required>
                         </div>
                         <div class="franchise-contact__form-group">
-                            <input type="email" class="franchise-contact__form-input" placeholder="Ваш e-mail">
+                            <input type="email" class="franchise-contact__form-input" placeholder="Ваш e-mail" required>
                         </div>
                         <div class="franchise-contact__form-group">
                             <input type="tel" class="franchise-contact__form-input js-phone-input"
-                                placeholder="Телефон">
+                                placeholder="Телефон" data-parsley-phone required>
                         </div>
                         <div class="franchise-contact__form-group">
                             <label class="franchise-contact__form-checkbox">
-                                <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input">
+                                <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input" required>
                                 <span class="franchise-contact__form-checkbox-mark">
 
                                 </span>

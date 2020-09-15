@@ -1,0 +1,52 @@
+<div class="modals">
+    <div class="modals__modal" id="contact-modal">
+        <div class="modals__modal-content">
+            <button class="modals__modal-close js-modal-close">
+                <svg width="15" height="15" aria-hidden="true" class="icon-cross-straight">
+                    <use xlink:href="#cross-straight"></use>
+                </svg>
+            </button>
+            <h3 class="modals__modal-heading">
+                Покажем и расскажем как мы работаем
+            </h3>
+            <div class="modals__modal-text">
+                <p>
+                    Оставьте ваши контактные данные,и мы свяжемся с вами в течении 20 минут
+                </p>
+            </div>
+            <form action="/" method="POST" class="franchise-contact__form franchise-contact__form--modal"
+                data-need-validation>
+                <div class="franchise-contact__form-group">
+                    <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя" required>
+                </div>
+                <div class="franchise-contact__form-group">
+                    <input type="email" class="franchise-contact__form-input" placeholder="Ваш e-mail" required>
+                </div>
+                <div class="franchise-contact__form-group">
+                    <input type="tel" class="franchise-contact__form-input js-phone-input" placeholder="Телефон"
+                        data-parsley-validation required>
+                </div>
+                <div class="franchise-contact__form-group">
+                    <label class="franchise-contact__form-checkbox">
+                        <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input" required>
+                        <span class="franchise-contact__form-checkbox-mark">
+
+                        </span>
+                        <div class="franchise-contact__form-checkbox-text">
+                            Согласие на обработку персональных данных
+                        </div>
+                    </label>
+                </div>
+                <div class="franchise-contact__form-group">
+                    <textarea name="comment" class="franchise-contact__form-input" placeholder="Ваше имя"
+                        required></textarea>
+                </div>
+                <div class="franchise-contact__form-group">
+                    <button type="submit" class="franchise-contact__form-submit">
+                        Оставить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -23,6 +23,9 @@ import FiltersButtonActivity from './filtersButtonActivity';
 import MediaModals from './mediaModals';
 import FilterDropdowns from './filterDropdowns';
 import FilterRangeInputs from './rangeInputs';
+import Modals from './modals';
+import Validation from './validation';
+import SectionsMenu from './sectionsMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -46,12 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     HowWeWork();
     FaqAccordions();
     BurgerMenu();
-   
+    Validation()
     MediaModals();
     FilterDropdowns();
     FilterRangeInputs();
 
     FiltersButtonActivity();
+    Modals();
+    SectionsMenu();
 });
 
 window.addEventListener('load', function() {

@@ -113,6 +113,22 @@
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 3rem;
 
+
+    &--modal {
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent;
+    }
+
+
+    .parsley-errors-list.filled {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: red;
+        
+    }
+
     .franchise-contact--with-bg & {
         box-shadow: none;
     }
@@ -120,6 +136,10 @@
     @include breakpoint(mobile) {
         padding: 2.4rem;
         grid-gap: 2rem;
+
+        &--modal {
+            padding: 0;
+        }
     }
 }
 
@@ -142,6 +162,12 @@
         padding: 0 2rem;
         height: 5rem;
     }
+}
+
+
+textarea.franchise-contact__form-input {
+    height: 14rem;
+    padding: 1.4rem 3rem;
 }
 
 .franchise-contact__form-checkbox {

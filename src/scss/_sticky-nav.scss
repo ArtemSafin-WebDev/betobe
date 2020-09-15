@@ -65,6 +65,8 @@
         opacity: 0;
     }
 
+
+    &.active-section,
     &:hover {
         color: black;
         &::after {

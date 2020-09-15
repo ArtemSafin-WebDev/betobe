@@ -1279,7 +1279,7 @@ button.swiper-pagination-bullet {
   --gotham: 'Gotham Pro Narrow', sans-serif; }
   @media only screen and (max-width: 767px) {
     :root {
-      --content-padding: 2.6rem; } }
+      --content-padding: 2.2rem; } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -1305,10 +1305,10 @@ html {
       font-size: 5px; } }
   @media only screen and (max-width: 767px) {
     html {
-      font-size: 11px; } }
+      font-size: 10px; } }
   @media only screen and (max-width: 370px) {
     html {
-      font-size: 10px; } }
+      font-size: 9px; } }
 
 body {
   min-width: 320px;
@@ -2192,9 +2192,7 @@ select:-webkit-autofill:focus {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       grid-column: span 2;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
+      margin: -1rem; } }
 
 .page-footer__bottom-nav-link {
   font-weight: bold;
@@ -2217,7 +2215,8 @@ select:-webkit-autofill:focus {
       font-weight: bold;
       font-size: 1rem;
       line-height: 1.2rem;
-      margin-right: 2rem; } }
+      margin-right: 2rem;
+      margin-bottom: 1rem; } }
 
 .page-footer__social {
   display: -webkit-box;
@@ -3626,9 +3625,9 @@ select:-webkit-autofill:focus {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 0; }
-  .sticky-nav__link:hover {
+  .sticky-nav__link.active-section, .sticky-nav__link:hover {
     color: black; }
-    .sticky-nav__link:hover::after {
+    .sticky-nav__link.active-section::after, .sticky-nav__link:hover::after {
       opacity: 1; }
   @media only screen and (max-width: 767px) {
     .sticky-nav__link {
@@ -5746,14 +5745,19 @@ select:-webkit-autofill:focus {
       line-height: 1.2; } }
 
 .franchise-description__competencies-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1.4rem;
+  grid-row-gap: 3rem; }
+  @media only screen and (max-width: 767px) {
+    .franchise-description__competencies-items {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 1rem;
+      grid-row-gap: 2rem;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
 
 .franchise-description__competencies-item {
   display: -webkit-box;
@@ -5775,8 +5779,8 @@ select:-webkit-autofill:focus {
 
 .franchise-description__competencies-item-icon-container {
   position: relative;
-  margin-bottom: 2rem;
-  width: 6.5rem;
+  margin-bottom: 1.4rem;
+  width: 4.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
   .franchise-description__competencies-item-icon-container::after {
@@ -5788,7 +5792,7 @@ select:-webkit-autofill:focus {
     .franchise-description__competencies-item-icon-container {
       width: 3rem;
       margin: 0;
-      margin-right: 1.6rem; } }
+      margin-right: .6rem; } }
 
 .franchise-description__competencies-item-icon-image {
   position: absolute;
@@ -5811,11 +5815,14 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 767px) {
     .franchise-description__competencies-item-title {
       font-size: 1rem;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      font-weight: 400;
+      font-family: 'Roboto', sans-serif;
+      text-align: left; } }
 
 .franchise-description__competencies-item-amount {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -5834,7 +5841,7 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   font-family: var(--gotham);
   background-color: var(--primary-color);
@@ -5847,7 +5854,8 @@ select:-webkit-autofill:focus {
       width: 1.7rem;
       height: 1.7rem;
       font-size: 1rem;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      font-family: 'Roboto', sans-serif; } }
 
 .franchise-description__buttons {
   grid-area: buttons;
@@ -6565,8 +6573,7 @@ select:-webkit-autofill:focus {
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 170%;
-  margin-right: 4.5rem;
-  cursor: pointer; }
+  margin-right: 4.5rem; }
   .franchise-geography__legend-item:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 767px) {
@@ -7116,13 +7123,25 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-gap: 3rem; }
+  .franchise-contact__form--modal {
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    background: transparent; }
+  .franchise-contact__form .parsley-errors-list.filled {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: red; }
   .franchise-contact--with-bg .franchise-contact__form {
     -webkit-box-shadow: none;
             box-shadow: none; }
   @media only screen and (max-width: 767px) {
     .franchise-contact__form {
       padding: 2.4rem;
-      grid-gap: 2rem; } }
+      grid-gap: 2rem; }
+      .franchise-contact__form--modal {
+        padding: 0; } }
 
 .franchise-contact__form-input {
   font-size: 1.8rem;
@@ -7144,6 +7163,10 @@ select:-webkit-autofill:focus {
       font-size: 1.4rem;
       padding: 0 2rem;
       height: 5rem; } }
+
+textarea.franchise-contact__form-input {
+  height: 14rem;
+  padding: 1.4rem 3rem; }
 
 .franchise-contact__form-checkbox {
   display: -webkit-box;
@@ -8606,3 +8629,103 @@ select:-webkit-autofill:focus {
       padding: 0.3rem 0.8rem;
       padding-right: 0.3rem;
       margin-right: 1.8rem; } }
+
+.modals__modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visibility 0s linear .3s;
+  transition: opacity .3s, visibility 0s linear .3s; }
+  .modals__modal::-webkit-scrollbar * {
+    background: transparent; }
+  .modals__modal::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .modals__modal::-webkit-scrollbar {
+    display: none;
+    background-color: transparent; }
+  .modals__modal::-webkit-scrollbar-thumb {
+    background-color: transparent; }
+  .modals__modal.shown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
+
+.modals__modal-content {
+  background-color: #fff;
+  color: black;
+  max-width: 54.4rem;
+  margin: auto;
+  padding: 6rem;
+  position: relative;
+  border-radius: 1rem;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-content {
+      max-width: none;
+      border-radius: .8rem;
+      padding: 2rem; } }
+
+.modals__modal-close {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  color: black;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .modals__modal-close svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block; }
+  .modals__modal-close:hover {
+    color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-close {
+      position: static;
+      margin-left: auto;
+      margin-bottom: 1.2rem; } }
+
+.modals__modal-heading {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 120%;
+  margin-bottom: 1.2rem; }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-heading {
+      font-size: 2.2rem; } }
+
+.modals__modal-text {
+  font-size: 2rem;
+  line-height: 120%;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-text {
+      font-size: 1.6rem;
+      margin-bottom: 2rem; } }
