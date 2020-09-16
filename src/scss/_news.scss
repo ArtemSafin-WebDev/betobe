@@ -333,6 +333,12 @@
     font-size: 2rem;
     line-height: 150%;
 
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.4;

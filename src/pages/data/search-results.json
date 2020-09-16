@@ -1,0 +1,13 @@
+{
+    "title": "Главная - Betobe",
+    "posts": [
+        {
+            "id": 1,
+            "name": "First post"
+        },
+        {
+            "id": 2,
+            "name": "Second post"
+        }
+    ]
+}
