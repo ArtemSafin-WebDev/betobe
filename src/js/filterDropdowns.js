@@ -7,11 +7,14 @@ export default function FilterDropdowns() {
         btn.addEventListener('click', event => {
             event.preventDefault();
 
-            elements.forEach(element => element.classList.remove('active'))
+            
 
             if (!element.classList.contains('active')) {
+                elements.forEach(element => element.classList.remove('active'))
                 element.classList.add('active');
+                
             } else {
+                elements.forEach(element => element.classList.remove('active'))
                 element.classList.remove('active');
             }
         });

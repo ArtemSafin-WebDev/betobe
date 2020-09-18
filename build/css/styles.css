@@ -2823,6 +2823,22 @@ select:-webkit-autofill:focus {
   .filters__select .choices__list--dropdown .choices__item--selectable {
     padding-right: 2rem; } }
 
+.filters__select-group-scroll-wrapper {
+  max-height: 20rem;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
+  .filters__select-group-scroll-wrapper::-webkit-scrollbar {
+    background-color: white;
+    width: 0.6rem; }
+  .filters__select-group-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); }
+  .filters__select-group-scroll-wrapper::-webkit-scrollbar-button {
+    display: none; }
+  .filters__select-group-scroll-wrapper::-webkit-scrollbar-track {
+    background-color: #f5f5f5; }
+
 .filters__select-group {
   position: relative; }
 
@@ -3539,8 +3555,8 @@ select:-webkit-autofill:focus {
     background: #3384fe;
     border-radius: 0.2rem;
     opacity: 0;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s; }
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
 
 .filters__select-group-checkbox-text {
   font-size: 1.6rem;
