@@ -1,8 +1,14 @@
 .franchise-profit {
-    padding: 5rem 0;
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 10.6rem;
+    border-radius: 1.2rem;
 
     @include breakpoint(mobile) {
-        padding: 3rem 0;
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
     }
 }
 
@@ -28,7 +34,6 @@
     }
 }
 
-
 .franchise-profit__slider {
     @include breakpoint(mobile) {
         position: relative;
@@ -51,7 +56,6 @@
     align-self: center;
 }
 
-
 .franchise-profit__card-right-col {
     @include breakpoint(mobile) {
         order: -1;
@@ -73,6 +77,7 @@
 .franchise-profit__card-text {
     font-size: 2rem;
     line-height: 120%;
+    margin-bottom: 3rem;
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -90,8 +95,12 @@
     top: 50%;
     transform: translateY(-50%);
     color: black;
-    transition: color 0.2s, opacity 0.2s;
+    transition: color 0.2s, background-color .2s, opacity 0.2s;
     z-index: 60;
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: #EDF5FF;
+    border-radius: 50%;
     &--prev {
         left: 0;
     }
@@ -103,9 +112,13 @@
         width: 1.1rem;
         height: 1.8rem;
         display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
         @include breakpoint(mobile) {
-            width: .7rem;
+            width: 0.7rem;
             height: 1.2rem;
             position: absolute;
             left: 50%;
@@ -116,7 +129,8 @@
 
     &:not(.swiper-button-disabled) {
         &:hover {
-            color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: white;
         }
     }
 
@@ -125,22 +139,51 @@
         opacity: 0.3;
     }
 
-
     @include breakpoint(mobile) {
         position: absolute;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        background: rgba(white, .9);
+        background: rgba(white, 0.9);
         transform: none;
         top: 10.5rem;
         &--prev {
             left: 1.3rem;
         }
 
-
         &--next {
             right: 1.3rem;
         }
+    }
+}
+
+
+
+.franchise-profit__card-link {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.3rem 2.6rem;
+    border-radius: 0.4rem;
+    display: inline-flex;
+    transition: background-color 0.2s;
+  
+    align-self: flex-start;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: black;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 0;
+        
     }
 }

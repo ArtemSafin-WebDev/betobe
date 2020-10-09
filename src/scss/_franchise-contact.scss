@@ -2,6 +2,22 @@
     background: #ebf3ff;
     padding: 8.5rem 0;
 
+    &--block {
+        background-color: #fff;
+        margin: 3.4rem;
+        padding-top: 10rem;
+        padding-bottom: 8.6rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        position: relative;
+
+        @include breakpoint(mobile) {
+            margin: 2rem 0;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+    }
+
     &--with-bg {
         background-color: var(--primary-color);
         color: white;
@@ -53,6 +69,17 @@
     line-height: 120%;
     margin-bottom: 4rem;
 
+    p {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 120%;
@@ -61,7 +88,20 @@
 }
 
 .franchise-contact__left-col {
+    font-size: 2rem;
+    line-height: 120%;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 0;
+    }
     ul {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
         li {
             margin-bottom: 1.5rem;
             position: relative;
@@ -90,6 +130,12 @@
                 }
             }
 
+            .franchise-contact--white-markers & {
+                &::before {
+                    background-color: #fff;
+                }
+            }
+
             @include breakpoint(mobile) {
                 font-size: 1.4rem;
                 line-height: 120%;
@@ -102,8 +148,6 @@
     }
 }
 
-
-
 .franchise-contact__form {
     background: #ffffff;
     box-shadow: 0px 2rem 3rem rgba(215, 227, 245, 0.5);
@@ -113,7 +157,6 @@
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 3rem;
 
-
     &--modal {
         padding: 0;
         box-shadow: none;
@@ -121,12 +164,10 @@
         background: transparent;
     }
 
-
     .parsley-errors-list.filled {
         margin-top: 1rem;
         font-size: 1.2rem;
-        color: red;
-        
+        color:#f22307;
     }
 
     .franchise-contact--with-bg & {
@@ -164,7 +205,6 @@
     }
 }
 
-
 textarea.franchise-contact__form-input {
     height: 14rem;
     padding: 1.4rem 3rem;
@@ -197,6 +237,9 @@ textarea.franchise-contact__form-input {
     border-radius: 0.4rem;
     margin-right: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.2s;
+    
+    
     &::before {
         content: '';
         position: absolute;

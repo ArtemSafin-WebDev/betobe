@@ -32,19 +32,36 @@ export default function SelectorRing() {
 
                         const input = inputs.find(element => element.name === categoryName);
 
-                        if (input) {
-                            input.value = steps.length - stepIndex;
-
-                            const event = new Event('change');
-
-                            input.dispatchEvent(event);
-                        }
-
                         const name = categoriesNames.find(element => element.getAttribute('data-cat') === categoryName);
 
                         if (name) name.classList.add('active');
 
-                        console.log(`Rating in category ${categoryName} is ${steps.length - stepIndex}`);
+                        if (!input) return;
+                        const initialInputValue = input.value;
+                        input.value = steps.length - stepIndex;
+
+                        console.log(`Initial value was ${initialInputValue}, now value is ${input.value}`)
+
+                        if (initialInputValue === input.value) {
+                            steps.forEach(step => {
+                                step.classList.remove('checked');
+                                step.classList.remove('preview-checked');
+                                step.classList.add('preview-unchecked');
+                            });
+
+                            input.value = 0;
+
+                            if (name) name.classList.remove('active');
+                        }
+
+                    
+                        const changeEvent = new Event('change');
+
+                        input.dispatchEvent(changeEvent);
+
+                        console.log(`Rating in category ${categoryName} is ${input.value}`);
+
+                        
                     });
                     step.addEventListener('mouseenter', event => {
                         event.preventDefault();

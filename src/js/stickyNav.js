@@ -7,9 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function StickyNav() {
 
-    if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
-        return;
-    }
+    // if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+    //     return;
+    // }
     const elements = Array.from(document.querySelectorAll('.js-sticky-nav'));
 
     elements.forEach(element => {
@@ -21,7 +21,8 @@ export default function StickyNav() {
             pin: true,
             pinSpacing: false,
             endTrigger: 'html',
-            end: 'bottom top'
+            end: 'bottom top',
+            toggleClass: "sticky"
         });
 
         window.stickyNav = {

@@ -31,6 +31,17 @@ export default function PopularsSlider() {
                 }
             });
 
+            element.addEventListener('mouseenter', () => {
+                slider.autoplay.stop();
+               
+               
+            })
+            element.addEventListener('mouseleave', () => {
+                if (autoDisabled) return;
+                slider.autoplay.start();
+               
+            })
+
             const prevArrow = element.querySelector('.populars__slider-arrow--prev');
             const nextArrow = element.querySelector('.populars__slider-arrow--next');
 

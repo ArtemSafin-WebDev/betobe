@@ -5,7 +5,6 @@
     padding: 0 var(--content-padding);
 }
 
-
 .inner-container {
     max-width: 112rem;
     margin: 0 auto;
@@ -20,4 +19,38 @@
 
 .page-main {
     flex-grow: 1;
+}
+
+.franchise-constructor-blocks {
+    background: #ebf3ff;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.franchise-block-type-heading {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    letter-spacing: 0.08em;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 120%;
+        margin-bottom: 2.8rem;
+    }
+}
+
+.franchise-block-main-heading {
+    font-weight: bold;
+    font-size: 3.3rem;
+    line-height: 120%;
+    margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 3rem;
+    }
 }

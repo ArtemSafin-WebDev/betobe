@@ -40,27 +40,12 @@ export default function CatalogAccordions() {
             const handler = instance.handler;
 
             element.addEventListener('click', event => {
-                console.log('Event', event);
-                // if (
-                //     event.target.matches('.franchise-catalog__card-title-heading') ||
-                //     event.target.closest('.franchise-catalog__card-title-heading')
-                // ) {
-                //     return;
-                // } else if (event.target.matches('.franchise-catalog__card-details') || event.target.closest('.franchise-catalog__card-details')) {
-                //     return;
-                // } else if (event.target.matches('.franchise-catalog__card-actions') || event.target.closest('.franchise-catalog__card-actions')) {
-                //     return;
-                // } else if (event.target.matches('.franchise-catalog__card-like') || event.target.closest('.franchise-catalog__card-like')) {
-                //     return;
-                // } else {
+                
+               
 
-                //     event.preventDefault();
-                //     handler();
-                // }
-
-                const clickInsideDescription =
-                    event.target.matches('.franchise-catalog__card-title-description') ||
-                    event.target.closest('.franchise-catalog__card-title-description');
+                // const clickInsideDescription =
+                //     event.target.matches('.franchise-catalog__card-title-description') ||
+                //     event.target.closest('.franchise-catalog__card-title-description');
                 const clickInsideBottomButton =
                     event.target.matches('.franchise-catalog__card-open-close') || event.target.closest('.franchise-catalog__card-open-close');
 
@@ -68,7 +53,7 @@ export default function CatalogAccordions() {
                     event.target.matches('.franchise-catalog__card-actions-accordion-toggle') ||
                     event.target.closest('.franchise-catalog__card-actions-accordion-toggle');
 
-                if (clickInsideDescription || clickInsideBottomButton || clickInsideBurger) {
+                if (clickInsideBottomButton || clickInsideBurger) {
                     event.preventDefault();
                     handler();
                 }

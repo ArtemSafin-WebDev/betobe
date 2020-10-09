@@ -1,24 +1,51 @@
 .franchise-catalog {
-    padding-top: 8.4rem;
+    padding-top: 2rem;
     padding-bottom: 8.4rem;
 
     @include breakpoint(mobile) {
-        padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
     }
 }
 
 .franchise-catalog__list-item {
     padding-bottom: 3.2rem;
     padding-top: 3.2rem;
-    border-bottom: 1px solid#D5D5D5;
+    border-top: 1px solid#D5D5D5;
+    position: relative;
 
-    &:first-child {
-        padding-top: 0;
+    transition: border-color 0.2s;
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc((100vw - 100%) / 2 * -1);
+        top: 0;
+        width: 100vw;
+        bottom: 0;
+        transition: background-color 0.2s, opacity 0.2s;
+        z-index: -1;
+        background: #f1f7ff;
+
+        opacity: 0;
+        pointer-events: none;
     }
-    &:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
+    &:first-child {
+        border-top: none;
+    }
+
+    .no-touch &:not(.active):hover {
+        border-color: transparent;
+
+        & + .franchise-catalog__list-item {
+            border-color: transparent;
+        }
+        &::before {
+            opacity: 1;
+        }
+
+        .franchise-catalog__card-title-heading {
+            color: var(--primary-color);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -167,6 +194,7 @@
         line-height: 120%;
         font-weight: 400;
         grid-column: span 2;
+        margin-bottom: 0;
     }
 }
 
@@ -229,7 +257,7 @@
             padding-right: 2rem;
             font-weight: 400;
             @include breakpoint(mobile) {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 line-height: 1.8rem;
                 display: flex;
                 align-items: baseline;
@@ -252,7 +280,7 @@
             @include breakpoint(mobile) {
                 text-align: right;
                 font-weight: 500;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 line-height: 2.4rem;
             }
         }
@@ -269,9 +297,13 @@
 .franchise-catalog__card-specs-ratings {
     display: flex;
     margin-left: 2rem;
+    flex-direction: column;
+    width: 30rem;
+
     @include breakpoint(mobile) {
         margin: 0;
-        justify-content: space-between;
+        width: 100%;
+        // justify-content: space-between;
         // display: grid;
         // grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -491,6 +523,21 @@
 
 .franchise-catalog__card-like {
     margin: 0 auto;
+    color: white;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover,
+    &.active {
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+    }
     svg {
         display: block;
         width: 2.2rem;
@@ -514,7 +561,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 2rem;
     transition: background-color 0.2s, color 0.2s;
     &:link,
     &:visited {
@@ -783,7 +830,7 @@
             font-size: 1.6rem;
             line-height: 2.6rem;
             text-align: right;
-            
+
             color: var(--primary-color);
 
             @include breakpoint(mobile) {
@@ -1157,7 +1204,7 @@
         height: 0.6rem;
         flex-shrink: 0;
         margin-left: 1.1rem;
-        transition: transform .3s;
+        transition: transform 0.3s;
     }
 
     .franchise-catalog__list-item.active & svg {
@@ -1168,7 +1215,6 @@
         display: none;
     }
 }
-
 
 .franchise-catalog__card-open-close-text {
     &.closed {
@@ -1183,5 +1229,91 @@
             display: none;
         }
     }
+}
 
+.franchise-catalog__card-specs-ratings-heading {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #818181;
+    margin-bottom: 0.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+}
+
+.franchise-catalog__card-specs-ratings-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        padding-right: 1.5rem;
+        @include breakpoint(mobile) {
+            padding-right: 1rem;
+        }
+    }
+
+    th,
+    td {
+        font-weight: 400;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    td {
+        width: 100%;
+    }
+}
+
+.franchise-catalog__card-specs-ratings-progress-text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    white-space: nowrap;
+
+    .franchise-description__competencies & {
+        font-weight: 400;
+
+        @include breakpoint(mobile) {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.9rem;
+        }
+    }
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
+
+.franchise-catalog__card-specs-ratings-progress-bar {
+    border-radius: 0.3rem;
+    background: #ebf3ff;
+    width: 100%;
+    height: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0.2rem;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% * var(--skill, 1));
+        height: 100%;
+        background-color: var(--primary-color);
+        transition: transform 0.4s;
+        border-radius: 0.3rem;
+        transform-origin: left center;
+    }
+
+    @include breakpoint(mobile) {
+        height: 0.4rem;
+        width: 25rem;
+    }
 }

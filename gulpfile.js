@@ -51,7 +51,7 @@ gulp.task('handlebars', function () {
                 path.extname = '.html';
             })
         )
-        .pipe(prettier())
+       
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });

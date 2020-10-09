@@ -1,12 +1,13 @@
 .sticky-nav {
-    border-bottom: 1px solid #d5d5d5;
     background-color: #fff;
     position: relative;
     z-index: 100;
+    transition: box-shadow .2s;
+   
 
-    // @include breakpoint(mobile) {
-    //     display: none;
-    // }
+    &.sticky {
+        box-shadow: 0 0 1.5rem rgba(black, .15);
+    }
 }
 
 .sticky-nav__row {
@@ -65,9 +66,8 @@
         opacity: 0;
     }
 
-
     &.active-section,
-    &:hover {
+    .no-touch &:hover {
         color: black;
         &::after {
             opacity: 1;
@@ -78,7 +78,7 @@
         font-weight: bold;
         font-size: 1rem;
         line-height: 120%;
-       
+
         white-space: nowrap;
         padding: 1.5rem 0.8rem;
         margin-right: 1.5rem;
@@ -201,23 +201,20 @@
 
     @include breakpoint(mobile) {
         margin: 0;
-        
-       
-       
+
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.015em;
-       
+
         color: rgba(black, 0.5);
         transition: color 0.2s;
         position: relative;
-      
+
         font-weight: bold;
         font-size: 1rem;
         line-height: 120%;
-       
-        white-space: nowrap;
 
+        white-space: nowrap;
 
         padding: 1.5rem 0.8rem;
         margin-right: 1.5rem;

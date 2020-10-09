@@ -1,10 +1,15 @@
 .franchise-about {
-    padding-top: 6.2rem;
-    padding-bottom: 6.2rem;
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 10.6rem;
+    border-radius: 1.2rem;
+
 
     @include breakpoint(mobile) {
-        padding: 3.2rem 0;
-        padding-bottom: 1.5rem;
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
     }
 }
 
@@ -40,7 +45,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 3.2rem;
-    margin-bottom: 5.2rem;
+    margin-bottom: 5.6rem;
 
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -53,15 +58,14 @@
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    border: 1px solid #d4d4d4;
+    // border: 1px solid #d4d4d4;
     border-radius: 0.4rem;
+    box-shadow: 0px 0.4rem 2.5rem #efefef;
     transition: border-color 0.2s;
     &:link,
     &:visited {
         color: inherit;
     }
-
-   
 
     @include breakpoint(mobile) {
         padding: 2rem;
@@ -97,7 +101,7 @@
 }
 
 .franchise-about__features-card-text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 120%;
 
     @include breakpoint(mobile) {
@@ -109,6 +113,8 @@
 .franchise-about__text-content {
     font-size: 2rem;
     line-height: 120%;
+    max-width: 90rem;
+    margin-bottom: 5.5rem;
 
     p {
         margin-bottom: 1.5rem;
@@ -120,5 +126,6 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 120%;
+        margin-bottom: 2rem;
     }
 }
