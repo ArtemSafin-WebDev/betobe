@@ -1,7 +1,7 @@
 .franchise-contact {
     background: #ebf3ff;
     padding: 8.5rem 0;
-   
+
     position: relative;
     z-index: 1;
 
@@ -55,9 +55,9 @@
 
 .franchise-contact__heading {
     font-weight: bold;
-    font-size: 4.6rem;
+    font-size: 3.3rem;
     line-height: 120%;
-    margin-bottom: 4rem;
+    margin-bottom: 5.5rem;
 
     @include breakpoint(mobile) {
         font-weight: bold;
@@ -73,7 +73,7 @@
     margin-bottom: 4rem;
 
     p {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         &:last-child {
             margin-bottom: 0;
         }
@@ -170,7 +170,7 @@
     .parsley-errors-list.filled {
         margin-top: 1rem;
         font-size: 1.2rem;
-        color:#f22307;
+        color: #f22307;
     }
 
     .franchise-contact--with-bg & {
@@ -241,8 +241,7 @@ textarea.franchise-contact__form-input {
     margin-right: 1.2rem;
     cursor: pointer;
     transition: background-color 0.2s;
-    
-    
+
     &::before {
         content: '';
         position: absolute;

@@ -7676,9 +7676,9 @@ select:-webkit-autofill:focus {
 
 .franchise-contact__heading {
   font-weight: bold;
-  font-size: 4.6rem;
+  font-size: 3.3rem;
   line-height: 120%;
-  margin-bottom: 4rem; }
+  margin-bottom: 5.5rem; }
   @media only screen and (max-width: 767px) {
     .franchise-contact__heading {
       font-weight: bold;
@@ -7691,7 +7691,7 @@ select:-webkit-autofill:focus {
   line-height: 120%;
   margin-bottom: 4rem; }
   .franchise-contact__text p {
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
     .franchise-contact__text p:last-child {
       margin-bottom: 0; }
   .franchise-contact__text:last-child {
