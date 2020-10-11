@@ -1,25 +1,19 @@
 .franchise-reviews {
-    padding-top: 8.4rem;
-    padding-bottom: 4rem;
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 10.6rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
 
     @include breakpoint(mobile) {
-        padding: 3rem 0;
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
     }
 }
 
-.franchise-reviews__heading {
-    font-weight: bold;
-    font-size: 4.6rem;
-    line-height: 120%;
-    margin-bottom: 4rem;
 
-    @include breakpoint(mobile) {
-        font-weight: bold;
-        font-size: 2.2rem;
-        line-height: 120%;
-        margin-bottom: 2rem;
-    }
-}
 
 .franchise-reviews__text {
     font-size: 2rem;
@@ -29,6 +23,7 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 120%;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -257,5 +252,14 @@
         width: 3rem;
         height: 3rem;
         transform: none; top: 8rem;
+    }
+}
+
+
+
+.franchise-reviews__heading {
+    margin-bottom: 5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
     }
 }

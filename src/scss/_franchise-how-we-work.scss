@@ -1,9 +1,15 @@
 .franchise-how-we-work {
-    padding: 5rem 0;
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 10.6rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
 
     @include breakpoint(mobile) {
-        padding: 3rem 0;
-        padding-top: 1.5rem;
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
     }
 }
 
@@ -22,6 +28,10 @@
 }
 
 .franchise-how-we-work__slider {
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
     .swiper-slide {
         @include breakpointMF(small-tablet) {
             display: block;

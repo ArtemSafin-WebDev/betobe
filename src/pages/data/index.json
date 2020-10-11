@@ -1,5 +1,6 @@
 {
     "title": "Главная - Betobe",
+    "hideFooterBar": true,
     "posts": [
         {
             "id": 1,

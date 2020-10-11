@@ -1,6 +1,9 @@
 .franchise-contact {
     background: #ebf3ff;
     padding: 8.5rem 0;
+   
+    position: relative;
+    z-index: 1;
 
     &--block {
         background-color: #fff;
@@ -217,9 +220,9 @@ textarea.franchise-contact__form-input {
     line-height: 1.2;
     color: #8a8a8a;
     user-select: none;
-
+    cursor: pointer;
     @include breakpoint(mobile) {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.2;
     }
 }

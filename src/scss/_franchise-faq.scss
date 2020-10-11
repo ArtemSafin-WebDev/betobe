@@ -1,8 +1,15 @@
 .franchise-faq {
-    padding: 5rem 0;
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 10.6rem;
+    border-radius: 1.2rem;
+
 
     @include breakpoint(mobile) {
-        padding: 3rem 0;
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
     }
 }
 

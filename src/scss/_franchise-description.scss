@@ -39,7 +39,7 @@
         @include breakpoint(mobile) {
             width: 1.6rem;
             height: 1.6rem;
-            margin-left: 0.8rem;
+           
         }
     }
 
@@ -197,6 +197,13 @@
             flex-grow: 1;
             margin: 0 1rem;
             background: #f0f0f0;
+        }
+    }
+
+
+    a {
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -580,7 +587,7 @@
 
         &:hover {
             background-color: #1d69db;
-            background-color: #5c9dff;
+         
         }
     }
 

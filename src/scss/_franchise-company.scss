@@ -178,35 +178,11 @@
         &:visited {
             color: var(--primary-color);
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
-.franchise-company__link {
-    display: inline-flex;
-    padding: 1.5rem 3.2rem;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 1.2;
-    color: white;
-    background-color: var(--primary-color);
-    transition: color 0.2s, background-color 0.2s;
-    border-radius: 0.4rem;
-    &:link,
-    &:visited {
-        color: white;
-    }
 
-    &:hover {
-        background-color: black;
-    }
-
-    @include breakpoint(mobile) {
-        font-weight: 500;
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-        padding: 1.3rem 2.4rem;
-        text-align: center;
-        width: 100%;
-        justify-content: center;
-    }
-}

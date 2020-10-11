@@ -10,6 +10,44 @@
     }
 }
 
+
+.sticky-nav__logo-container {
+    width: 5.6rem;
+    position: absolute;
+    left: var(--content-padding);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s, visibility 0s linear .3s;
+    opacity: 0;
+    visibility: hidden;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    .sticky-nav.sticky & {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s, visibility .3s;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+
+.sticky-nav__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitContain();
+}
+
 .sticky-nav__row {
     display: flex;
     align-items: center;
@@ -237,6 +275,8 @@
             opacity: 0;
         }
 
+
+        &.active-section,
         &:hover {
             color: black;
             &::after {

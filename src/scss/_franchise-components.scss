@@ -126,28 +126,4 @@
     }
 }
 
-.franchise-components__get-plan {
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1.3rem 2.6rem;
-    border-radius: 0.4rem;
-    display: inline-flex;
-    transition: background-color .2s;
-    &:link,
-    &:visited {
-        color: white;
-    }
 
-    &:hover {
-        background-color: black;
-    }
-
-
-    @include breakpoint(mobile) {
-        padding: 1rem 2rem;
-        font-size: 1.4rem;
-        line-height: 1.2;
-    }
-}

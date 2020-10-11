@@ -12,21 +12,13 @@ export default function CatalogAccordions() {
         const showMoreBtns = Array.from(document.querySelectorAll('.franchise-catalog__card-details-btn'));
 
         showMoreBtns.forEach(btn => {
-            const originalText = btn.textContent;
-            let clicked = false;
+           
             btn.addEventListener('click', event => {
                 event.preventDefault();
-                clicked = !clicked;
-
-                btn.textContent = clicked ? 'Скрыть' : originalText;
             });
         });
 
-        // catalogCards.forEach(card => card.addEventListener('click', event => {
-        //     if (event.target.matches('.franchise-catalog__card-specs-block') || event.target.closest('.franchise-catalog__card-specs-block')) {
-        //         event.preventDefault();
-        //     }
-        // }))
+        
     } else {
         const accordions = accordionsFactory(catalogCards);
         accordions.init();

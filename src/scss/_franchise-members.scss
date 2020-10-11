@@ -1,0 +1,122 @@
+.franchise-members {
+    background-color: #fff;
+    margin: 3.4rem;
+    padding-top: 7.2rem;
+    padding-bottom: 7.6rem;
+    border-radius: 1.2rem;
+
+    @include breakpoint(mobile) {
+        margin: 2rem 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+    }
+}
+
+.franchise-members__list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 4.2rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2.5rem;
+        grid-row-gap: 1.8rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0 1.8rem;
+    }
+}
+
+.franchise-members__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.franchise-members__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        .franchise-members__card-image {
+            transform: translateZ(0) scale(1.04);
+        }
+    }
+}
+
+.franchise-members__card-image-container {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    width: 100%;
+    overflow: hidden;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.franchise-members__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .4s;
+    @include objectFitCover();
+}
+
+.franchise-members__card-title {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
+}
+
+.franchise-members__card-more-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateZ(0) translate(-50%, -50%);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.9rem;
+    line-height: 120%;
+    width: 9.2rem;
+    height: 9.2rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform .3s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        transform: translateZ(0) translate(-50%, -50%) scale(1.03);
+    }
+
+    @include breakpoint(mobile) {
+        width: 4.4rem;
+        height: 4.4rem;
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+}
