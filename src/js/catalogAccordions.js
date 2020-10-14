@@ -2,42 +2,35 @@ import { MOBILE_WIDTH } from './constants';
 import accordionsFactory from './accordionsFactory';
 
 export default function CatalogAccordions() {
-    const catalogCards = Array.from(document.querySelectorAll('.franchise-catalog__list-item'));
+    let factory = null;
+    const initializeCatalogCards = () => {
+        if (factory) {
+            factory.destroy();
+            factory = null;
+        }
+        factory = accordionsFactory(Array.from(document.querySelectorAll('.franchise-catalog__list-item')));
 
-    if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
-        console.log(catalogCards);
+        factory.init();
+    };
 
-        accordionsFactory(catalogCards).init();
+    window.initializeCatalogCards = initializeCatalogCards;
 
-        const showMoreBtns = Array.from(document.querySelectorAll('.franchise-catalog__card-details-btn'));
+    initializeCatalogCards();
 
-        showMoreBtns.forEach(btn => {
-           
-            btn.addEventListener('click', event => {
-                event.preventDefault();
-            });
-        });
+    if (!window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+        document.addEventListener('click', event => {
+            if (event.target.matches('.franchise-catalog__list-item') || event.target.closest('.franchise-catalog__list-item')) {
+                const item = event.target.matches('.franchise-catalog__list-item')
+                    ? event.target
+                    : event.target.closest('.franchise-catalog__list-item');
 
-        
-    } else {
-        const accordions = accordionsFactory(catalogCards);
-        accordions.init();
+                const accordionBtn = item.querySelector('.js-accordion-btn');
 
-        const instances = accordions.getInstances();
+                if (!accordionBtn) {
+                    console.warn('No accordion btn');
+                    return;
+                }
 
-        console.log('Instances', instances);
-
-        instances.forEach(instance => {
-            const element = instance.element;
-            const handler = instance.handler;
-
-            element.addEventListener('click', event => {
-                
-               
-
-                // const clickInsideDescription =
-                //     event.target.matches('.franchise-catalog__card-title-description') ||
-                //     event.target.closest('.franchise-catalog__card-title-description');
                 const clickInsideBottomButton =
                     event.target.matches('.franchise-catalog__card-open-close') || event.target.closest('.franchise-catalog__card-open-close');
 
@@ -47,9 +40,11 @@ export default function CatalogAccordions() {
 
                 if (clickInsideBottomButton || clickInsideBurger) {
                     event.preventDefault();
-                    handler();
+                    accordionBtn.click();
                 }
-            });
+            }
         });
     }
+
+    
 }

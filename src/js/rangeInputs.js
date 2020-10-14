@@ -27,8 +27,16 @@ export default function FilterRangeInputs() {
             });
         });
 
+
+        const startValue = inputs[0].value.replace(/\s/g, '').trim() ? parseFloat(inputs[0].value.replace(/\s/g, '').trim()) : '';
+        const endValue = inputs[1].value.replace(/\s/g, '').trim() ? parseFloat(inputs[1].value.replace(/\s/g, '').trim()) : '';
+
+        console.log({
+            startValue, endValue
+        })
+
         noUiSlider.create(rangeSliderElement, {
-            start: [min, max],
+            start: [startValue ? startValue : min, endValue ? endValue : max],
             connect: true,
             range: {
                 min,

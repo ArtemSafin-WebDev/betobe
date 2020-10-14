@@ -14,17 +14,17 @@ export default function FiltersButtonActivity() {
             input.addEventListener('change', () => {
                 const newFormData = $(filtersForm).serialize();
 
-                console.log('Old form data', initialFormData);
-                console.log('New form data', newFormData);
+                // console.log('Old form data', initialFormData);
+                // console.log('New form data', newFormData);
 
                 if (initialFormData === newFormData) {
 
-                    console.log('Initial form data equal to the new form data')
+                    // console.log('Initial form data equal to the new form data')
                   
                     submitBtn.setAttribute('disabled', '');
                 } else {
 
-                    console.log('Initial form data not equal to the new form data')
+                    // console.log('Initial form data not equal to the new form data')
                     submitBtn.removeAttribute('disabled');
                 }
 

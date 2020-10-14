@@ -17,6 +17,26 @@ export default function SelectorRing() {
             categories.forEach(category => {
                 const steps = Array.from(category.querySelectorAll('path'));
 
+                const categoryName = category.getAttribute('data-cat');
+
+                const input = inputs.find(element => element.name === categoryName);
+
+                const name = categoriesNames.find(element => element.getAttribute('data-cat') === categoryName);
+
+
+                const initialInputValue = input.value.trim() ? parseInt(input.value.trim(), 10) : 0;
+
+                if (input.value.trim() && initialInputValue !== 0) {
+                    
+                    steps.forEach((step, stepIndex) => {
+                        if (stepIndex >= (steps.length - initialInputValue)) {
+                            step.classList.add('checked');
+                        } 
+                    });
+
+                    if (name) name.classList.add('active');
+                }
+
                 steps.forEach((step, stepIndex) => {
                     step.addEventListener('click', event => {
                         event.preventDefault();
@@ -28,19 +48,13 @@ export default function SelectorRing() {
                             }
                         });
 
-                        const categoryName = category.getAttribute('data-cat');
-
-                        const input = inputs.find(element => element.name === categoryName);
-
-                        const name = categoriesNames.find(element => element.getAttribute('data-cat') === categoryName);
-
                         if (name) name.classList.add('active');
 
                         if (!input) return;
                         const initialInputValue = input.value;
                         input.value = steps.length - stepIndex;
 
-                        console.log(`Initial value was ${initialInputValue}, now value is ${input.value}`)
+                        console.log(`Initial value was ${initialInputValue}, now value is ${input.value}`);
 
                         if (initialInputValue === input.value) {
                             steps.forEach(step => {
@@ -54,14 +68,11 @@ export default function SelectorRing() {
                             if (name) name.classList.remove('active');
                         }
 
-                    
                         const changeEvent = new Event('change');
 
                         input.dispatchEvent(changeEvent);
 
                         console.log(`Rating in category ${categoryName} is ${input.value}`);
-
-                        
                     });
                     step.addEventListener('mouseenter', event => {
                         event.preventDefault();

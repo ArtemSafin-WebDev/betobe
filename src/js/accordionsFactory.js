@@ -1,4 +1,4 @@
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 let animating = false;
 
@@ -34,11 +34,12 @@ function closeAccordeon(element) {
 }
 
 export default function(accordionElements, openFirst = false) {
-    const accordionInstances = [];
+    let accordionInstances = [];
     let initialized = false;
 
     function init() {
         accordionElements.forEach(element => {
+          
             const btns = Array.from(element.querySelectorAll('.js-accordion-btn'));
             const content = element.querySelector('.js-accordion-content');
 
@@ -47,9 +48,7 @@ export default function(accordionElements, openFirst = false) {
                 return;
             }
 
-            console.log('Btns', btns)
-            console.log('Content', content)
-
+            
             const handler = function(event) {
                 
                 if (animating) return;
