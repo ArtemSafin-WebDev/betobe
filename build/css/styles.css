@@ -6594,7 +6594,7 @@ select:-webkit-autofill:focus {
   height: 100%; }
   .franchise-mosaic__photo-link:link, .franchise-mosaic__photo-link:visited {
     color: white; }
-  .franchise-mosaic__photo-link::after {
+  .franchise-mosaic__photo-link--with-overlay::after {
     content: '';
     position: absolute;
     left: 0;
