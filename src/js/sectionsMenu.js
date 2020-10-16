@@ -5,6 +5,8 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function SectionsMenu() {
+
+    
     const elements = Array.from(document.querySelectorAll('.js-sections-menu'));
 
     elements.forEach(element => {

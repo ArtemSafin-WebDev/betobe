@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     FiltersButtonActivity();
     Modals();
-    SectionsMenu();
+    
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    SectionsMenu();
 })

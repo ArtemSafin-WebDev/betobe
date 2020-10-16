@@ -6594,6 +6594,16 @@ select:-webkit-autofill:focus {
   height: 100%; }
   .franchise-mosaic__photo-link:link, .franchise-mosaic__photo-link:visited {
     color: white; }
+  .franchise-mosaic__photo-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.42)), to(rgba(0, 0, 0, 0.42)));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)); }
   .franchise-mosaic__photo-link:hover .franchise-mosaic__photo {
     -webkit-transform: scale(1.015);
             transform: scale(1.015); }
@@ -6650,7 +6660,8 @@ select:-webkit-autofill:focus {
   font-size: 2.2rem;
   line-height: 120%;
   text-align: center;
-  max-width: 100%; }
+  max-width: 100%;
+  z-index: 20; }
   @media only screen and (max-width: 767px) {
     .franchise-mosaic__photo-more-photos {
       font-size: 1.8rem; } }
