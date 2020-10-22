@@ -800,19 +800,19 @@
     }
 
     &.active {
-        &:nth-child(1) {
+        &:nth-child(5) {
             background: #3384fe;
         }
-        &:nth-child(2) {
+        &:nth-child(4) {
             background: #428dff;
         }
         &:nth-child(3) {
             background: #65a3ff;
         }
-        &:nth-child(4) {
+        &:nth-child(2) {
             background: #97c2ff;
         }
-        &:nth-child(5) {
+        &:nth-child(1) {
             background: #c2dbff;
         }
     }
@@ -1024,6 +1024,13 @@
         &::after {
             opacity: 1;
         }
+    }
+
+
+    @include breakpoint(mobile) {
+        line-height: 1.3;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
     }
 }
 

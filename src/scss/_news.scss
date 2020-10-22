@@ -54,10 +54,10 @@
 }
 
 .news__other-news-list-item {
-    margin-bottom: 2.4rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
+    // margin-bottom: 2.4rem;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -77,7 +77,7 @@
         position: absolute;
         background: #e7f0ff;
         border-radius: 0.4rem;
-        top: 0;
+        top: -1px;
         left: -1.6rem;
         bottom: -1px;
         right: -1.6rem;
@@ -91,6 +91,8 @@
         color: #000000;
     }
 
+
+    &.active,
     &:hover {
         border-color: transparent;
 

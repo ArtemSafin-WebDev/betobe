@@ -67,9 +67,10 @@
 
 
     @include breakpoint(mobile) {
-        position: static;
-        margin-left: auto;
-        margin-bottom: 1.2rem;
+        
+        position: absolute;
+        right: 2rem;
+        top: 2.6rem;
         
     }
 }
@@ -81,6 +82,7 @@
     margin-bottom: 1.2rem;
     @include breakpoint(mobile) {
         font-size: 2.2rem;
+        padding-right: 2.4rem;
     }
 }
 

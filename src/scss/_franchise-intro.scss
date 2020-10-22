@@ -149,6 +149,10 @@
         color: inherit;
     }
 
+    &:hover {
+        color: var(--primary-color);
+    }
+
     @include breakpoint(mobile) {
         font-weight: bold;
         font-size: 1.6rem;
@@ -289,6 +293,15 @@
     font-size: 1.8rem;
     line-height: 3.8rem;
     margin-right: 2.6rem;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
