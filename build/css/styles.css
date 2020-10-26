@@ -4577,7 +4577,9 @@ select:-webkit-autofill:focus {
   width: 13.2rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 4.2rem; }
+  margin-right: 4.2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-details-social-block {
       margin: 0;
@@ -4683,7 +4685,9 @@ select:-webkit-autofill:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  margin-top: 1.8rem;
+  width: 100%; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-details-place-ratings {
       border: none;
@@ -4721,7 +4725,7 @@ select:-webkit-autofill:focus {
   margin-right: 1rem; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-details-place-rating-logo {
-      height: 1.3rem;
+      height: 1.4rem;
       margin-right: 1.1rem; } }
 
 .franchise-catalog__card-details-place-rating-score {
@@ -4738,7 +4742,7 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-details-place-rating-score {
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.2; } }
 
 .franchise-catalog__card-details-description-block {
