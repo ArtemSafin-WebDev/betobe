@@ -1,8 +1,5 @@
 .page-footer__grid {
-    
-
-
-    border-top: 1px solid #D5D5D5;
+    border-top: 1px solid #d5d5d5;
 
     .page-footer--no-bar & {
         border: none;
@@ -68,7 +65,6 @@
     line-height: 1.7rem;
     margin-bottom: 8rem;
     text-transform: uppercase;
-   
 
     @include breakpointMF(small-tablet) {
         font-family: var(--gotham);
@@ -171,7 +167,7 @@
     margin-right: 3.6rem;
     text-transform: uppercase;
     transition: color 0.2s;
-    
+
     &:last-child {
         margin-right: 0;
     }
@@ -196,7 +192,6 @@
 .page-footer__social {
     display: flex;
     align-items: center;
-
 }
 
 .page-footer__social-link {
@@ -221,10 +216,8 @@
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
-            
         }
     }
-
 
     @include breakpoint(mobile) {
         margin-right: 1.5rem;
@@ -241,8 +234,48 @@
         @include breakpoint(mobile) {
             width: 7.3rem;
             position: relative;
-            bottom: -.4rem;
+            bottom: -0.4rem;
         }
     }
 }
 
+.page-footer__scroll-up {
+    width: 5.2rem;
+    height: 5.2rem;
+    flex-shrink: 0;
+    position: relative;
+    background-color: #3384fe;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    transition: background-color .2s;
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background-color: #0b5edb;
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 4.4rem;
+       
+        height: 4.4rem;
+        bottom: 4.7rem;
+        right: 2rem;
+        bottom: 2rem;
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}

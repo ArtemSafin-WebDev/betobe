@@ -26,6 +26,7 @@ import FilterRangeInputs from './rangeInputs';
 import Modals from './modals';
 import Validation from './validation';
 import SectionsMenu from './sectionsMenu';
+import ScrollUp from './scrollUp';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     FiltersButtonActivity();
     Modals();
+    ScrollUp();
     
 });
 

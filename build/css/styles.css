@@ -2126,7 +2126,7 @@ select:-webkit-autofill:focus {
           transform: translate(50%, -50%); }
 
 .page-footer__grid {
-  border-top: 1px solid #D5D5D5; }
+  border-top: 1px solid #d5d5d5; }
   .page-footer--no-bar .page-footer__grid {
     border: none; }
 
@@ -2343,7 +2343,43 @@ select:-webkit-autofill:focus {
       .page-footer__made-by img {
         width: 7.3rem;
         position: relative;
-        bottom: -.4rem; } }
+        bottom: -0.4rem; } }
+
+.page-footer__scroll-up {
+  width: 5.2rem;
+  height: 5.2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  background-color: #3384fe;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s; }
+  .page-footer__scroll-up svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .page-footer__scroll-up:hover {
+    background-color: #0b5edb; }
+  @media only screen and (max-width: 767px) {
+    .page-footer__scroll-up {
+      width: 4.4rem;
+      height: 4.4rem;
+      bottom: 4.7rem;
+      right: 2rem;
+      bottom: 2rem; }
+      .page-footer__scroll-up svg {
+        width: 1.4rem;
+        height: 1.4rem; } }
 
 .intro {
   padding: 5rem 0;
