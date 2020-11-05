@@ -1525,7 +1525,14 @@ select:-webkit-autofill:focus {
 .page-main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .franchise-constructor-blocks {
   background: #ebf3ff;
@@ -10228,3 +10235,79 @@ textarea.franchise-contact__form-input {
       font-size: 1.4rem;
       padding: 1.3rem 2rem;
       margin-top: 1rem; } }
+
+.not-found {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .not-found .container,
+  .not-found .inner-container {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.not-found__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 4rem 0; }
+
+.not-found__image {
+  width: 81rem;
+  height: auto;
+  max-width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .not-found__image {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 1.5rem; } }
+
+.not-found__message {
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-align: center;
+  margin-top: -2rem;
+  color: #818181; }
+  .not-found__message p {
+    margin-bottom: .8rem; }
+    .not-found__message p:last-child {
+      margin-bottom: 0; }
+    @media only screen and (max-width: 767px) {
+      .not-found__message p {
+        margin-bottom: 0.4rem; } }
+  .not-found__message a:link, .not-found__message a:visited {
+    color: var(--primary-color); }
+  .not-found__message a:hover {
+    text-decoration: underline; }
+  @media only screen and (max-width: 767px) {
+    .not-found__message {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.2; } }
