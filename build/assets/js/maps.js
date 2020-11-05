@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var geographyMaps = Array.prototype.slice.call(document.querySelectorAll('.js-franchise-geography-map'));
+    var contactsMaps = Array.prototype.slice.call(document.querySelectorAll('.js-contacts-map'));
 
     var mapStyles = [
         {
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             elementType: 'geometry',
             stylers: [
                 {
-                    color: '#dfd2ae'
+                    color: '#FFFAEC'
                 }
             ]
         },
@@ -202,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
             elementType: 'geometry.fill',
             stylers: [
                 {
-                    color: '#b9d3c2'
+                    color: '#BBD6E4'
                 }
             ]
         },
@@ -264,10 +265,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mapInstance.setCenter(centerCoords);
 
-        let infoWindows = [];
+        var infoWindows = [];
 
         dummyData.forEach(function(item) {
-            const infoWindow = new google.maps.InfoWindow({
+            var infoWindow = new google.maps.InfoWindow({
                 content: `
                     <div class="franchise-geography__local-franchisers">
                         <div class="franchise-geography__local-franchisers-top-row">
@@ -311,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `,
                 maxWidth: 350
             });
-            const marker = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: {
                     lat: item.lat,
                     lng: item.lng
@@ -323,8 +324,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     origin: new google.maps.Point(0, 0),
                     anchor: item.open ? new google.maps.Point(37 / 2, 37 / 2) : new google.maps.Point(23 / 2, 23 / 2)
                 }
-
-                // icon: rootURL + '/img/icon_Brownfield.svg'
             });
 
             infoWindows.push(infoWindow);
@@ -337,6 +336,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
+        });
+    });
+
+    contactsMaps.forEach(function(element) {
+        var centerCoords = {
+            lat: parseFloat(element.getAttribute('data-lat')),
+            lng: parseFloat(element.getAttribute('data-lng'))
+        };
+
+        var mapInstance = new google.maps.Map(element, {
+            zoom: 12,
+            streetViewControl: false,
+            fullscreenControl: false,
+            mapTypeControl: false,
+            styles: mapStyles
+        });
+
+        mapInstance.setCenter(centerCoords);
+
+        new google.maps.Marker({
+            position: {
+                lat: centerCoords.lat,
+                lng: centerCoords.lng
+            },
+            map: mapInstance,
+            icon: {
+                url: element.getAttribute('data-pin'),
+                size: new google.maps.Size(37, 37),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(37 / 2, 37 / 2)
+            }
         });
     });
 });

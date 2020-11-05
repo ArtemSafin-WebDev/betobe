@@ -1,0 +1,131 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="news">
+    <div class="container">
+
+
+        <div class="project-page__layout">
+            <div class="project-page__layout-sidebar">
+                <a href="#" class="project-page__back">
+                    Вернуться
+                </a>
+            </div>
+            <div class="project-page__layout-main">
+                <div class="contacts">
+                    <h1 class="contacts__heading">
+                        Контакты
+                    </h1>
+                    <div class="contacts__info">
+                        <div class="contacts__info-text">
+                            Мы всегда открыты для сотрудничества и рады новым интересным проектам
+                        </div>
+                        <div class="contacts__phone">
+                            <a href="tel:88002504406" class="contacts__phone-link">8 800 250-44-06</a>
+                            <div class="contacts__phone-text">
+                                Телефон офиса
+                            </div>
+                        </div>
+                        <div class="contacts__schedule">
+                            <div class="contacts__schedule-item">
+                                <svg width="12" height="18" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                109544, г. Казань,<br>
+                                пр. Ямашева, дом 33Б
+                            </div>
+                            <div class="contacts__schedule-item">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-clock">
+                                    <use xlink:href="#clock"></use>
+                                </svg>
+                                Ежедневно <br>
+                                с 9:00 до 21:00
+                            </div>
+                        </div>
+                        <div class="contacts__email">
+                            <a href="mailto:mail@betobe.ru" class="contacts__email-link">
+                                mail@betobe.ru
+                            </a>
+                            <div class="contacts__email-text">
+                                Почта для связи
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__map-container">
+                        <div class="contacts__map js-contacts-map" data-lat="55.796289" data-lng="49.108795"
+                            data-pin="img/open-pin.svg">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="contacts__form">
+    <div class="container">
+        <div class="inner-container">
+            <div class="contacts__form-row">
+                <div class="contacts__form-col">
+                    <div class="contacts__form-content">
+
+                        <form action="/" method="POST" class="franchise-contact__form" data-need-validation="">
+                            <h2 class="contacts__form-heading">
+                                Покажем и расскажем,
+                                как мы работаем
+                                с нашими партнерами
+                            </h2>
+                            <div class="franchise-contact__form-group">
+                                <input type="text" class="franchise-contact__form-input" placeholder="Ваше имя"
+                                    required>
+                            </div>
+                            <div class="franchise-contact__form-group">
+                                <input type="tel" class="franchise-contact__form-input js-phone-input"
+                                    placeholder="Телефон" data-parsley-phone required>
+                            </div>
+                            <div class="franchise-contact__form-group">
+                                <label class="franchise-contact__form-checkbox">
+                                    <input type="checkbox" name="policy" class="franchise-contact__form-checkbox-input"
+                                        required>
+                                    <span class="franchise-contact__form-checkbox-mark">
+
+                                    </span>
+                                    <div class="franchise-contact__form-checkbox-text">
+                                        Согласие на обработку персональных данных
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="franchise-contact__form-group">
+                                <button type="submit" class="franchise-contact__form-submit">
+                                    Оставить заявку
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contacts__form-col">
+                    <img src="img/contact-form-image.svg" alt="" class="contacts__form-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts__company-info">
+    <div class="container">
+        <div class="inner-container">
+            <div class="contacts__company-info-text">
+                ИП Богомолов Юрий Александрович<br>
+                ОГРНИП 315169000030181<br>
+                ИНН 166109472099<br>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
