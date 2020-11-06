@@ -27,6 +27,7 @@ import Modals from './modals';
 import Validation from './validation';
 import SectionsMenu from './sectionsMenu';
 import ScrollUp from './scrollUp';
+import TeamCardSocial from './teamCardSocial';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     FiltersButtonActivity();
     Modals();
     ScrollUp();
+    TeamCardSocial();
     
 });
 
