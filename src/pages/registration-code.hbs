@@ -1,0 +1,109 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="registration-code">
+    <div class="container">
+        <div class="inner-container">
+            <div class="registration-code__row">
+                <div class="registration-code__left-col">
+
+                    <h2 class="registration-code__heading">
+                        Регистрация на Betobe
+                    </h2>
+                    <div class="registration-code__info">
+                        <div class="registration-code__content">
+                            <p>
+                                Это займет 2 минуты
+                            </p>
+                            <ul>
+                                <li>
+                                    Экскурсия по нашим парикмахерским
+                                </li>
+                                <li>
+                                    Экскурсия в центральный офис
+                                </li>
+                                <li>
+                                    Знакомство с управляющей компанией и ключевыми сотрудниками
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="img/register-image.png" alt="" class="registration-code__image">
+                    </div>
+
+                </div>
+                <div class="registration-code__right-col">
+                    <form action="/" method="POST" class="registration-code__form">
+                        <div class="registration-code__form-country">
+                            <div class="custom-select">
+                                <select name="country-code" class="js-custom-select">
+                                    <option value="+7">
+                                        +7
+                                    </option>
+                                    <option value="+9">
+                                        +9
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="registration-code__form-number">
+                            <input type="tel" name="phone" class="registration-code__form-number-input js-numeric-input-no-formatting">
+                        </div>
+                        <button class="registration-code__form-submit">
+                            Выслать код
+                        </button>
+                    </form>
+                    <div class="registration-code__social-auth">
+                        <h3 class="registration-code__social-auth-heading">
+                            или через соцсети
+                        </h3>
+                        <ul class="registration-code__social-list">
+                            <li class="registration-code__social-list-item">
+                                <a href="#"
+                                    class="registration-code__social-link registration-code__social-link--facebook">
+                                    <svg width="20" height="20" aria-hidden="true" class="icon-facebook">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="registration-code__social-list-item">
+                                <a href="#"
+                                    class="registration-code__social-link registration-code__social-link--google">
+                                    <svg width="20" height="20" aria-hidden="true" class="icon-google">
+                                        <use xlink:href="#google"></use>
+                                    </svg>
+                                    Google
+                                </a>
+                            </li>
+                            <li class="registration-code__social-list-item">
+                                <a href="#" class="registration-code__social-link registration-code__social-link--vk">
+                                    <svg width="20" height="20" aria-hidden="true" class="icon-vk">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                    Вконтакте
+                                </a>
+                            </li>
+                            <li class="registration-code__social-list-item">
+                                <a href="#"
+                                    class="registration-code__social-link registration-code__social-link--instagram">
+                                    <svg width="20" height="20" aria-hidden="true" class="icon-instagram">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="registration-code__has-account">
+                        Уже есть аккаунт? <a href="#">
+                            Авторизуйтесь
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
