@@ -148,9 +148,45 @@
     grid-template-columns: 9rem 1fr;
     grid-column-gap: 1.2rem;
     grid-row-gap: 2.5rem;
+    margin-top: 1.2rem;
 
+    &--send {
+        grid-row-gap: 1.2rem;
+    }
     @include breakpoint(mobile) {
         grid-row-gap: 1.2rem;
+        margin: 0;
+        margin-bottom: 4rem;
+    }
+}
+
+.registration-code__form-send,
+.registration-code__form-get-new-code {
+    grid-column: 1 / -1;
+}
+
+.registration-code__form-get-new-code {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #555555;
+    button,
+    em {
+        transition: color 0.2s;
+        user-select: initial;
+    }
+
+    button[disabled] {
+        cursor: default;
+        color: #555555;
+    }
+    button:not([disabled]),
+    em {
+        color: var(--primary-color);
+        font-style: normal;
+    }
+
+    button:not([disabled]) {
+        text-decoration: underline;
     }
 }
 
@@ -163,6 +199,10 @@
     padding: 0 1.8rem;
     color: black;
     font-size: 1.8rem;
+
+    @include placeholder {
+        color: rgba(139, 154, 183, 0.5);
+    }
 
     @include breakpoint(mobile) {
         font-size: 16px;

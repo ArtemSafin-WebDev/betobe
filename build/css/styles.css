@@ -10674,10 +10674,41 @@ textarea.franchise-contact__form-input {
   display: grid;
   grid-template-columns: 9rem 1fr;
   grid-column-gap: 1.2rem;
-  grid-row-gap: 2.5rem; }
+  grid-row-gap: 2.5rem;
+  margin-top: 1.2rem; }
+  .registration-code__form--send {
+    grid-row-gap: 1.2rem; }
   @media only screen and (max-width: 767px) {
     .registration-code__form {
-      grid-row-gap: 1.2rem; } }
+      grid-row-gap: 1.2rem;
+      margin: 0;
+      margin-bottom: 4rem; } }
+
+.registration-code__form-send,
+.registration-code__form-get-new-code {
+  grid-column: 1 / -1; }
+
+.registration-code__form-get-new-code {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #555555; }
+  .registration-code__form-get-new-code button,
+  .registration-code__form-get-new-code em {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    -webkit-user-select: initial;
+       -moz-user-select: initial;
+        -ms-user-select: initial;
+            user-select: initial; }
+  .registration-code__form-get-new-code button[disabled] {
+    cursor: default;
+    color: #555555; }
+  .registration-code__form-get-new-code button:not([disabled]),
+  .registration-code__form-get-new-code em {
+    color: var(--primary-color);
+    font-style: normal; }
+  .registration-code__form-get-new-code button:not([disabled]) {
+    text-decoration: underline; }
 
 .registration-code__form-number-input {
   font: inherit;
@@ -10688,6 +10719,14 @@ textarea.franchise-contact__form-input {
   padding: 0 1.8rem;
   color: black;
   font-size: 1.8rem; }
+  .registration-code__form-number-input::-webkit-input-placeholder {
+    color: rgba(139, 154, 183, 0.5); }
+  .registration-code__form-number-input:-moz-placeholder {
+    color: rgba(139, 154, 183, 0.5); }
+  .registration-code__form-number-input::-moz-placeholder {
+    color: rgba(139, 154, 183, 0.5); }
+  .registration-code__form-number-input:-ms-input-placeholder {
+    color: rgba(139, 154, 183, 0.5); }
   @media only screen and (max-width: 767px) {
     .registration-code__form-number-input {
       font-size: 16px;
