@@ -1,8 +1,9 @@
 .franchise-catalog {
     padding-top: 2rem;
     padding-bottom: 8.4rem;
-
-    @include breakpoint(mobile) {
+    position: relative;
+    z-index: 2;
+    @include breakpoint(mobile) {   
         padding-top: 1rem;
         padding-bottom: 3rem;
     }
@@ -1235,6 +1236,11 @@
         background-color: var(--primary-color);
         margin-bottom: 5px;
         transition: transform 0.3s, opacity 0.3s;
+
+        @include breakpoint(tablet) {
+            height: 2px;
+            margin-bottom: 4px;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -1252,6 +1258,26 @@
                 transform: translateY(-8px) rotate(-45deg);
             }
         }
+
+
+        @include breakpoint(tablet) {
+            & > span {
+                &:nth-child(1) {
+                    transform: translateY(6px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-6px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(tablet) {
+        width: 20px;
     }
 }
 
