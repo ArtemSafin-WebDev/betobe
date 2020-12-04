@@ -537,10 +537,14 @@
         color: white;
     }
 
-    &:hover,
-    &.active {
-        color: var(--primary-color);
+    &[href] {
+        &:hover,
+        &.active {
+            color: var(--primary-color);
+        }
     }
+
+ 
 
     svg {
         width: 100%;

@@ -91,7 +91,6 @@
         color: #000000;
     }
 
-
     &.active,
     &:hover {
         border-color: transparent;
@@ -196,14 +195,30 @@
 
 .news__navigation {
     display: flex;
-    align-items: center;
+
     flex-wrap: wrap;
     border-bottom: 1px solid #d2e2f9;
     justify-content: center;
 
+    @include breakpointMF(small-tablet) {
+        &--fullwidth-border {
+            border: none;
+            position: relative;
+            &::before {
+                content: '';
+                height: 1px;
+                position: absolute;
+                left: calc((100vw - 100%) / 2 * -1);
+                width: 100vw;
+                background-color: #d2e2f9;
+                bottom: 0;
+            }
+        }
+    }
+
     @include breakpoint(mobile) {
         flex-wrap: nowrap;
-        align-items: center;
+        // align-items: center;
         justify-content: flex-start;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -231,6 +246,13 @@
     padding: 2.7rem 0;
     position: relative;
     transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+
+    .page-header__user-fav {
+        margin-left: 1.4rem;
+        margin-right: 0;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -260,11 +282,18 @@
         &::after {
             opacity: 1;
         }
+
+        .page-header__user-fav {
+            color: var(--primary-color);
+        }
     }
 
     &:not(.active) {
         &:hover {
             color: var(--primary-color);
+            .page-header__user-fav {
+                color: var(--primary-color);
+            }
         }
     }
 
@@ -293,7 +322,6 @@
     font-size: 4.6rem;
     line-height: 120%;
     margin-bottom: 1.9rem;
-
 
     @include breakpoint(mobile) {
         font-size: 2.4rem;
@@ -344,7 +372,6 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.4;
-        
     }
 
     & > * {
@@ -425,7 +452,7 @@
         }
         li {
             padding-left: 2.5rem;
-          
+
             position: relative;
             margin-bottom: 1.5rem;
 
@@ -448,12 +475,9 @@
                 @include breakpoint(mobile) {
                     width: 0.5rem;
                     height: 0.5rem;
-                    top: .70rem;
+                    top: 0.7rem;
                 }
             }
-
-
-            
         }
     }
     ol {

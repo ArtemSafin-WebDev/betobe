@@ -174,10 +174,18 @@
 
     td {
         text-align: right;
-        color: var(--primary-color);
+       
         font-weight: 500;
         font-size: 1.6rem;
         font-family: var(--gotham);
+
+        a {
+            color: var(--primary-color);
+            &:link,
+            &:visited {
+                color: var(--primary-color);
+            }
+        }
 
         @include breakpoint(mobile) {
             font-size: 1.4rem;
@@ -375,7 +383,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #8a8a8a;
-    margin-bottom: 3rem;
+    margin-bottom: 2.4rem;
 
     svg {
         width: 2.2rem;
