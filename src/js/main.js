@@ -29,6 +29,7 @@ import SectionsMenu from './sectionsMenu';
 import ScrollUp from './scrollUp';
 import TeamCardSocial from './teamCardSocial';
 import OnlyNumeric from './onlyNumeric';
+import MaybeInterestingSlider from './maybeInterestingSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ScrollUp();
     TeamCardSocial();
     OnlyNumeric();
+    MaybeInterestingSlider();
     
 });
 

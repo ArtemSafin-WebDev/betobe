@@ -5478,7 +5478,7 @@ select:-webkit-autofill:focus {
         width: 1rem; } }
   .franchise-intro__tag:link, .franchise-intro__tag:visited {
     color: #000000; }
-  .franchise-intro__tag:hover {
+  .franchise-intro__tag[href]:hover {
     color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
     .franchise-intro__tag {
@@ -10934,3 +10934,131 @@ textarea.franchise-contact__form-input {
 @media (min-width: 640px) {
   .custom-select .choices__list--dropdown .choices__item--selectable {
     padding-right: 2rem; } }
+
+.maybe-interesting {
+  margin-bottom: 9rem; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting {
+      margin-bottom: 4rem; } }
+
+.maybe-interesting__heading {
+  font-weight: 400;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting__heading {
+      font-size: 1.4rem;
+      line-height: 1.2;
+      margin-bottom: 2rem; } }
+
+.maybe-interesting__slider {
+  position: relative; }
+  .maybe-interesting__slider .swiper-container {
+    overflow: visible; }
+  .maybe-interesting__slider .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85.8rem; }
+    @media only screen and (max-width: 767px) {
+      .maybe-interesting__slider .swiper-slide {
+        width: 100%; } }
+
+.maybe-interesting__slider-card {
+  background: #3384fe;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: white;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  z-index: 1;
+  padding: 4.2rem;
+  min-height: 36.4rem; }
+  .maybe-interesting__slider-card:link, .maybe-interesting__slider-card:visited {
+    color: white; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting__slider-card {
+      min-height: auto;
+      padding: 1.8rem; } }
+
+.maybe-interesting__slider-card-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+  .maybe-interesting__slider-card-bg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(32.18deg, #000000 -13.83%, rgba(0, 0, 0, 0) 52.2%); }
+
+.maybe-interesting__slider-card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
+
+.maybe-interesting__slider-card-tags {
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting__slider-card-tags {
+      margin-bottom: 4rem; } }
+
+.maybe-interesting__slider-card-title {
+  margin-top: auto;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting__slider-card-title {
+      font-size: 2.2rem;
+      margin-bottom: 1rem; }
+      .maybe-interesting__slider-card-title br {
+        display: none; } }
+
+.maybe-interesting__slider-card-text {
+  font-size: 1.8rem;
+  line-height: 2.5rem; }
+  @media only screen and (max-width: 767px) {
+    .maybe-interesting__slider-card-text {
+      font-size: 1.4rem;
+      line-height: 1.2; }
+      .maybe-interesting__slider-card-text br {
+        display: none; } }

@@ -111,9 +111,13 @@
         color: #000000;
     }
 
-    &:hover {
-        color: var(--primary-color);
+    &[href] {
+        &:hover {
+            color: var(--primary-color);
+        }
     }
+
+   
 
     @include breakpoint(mobile) {
         font-size: 0.9rem;

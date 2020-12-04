@@ -1,0 +1,138 @@
+.maybe-interesting {
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.maybe-interesting__heading {
+    font-weight: 400;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.maybe-interesting__slider {
+    position: relative;
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        width: 85.8rem;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.maybe-interesting__slider-card {
+    background: #3384fe;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: white;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    z-index: 1;
+    padding: 4.2rem;
+    min-height: 36.4rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    // &:hover {
+    //     .maybe-interesting__slider-card-bg-image {
+    //         transform: translateZ(0) scale(1.02);
+    //         transition: transform .3s ease-out;
+    //     }
+    // }
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding: 1.8rem;
+    }
+}
+
+.maybe-interesting__slider-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(32.18deg, #000000 -13.83%, rgba(0, 0, 0, 0) 52.2%);
+    }
+}
+
+.maybe-interesting__slider-card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform .3s;
+    @include objectFitCover();
+}
+
+.maybe-interesting__slider-card-tags {
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.maybe-interesting__slider-card-title {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.maybe-interesting__slider-card-text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+
+        br {
+            display: none;
+        }
+    }
+}
