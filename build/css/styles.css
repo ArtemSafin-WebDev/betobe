@@ -1775,13 +1775,25 @@ select:-webkit-autofill:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media only screen and (min-width: 768px) {
+  .page-header__burger-content > span {
+    width: 24px;
+    height: 3px;
+    background: #33373d;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .page-header__burger-content > span:last-child {
+      margin-bottom: 0; }
+  @media only screen and (max-width: 1024px) {
     .page-header__burger-content > span {
-      width: 24px;
-      height: 3px;
+      width: 18px;
+      height: 2px;
       background: #33373d;
       border-radius: 2px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       -ms-flex-negative: 0;
           flex-shrink: 0;
       -webkit-transition: background-color 0.2s;
@@ -2089,8 +2101,8 @@ select:-webkit-autofill:focus {
   margin-right: 2.5rem;
   position: relative;
   color: white;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .page-header__user-fav:link, .page-header__user-fav:visited {
     color: white; }
   .page-header__user-fav[href]:hover, .page-header__user-fav[href].active {
@@ -2105,7 +2117,7 @@ select:-webkit-autofill:focus {
 
 .page-header__user-fav-count {
   position: absolute;
-  top: .3rem;
+  top: 0.3rem;
   right: 0;
   width: 1.8rem;
   height: 1.8rem;
