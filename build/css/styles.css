@@ -11752,7 +11752,7 @@ textarea.franchise-contact__form-input {
     .account__header-controls-btn {
       min-width: auto;
       font-size: 1.4rem;
-      padding: .8rem 1.8rem;
+      padding: 0.8rem 1.8rem;
       margin-right: 1.4rem; } }
 
 .account__header-back {
@@ -11901,8 +11901,8 @@ textarea.franchise-contact__form-input {
   line-height: 3.2rem;
   color: var(--primary-color);
   z-index: 20;
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s; }
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
   .photo-loaded .account__load-photo-link {
     opacity: 0; }
   .account__load-photo-link:link, .account__load-photo-link:visited {
@@ -12080,7 +12080,7 @@ textarea.franchise-contact__form-input {
     opacity: 0.6; }
   @media only screen and (max-width: 767px) {
     .account__connected-accounts-link {
-      padding: .8rem 1.2rem; } }
+      padding: 0.8rem 1.2rem; } }
 
 .account__connected-accounts-link-content {
   display: -webkit-box;
@@ -12247,7 +12247,6 @@ textarea.account__edit-input {
   grid-column-gap: 11rem;
   margin-bottom: 10rem; }
   .account__info .franchise-description__buttons {
-    grid-column: 1 / -1;
     padding-top: 3rem; }
     @media only screen and (max-width: 767px) {
       .account__info .franchise-description__buttons {
@@ -12262,6 +12261,10 @@ textarea.account__edit-input {
     grid-template-columns: 1fr 44.8rem; }
   .account__info:not(.account__info--edit) > * {
     grid-area: initial; }
+  .account__info:not(.account__info--edit) .franchise-description__buttons {
+    grid-column: 1 / -1; }
+  .account__info:not(.account__info--edit) .account__about {
+    grid-column: 1 / -1; }
   @media only screen and (max-width: 767px) {
     .account__info {
       display: -webkit-box;
@@ -12274,10 +12277,8 @@ textarea.account__edit-input {
       grid-gap: initial;
       margin-bottom: 4rem; } }
 
-.account__about {
-  grid-column: 1 / -1; }
-  .account__info--edit .account__about {
-    grid-column: initial; }
+.account__info--edit .account__about {
+  grid-column: initial; }
 
 .account__about-layout {
   display: grid;
@@ -12367,8 +12368,8 @@ textarea.account__edit-input {
 .account__edit-competencies-name {
   font-size: 1.8rem;
   line-height: 1.2;
-  -webkit-transition: color .2s;
-  transition: color .2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
   font-weight: 400;
   -ms-flex-item-align: center;
       align-self: center; }
@@ -12402,18 +12403,18 @@ textarea.account__edit-input {
   .account__edit-competencies-btn.active {
     color: white; }
     .account__edit-competencies-btn.active:nth-child(1) {
-      background: #B4D3FF; }
+      background: #b4d3ff; }
     .account__edit-competencies-btn.active:nth-child(2) {
-      background: #84B6FE; }
+      background: #84b6fe; }
     .account__edit-competencies-btn.active:nth-child(3) {
-      background: #66A4FE; }
+      background: #66a4fe; }
     .account__edit-competencies-btn.active:nth-child(4) {
-      background: #5399FE; }
+      background: #5399fe; }
     .account__edit-competencies-btn.active:nth-child(5) {
-      background: #4791FE; }
+      background: #4791fe; }
   @media only screen and (max-width: 767px) {
     .account__edit-competencies-btn {
-      padding: .6rem 1rem;
+      padding: 0.6rem 1rem;
       font-size: 1.4rem; } }
 
 .progress {
