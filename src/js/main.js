@@ -30,11 +30,17 @@ import ScrollUp from './scrollUp';
 import TeamCardSocial from './teamCardSocial';
 import OnlyNumeric from './onlyNumeric';
 import MaybeInterestingSlider from './maybeInterestingSlider';
+import EditName from './editName';
+import Datepicker from './datepicker';
+import EditCompetencies from './editCompetencies';
+import LoadAccountImages from './loadAccountImages';
+import DateInput from './dateInput';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     PopularsSlider();
+    Datepicker();
     CustomSelects();
     SelectorRing();
     ShowHiddenCheckboxes();
@@ -64,7 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
     TeamCardSocial();
     OnlyNumeric();
     MaybeInterestingSlider();
-    
+    EditName();
+  
+    EditCompetencies();
+    LoadAccountImages();
+    DateInput();
 });
 
 window.addEventListener('load', function() {

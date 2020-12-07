@@ -11,4 +11,19 @@ export default function CustomSelects() {
             position: 'bottom'
         });
     });
+
+    const datepickerSelects = Array.from(document.querySelectorAll('.pika-select'));
+    console.log('Datepicker selects', datepickerSelects)
+
+
+    datepickerSelects.forEach(select => {
+        new Choices(select, {
+            searchEnabled: false,
+            itemSelectText: '',
+            shouldSort: false,
+            position: 'bottom'
+        });
+    })
+
+    
 }

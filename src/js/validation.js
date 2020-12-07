@@ -1,4 +1,9 @@
 import 'parsleyjs';
+import dayjs from 'dayjs'
+
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
+dayjs.extend(customParseFormat)
 
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
@@ -8,6 +13,17 @@ window.Parsley.addValidator('phone', {
     messages: {
         en: 'This value should be a mobile number',
         ru: 'Введите правильный номер мобильного телефона'
+    }
+});
+window.Parsley.addValidator('date', {
+    requirementType: 'string',
+    validateString: function(value) {
+        console.log('Получаем дату', dayjs(value, 'DD.MM.YYYY', true))
+        return dayjs(value, 'DD.MM.YYYY', true).isValid();
+    },
+    messages: {
+        en: 'This value should be a valid date',
+        ru: 'Введите правильную дату'
     }
 });
 

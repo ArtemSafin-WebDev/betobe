@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Страница новости - Betobe
+        Редактирование пользователя - Betobe
     </title>
 </head>
 
@@ -172,237 +172,516 @@
             </div>
         </header>        <main class="page-main">
 
-<section class="news">
+<nav class="settings-nav">
     <div class="container">
-        <h2 class="news__main-heading">
-            Новости
-        </h2>
-        <div class="news__navigation">
-            <a href="#" class="news__navigation-link active">
-                Франшизы
+        <div class="settings-nav__row">
+            <a href="#" class="settings-nav__link active">
+                Мой профиль 
             </a>
-            <a href="#" class="news__navigation-link">
-                Обзор новинок
+            <a href="#" class="settings-nav__link">
+                МОИ ФРАНШИЗЫ
             </a>
-            <a href="#" class="news__navigation-link">
-                о сервисе
-            </a>
-            <a href="#" class="news__navigation-link">
-                СМИ о нас
+            <a href="#" class="settings-nav__link">
+                Настройки
             </a>
         </div>
+    </div>
+</nav>
+<div class="progress">
+    <div class="progress__bar">
+        <div class="progress__bar-static">
 
-        <div class="news__layout">
-            <div class="news__layout-sidebar">
-                <ul class="news__other-news-list">
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Сеть кофеен меняет стратегию работы с франчайзи
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/1.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card active">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Eurospar откроется в знаковой локации в Омске
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/2.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Нидерландский кикшеринг будет развиваться по франшизе
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/3.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Сооснователь Fit Service рассказал о своём худшем факапе
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/4.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Eurospar откроется в знаковой локации в Омске
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/5.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="news__other-news-list-item">
-                        <a href="#" class="news__other-news-card">
-                            <div class="news__other-news-card-content">
-                                <h4 class="news__other-news-card-title">
-                                    Нидерландский кикшеринг будет развиваться по франшизе
-                                </h4>
-                                <span class="news__other-news-card-date">
-                                    4.03.2020
-                                </span>
-                            </div>
-                            <div class="news__other-news-card-image-container">
-                                <img src="img/other-news/6.jpg" alt="" class="news__other-news-card-image">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" class="news__other-news-show-more-link">
-                    Показать еще
-                </a>
+        </div>
+        <div class="progress__bar-dynamic" style="--progress: 60%;">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="progress__text">
+            Заполните ваш профиль на 80% и получите доступ к расширенной<br> информации о франшизах.
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <form action="/" class="account__edit-form" enctype="multipart/form-data" method="POST" data-need-validation>
+
+
+        <div class="account__header">
+            <div class="account-header__bg">
+                <img src="img/account-header.jpg" alt="" class="account-header__bg-image">
+
             </div>
-            <div class="news__main">
-                <ul class="news__list">
-                    <li class="news__list-item">
-                        <h1 class="news__heading">
-                            Обязательную маркировку ювелирных изделий введут не раньше 2021 года
-                        </h1>
-                        <div class="news__date">
-                            4.03.2020
+
+            <div class="container">
+                <div class="account__header-top-row account__header-top-row--edit">
+                    <label class="account__header-change-bg">
+                        <svg width="12" height="12" aria-hidden="true" class="icon-pencil">
+                            <use xlink:href="#pencil"></use>
+                        </svg>
+                        Сменить фон
+                        <input type="file" name="background" class="account__header-change-bg-input js-change-bg-input" accept="image/*">
+                    </label>
+
+                    <div class="account__header-controls">
+                        <a href="#" class="account__header-controls-btn">
+                            Предпросмотр
+                        </a>
+                        <button type="submit" class="account__header-controls-btn account__header-controls-btn--save">
+                            Сохранить
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="account__intro">
+                <div class="account__photo-container">
+
+
+
+                    <label class="account__load-photo-link">
+                        <input type="file" name="photo" class="account__load-photo-link-file-input js-load-profile-photo" accept="image/*">
+                        <svg width="50" height="50" aria-hidden="true" class="icon-load-photo">
+                            <use xlink:href="#load-photo"></use>
+                        </svg>
+                        Загрузить фото
+                    </label>
+                </div>
+                <h1 class="account__intro-name">
+
+                    <input type="text" class="account__intro-name-input" value="Альберт Гайнуллин" readonly>
+                    <button class="account__intro-name-edit-btn js-edit-name">
+                        <svg width="18" height="18" aria-hidden="true" class="icon-pencil">
+                            <use xlink:href="#pencil"></use>
+                        </svg>
+                    </button>
+
+
+                </h1>
+                <div class="account__intro-description">
+                    <div class="account__intro-edit-description">
+                        <div class="account__edit-input-wrapper">
+                            <input type="text" class="account__edit-input" placeholder="Краткая подпись">
                         </div>
-                        <div class="news__content-short-description">
-                            Нидерландская сеть супермаркетов Spar, недавно покинувшая Санкт-Петербург из-за банкротства
-                            крупнейшего российского франчайзи ТД «Интерторг», расширяет своё присутствие в Сибири за
-                            счет другого местного партнёра. Открытие магазина запланировано в Омске, точка начнёт работу
-                            в апреле 2020-го года. Речь идёт об универмаге под вывеской Eurospar.
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="account__info account__info--edit">
+                    <div class="account__about">
+
+
+                        <h2 class="franchise-description__heading">
+                            о себе
+                        </h2>
+                        <div class="account__about-layout">
+                            <div class="account__about-description">
+                                <textarea name="about" class="account__edit-input"
+                                    placeholder="Опишите свой опыт, компетенции или любую другую информацию, полезную для других пользователей"></textarea>
+                            </div>
+
                         </div>
-                        <div class="news__content">
-                            <figure>
-                                <img src="img/news/1.jpg" alt="">
-                                <figcaption>Нидерландская сеть супермаркетов Spar, недавно покинувшая Санкт-Петербург
-                                    из-за банкротства крупнейшего российского франчайзи ТД «Интерторг»</figcaption>
-                            </figure>
-                            <p>
-                                Это будет третья точка Eurospar в Омске. Вторая начала принимать покупателей немногим
-                                ранее — в феврале 2020-го года.
-                            </p>
-                            <p>
-                                Новый магазин откроется на перекрёстке улиц Дианова и Лукашевича на месте универсама
-                                «Север», который начал работу в 80-е годы и в своё время считался крупнейшим в старой
-                                части Кировского административного округа Омска.
-                            </p>
-                            <p>
-                                Об этом сообщает Ngs55.ru со ссылкой на бывшего президента Союза предпринимателей Омской
-                                области Дмитрия Шадрина. Бизнесмен управляет франчайзинговой сетью Eurospar в сибирском
-                                мегаполисе.
-                            </p>
-                            <ul>
-                                <li>
-                                    Введение
-                                </li>
-                                <li>
-                                    Поиск помещения
-                                </li>
-                                <li>
-                                    Ремонт помещения
-                                </li>
-                                <li>
-                                    Запуск франчайзи
-                                </li>
-                                <li>
-                                    Оборудование
-                                </li>
-                                <li>
-                                    Персонал
-                                </li>
-                                <li>
-                                    Система мотивации
-                                </li>
-                            </ul>
-                            <p>
-                                По его словам, помещение давно использовалось для размещения продуктовых магазинов.
-                                «Внешний вид здания будет приведён в порядок, и будут исправлены все те проблемы,
-                                которые накопились за годы, пока за ним особо не следили. Внутри всё будет
-                                соответствовать франшизе», — утверждает Шадрин.
-                            </p>
-                            <h3>
-                                Шкуренко имеет опыт работы за рубежом.
-                            </h3>
-                            <p>
-                                Кроме того, Шкуренко имеет опыт работы за рубежом: в частности, он занимался развитием
-                                собственной сети супермаркетов «Низкоцен» в Казахстане. В 2017-м году бизнесмен решил
-                                продать точки местному ретейлеру «Семейный», после чего открыл в стране магазин под
-                                вывеской Inmart. На данный момент бренд насчитывает более 15 точек.
-                            </p>
-                            <ol>
-                                <li>
-                                    Введение
-                                </li>
-                                <li>
-                                    Поиск помещения
-                                </li>
-                                <li>
-                                    Ремонт помещения
-                                </li>
-                                <li>
-                                    Запуск франчайзи
-                                </li>
-                                <li>
-                                    Оборудование
-                                </li>
-                                <li>
-                                    Персонал
-                                </li>
-                                <li>
-                                    Система мотивации
-                                </li>
-                            </ol>
-                            <p>
-                                Кроме того, Шкуренко имеет опыт работы за рубежом: в частности, он занимался развитием
-                                собственной сети супермаркетов «Низкоцен» в Казахстане. В 2017-м году бизнесмен решил
-                                продать точки местному ретейлеру «Семейный», после чего открыл в стране магазин под
-                                вывеской Inmart. На данный момент бренд насчитывает более 15 точек.
-                            </p>
-                        </div>
-                        <div class="news__tags">
-                            <a href="#" class="news__tag">
-                                Франшизы
-                            </a>
-                            <a href="#" class="news__tag">
-                                Обзор открытий
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+
+                    </div>
+
+                    <div class="account__contact-data">
+                        <ul class="account__contact-data-list">
+                            <li class="account__contact-data-list-item">
+                                <label class="account__contact-data-label">
+                                    <span class="account__contact-data-label-text">
+                                        E-mail
+                                    </span>
+                                    <div class="account__edit-input-wrapper">
+                                        <input type="email" name="email" class="account__edit-input"
+                                            placeholder="E-mail" required>
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
+                                            <use xlink:href="#warning"></use>
+                                        </svg>
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
+                                            <use xlink:href="#success"></use>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="account__contact-data-list-item">
+                                <label class="account__contact-data-label">
+                                    <span class="account__contact-data-label-text">
+                                        Телефон
+                                    </span>
+                                    <div class="account__edit-input-wrapper">
+                                        <input type="tel" name="phone" class="account__edit-input js-phone-input"
+                                            placeholder="Телефон" required data-parsley-phone>
+
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
+                                            <use xlink:href="#warning"></use>
+                                        </svg>
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
+                                            <use xlink:href="#success"></use>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="account__contact-data-list-item">
+                                <label class="account__contact-data-label">
+                                    <span class="account__contact-data-label-text">
+                                        Пол
+                                    </span>
+                                    <div class="account__edit-input-wrapper">
+                                        <div class="custom-select">
+                                            <select name="gender" class="js-custom-select">
+                                                <option value="m">Мужской</option>
+                                                <option value="f">Женский</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li class="account__contact-data-list-item">
+                                <label class="account__contact-data-label">
+                                    <span class="account__contact-data-label-text">
+                                        Город
+                                    </span>
+                                    <div class="account__edit-input-wrapper">
+                                        <input type="text" name="city" class="account__edit-input" placeholder="Город"
+                                            required>
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
+                                            <use xlink:href="#warning"></use>
+                                        </svg>
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
+                                            <use xlink:href="#success"></use>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="account__contact-data-list-item">
+                                <label class="account__contact-data-label">
+                                    <span class="account__contact-data-label-text">
+                                        Дата рождения
+                                    </span>
+                                    <div class="account__edit-input-wrapper">
+                                        <input type="tel" name="date-of-birth" class="account__edit-input js-date-input"
+                                            required data-parsley-date placeholder="Дата рождения">
+                                        <svg width="20" height="20" aria-hidden="true" class="icon-calendar">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="account__connected-accounts">
+                        <h2 class="franchise-description__heading">
+                            связанные аккаунты
+                        </h2>
+                        <ul class="account__connected-accounts-list">
+                            <li class="account__connected-accounts-list-item">
+                                <a href="#"
+                                    class="account__connected-accounts-link account__connected-accounts-link--facebook active">
+                                    <span class="account__connected-accounts-link-content">
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-facebook">
+                                            <use xlink:href="#facebook"></use>
+                                        </svg>
+                                        Facebook
+                                    </span>
+
+                                    <span class="account__connected-accounts-status">
+                                        biktagirov
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-unsubscribe">
+                                            <use xlink:href="#unsubscribe"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="account__connected-accounts-list-item">
+                                <a href="#"
+                                    class="account__connected-accounts-link account__connected-accounts-link--vk active">
+                                    <span class="account__connected-accounts-link-content">
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-vk">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                        Вконтакте
+                                    </span>
+
+                                    <span class="account__connected-accounts-status">
+                                        biktagirov
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-unsubscribe">
+                                            <use xlink:href="#unsubscribe"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="account__connected-accounts-list-item">
+                                <a href="#"
+                                    class="account__connected-accounts-link account__connected-accounts-link--google">
+                                    <span class="account__connected-accounts-link-content">
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-google">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                        Google
+                                    </span>
+
+                                    <span class="account__connected-accounts-status">
+                                        Связать
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="account__connected-accounts-list-item">
+                                <a href="#"
+                                    class="account__connected-accounts-link account__connected-accounts-link--instagram">
+                                    <span class="account__connected-accounts-link-content">
+                                        <svg width="18" height="18" aria-hidden="true" class="icon-instagram">
+                                            <use xlink:href="#instagram"></use>
+                                        </svg>
+                                        Instagram
+                                    </span>
+
+                                    <span class="account__connected-accounts-status">
+                                        Связать
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="account__edit-competencies js-edit-competencies">
+                        <h3 class="franchise-description__heading">
+                            компетенции
+
+                            <div class="franchise-description__heading-details">
+                                <svg width="22" height="22" aria-hidden="true" class="icon-details">
+                                    <use xlink:href="#details"></use>
+                                </svg>
+                                <div class="franchise-description__heading-details-dropdown">
+                                    <div class="franchise-description__heading-details-dropdown-inner">
+                                        Примечание
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <ul class="account__edit-competencies-list">
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="5">
+                                <h4 class="account__edit-competencies-name">
+                                    Работа с людьми
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="3">
+                                <h4 class="account__edit-competencies-name">
+                                    Продажи
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
+                                <h4 class="account__edit-competencies-name">
+                                    Бизнес-процессы
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
+                                <h4 class="account__edit-competencies-name">
+                                    Склад/закупки
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="3">
+                                <h4 class="account__edit-competencies-name">
+                                    Мерчандайзинг
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="5">
+                                <h4 class="account__edit-competencies-name">
+                                    Финансы
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
+                                <h4 class="account__edit-competencies-name">
+                                    Маркетинг
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="account__edit-competencies-list-item">
+                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
+                                <h4 class="account__edit-competencies-name">
+                                    Дизайн
+                                </h4>
+                                <div class="account__edit-competencies-btns">
+                                    <button class="account__edit-competencies-btn">
+                                        1
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        2
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        3
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        4
+                                    </button>
+                                    <button class="account__edit-competencies-btn">
+                                        5
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </form>
+</section>
+
+<section class="add-franchise">
+    <div class="container">
+        <div class="inner-container">
+            <div class="add-franchise__content">
+                <div class="add-franchise__left-col">
+                    <h2 class="add-franchise__heading">
+                        Sed ut perspiciatis unde<br> omnis iste natus error 
+                    </h2>
+                    <a href="#" class="add-franchise__link">
+                        Добавить франшизу
+                    </a>
+                </div>
+                <div class="add-franchise__right-col">
+                    <img src="img/add-franchise.png" alt="" class="add-franchise__image">
+                </div>
             </div>
         </div>
     </div>

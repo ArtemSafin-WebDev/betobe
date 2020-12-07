@@ -1,0 +1,57 @@
+.progress {
+    position: relative;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 1;
+}
+
+.progress__bar-static,
+.progress__bar-dynamic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: left 100%;
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: repeat-x;
+}
+
+.progress__bar-static {
+    background-image: url('../img/light-blue-progress.svg');
+}
+
+.progress__bar-dynamic {
+    background-image: url('../img/dark-blue-progress.svg');
+    clip-path: polygon(0% 0%, var(--progress, 0%) 0%, var(--progress, 0%) 100%, 0% 100%);
+    transition: clip-path .3s;
+}
+.progress__bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progress__text {
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 120%;
+    position: relative;
+    z-index: 80;
+
+
+    @include breakpoint(mobile) {
+        min-height: 9rem;
+        font-size: 1.6rem;
+    }
+}

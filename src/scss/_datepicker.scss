@@ -1,0 +1,177 @@
+.pika-single {
+    box-shadow: none;
+    border: 1px solid #827e79;
+    background-color: #fff;
+    border-radius: 0;
+    font-family: inherit;
+}
+
+.pika-single.is-bound {
+    box-shadow: none;
+    top: 100%;
+    left: 0;
+    margin-top: -1px;
+    margin-top: 1rem;
+}
+
+.pika-lendar {
+    margin: 0;
+    float: none;
+    padding: 1.3rem;
+    width: 23.6rem;
+  
+}
+
+.pika-single:after,
+.pika-single:before {
+    display: none;
+}
+
+.pika-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.pika-label {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #2c251f;
+    padding: 0;
+    overflow: visible;
+    font-family: var(--gotham);
+    &:first-child {
+        margin-right: 0.5rem;
+    }
+}
+
+.pika-title select {
+    // display: none;
+    // top: 0;
+}
+
+.is-rtl .pika-next,
+.pika-prev,
+.is-rtl .pika-prev,
+.pika-next {
+    float: none;
+    background: none;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.12 9.41'%3E%3Cpath fill='%232c251f' d='M4.71 9.41L0 4.71 4.71 0l1.41 1.41-3.29 3.3L6.12 8 4.71 9.41z'/%3E%3C/svg%3E");
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.is-rtl .pika-prev,
+.pika-next {
+    &::before {
+        transform: translate(-50%, -50%) scaleX(-1);
+    }
+}
+
+.pika-next,
+.pika-prev {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #f5f5f5;
+
+    text-indent: 3rem;
+    opacity: 1;
+    position: relative;
+}
+
+.pika-prev {
+    margin-left: auto;
+    border-right: none;
+}
+
+.pika-table {
+    display: block;
+    thead,
+    tbody,
+    th,
+    td {
+        display: block;
+    }
+
+    tr {
+        display: flex;
+    }
+}
+
+.pika-table th {
+    font-size: 1.2rem;
+    line-height: 150%;
+    color: #cacaca;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding: 0.8rem 0;
+}
+
+.pika-table abbr {
+    cursor: default;
+    text-decoration: none;
+}
+
+.pika-button {
+    font-size: 1.4rem;
+    background: transparent;
+    line-height: 150%;
+    padding: 0.4rem 0;
+    color: #5A4D41;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: background-color .2s, border-color .2s, color .2s;
+}
+
+
+.has-event .pika-button, .is-selected .pika-button {
+    color: #fff !important;
+    font-weight: 400;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+.pika-button:hover, .pika-row.pick-whole-week:hover .pika-button {
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+}
+
+
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    color: #CACACA;
+    opacity: 1;
+}
+
+.is-disabled .pika-button, .is-inrange .pika-button {
+    background:transparent;
+}
+
+.is-outside-current-month .pika-button {
+    color: #CACACA;
+    opacity: 1;
+}
+
+
+.is-today .pika-button {
+    font-weight: 400;
+    color: var(--primary-color);
+}
