@@ -13485,7 +13485,7 @@ textarea.account__edit-input {
       padding-bottom: 0.7rem; } }
 
 @media only screen and (max-width: 767px) {
-  .add__editor-form-custom-select .custom-select .choices[data-type*=select-one] .choices__inner {
+  .add__editor-form-custom-select .custom-select .choices[data-type*='select-one'] .choices__inner {
     padding-bottom: 0.7rem; } }
 
 textarea.add__editor-form-input {
@@ -13574,6 +13574,12 @@ textarea.add__editor-form-input {
     margin: 0 auto;
     fill: #c9daf4;
     margin-bottom: 3.5rem; }
+  .add__editor-image-upload-with-preview--compact {
+    min-height: 15rem; }
+    .add__editor-image-upload-with-preview--compact svg {
+      margin-bottom: 1rem; }
+    .add__editor-image-upload-with-preview--compact .add__editor-image-upload-with-preview-text {
+      margin-bottom: 0.5rem; }
 
 .add__editor-image-upload-with-preview-text {
   font-size: 1.4rem;
@@ -13742,6 +13748,9 @@ textarea.add__editor-form-input {
   -ms-flex-item-align: start;
       align-self: flex-start;
   justify-self: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative; }
   .add__editor-file-upload input[type='file'] {
     position: absolute;
@@ -14044,3 +14053,108 @@ textarea.add__editor-form-input {
       font-size: 1.6rem;
       line-height: 1.2;
       margin-bottom: 3rem; } }
+
+.add__editor-form-repeater {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2.8rem;
+  margin-top: 5rem;
+  padding-left: 19rem;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-repeater {
+      padding: 0;
+      margin: 3rem 0;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 3rem; } }
+
+.add__editor-form-repeater-card {
+  border-radius: 0.4rem;
+  border: 1px solid #d0d8e5;
+  position: relative;
+  padding: 1.8rem;
+  padding-top: 2.4rem; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-repeater-card {
+      padding: 1.4rem;
+      padding-top: 2rem; } }
+
+.add__editor-form-repeater-card-label {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #ced6e3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  max-width: calc(100% - 2rem);
+  background-color: #fff;
+  margin-top: -.75rem;
+  padding: 0 .4rem; }
+
+.add__editor-form-repeater-card-remove {
+  position: absolute;
+  right: -.8rem;
+  top: 0;
+  margin-top: -.6rem; }
+  .add__editor-form-repeater-card-remove svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #ced6e3;
+    display: block;
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+  .add__editor-form-repeater-card-remove:hover svg {
+    fill: var(--primary-color); }
+
+.add__editor-form-repeater-row {
+  margin-bottom: 1.2rem; }
+  .add__editor-form-repeater-row .add__editor-file-upload {
+    width: 100%; }
+  .add__editor-form-repeater-row:last-child {
+    margin-bottom: 0; }
+
+.add__editor-form-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-gallery {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.add__editor-form-gallery-left-col {
+  width: 19rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-right: 2rem; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-gallery-left-col {
+      width: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      padding: 0; } }
+
+.add__editor-form-gallery-right-col {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-gallery-right-col {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.add__editor-form-gallery-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1.8rem; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-gallery-cards {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); } }
