@@ -752,7 +752,10 @@ textarea.add__editor-form-input {
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
-        margin-bottom: 0;
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -1406,5 +1409,59 @@ textarea.add__editor-form-input {
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         
+    }
+}
+
+
+.add__editor-form-materials {
+    margin-bottom: 4rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.add__editor-form-materials-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1.8rem;
+    margin-bottom: 1.8rem;
+
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
+
+
+.add__editor-form-add-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 1px solid #D0D8E5;
+    border-radius: .4rem;
+    padding: 1.7rem 2.4rem;
+    flex-shrink: 0;
+    transition: border-color .2s, color .2s;
+    &:link,
+    &:visited {
+        color:  #D0D8E5;
+    }
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: 1rem;
+        fill: currentColor;
+    }
+
+
+    &:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
     }
 }
