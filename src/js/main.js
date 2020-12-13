@@ -35,6 +35,7 @@ import Datepicker from './datepicker';
 import EditCompetencies from './editCompetencies';
 import LoadAccountImages from './loadAccountImages';
 import DateInput from './dateInput';
+import Add from './add';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     EditCompetencies();
     LoadAccountImages();
     DateInput();
+    Add();
 });
 
 window.addEventListener('load', function() {
