@@ -540,7 +540,7 @@
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #ced6e3;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -548,6 +548,10 @@
     align-items: center;
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
     }
 }
 
@@ -1280,3 +1284,6 @@ textarea.add__editor-form-input {
 
 
 
+.add__editor-form-edit-competencies {
+
+}

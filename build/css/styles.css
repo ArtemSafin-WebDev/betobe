@@ -13316,7 +13316,7 @@ textarea.account__edit-input {
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #ced6e3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -13328,6 +13328,9 @@ textarea.account__edit-input {
           align-items: center; }
   .add__editor-form-heading:last-child {
     margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .add__editor-form-heading {
+      margin-bottom: 2rem; } }
 
 .add__editor-form-heading-details {
   -ms-flex-negative: 0;
