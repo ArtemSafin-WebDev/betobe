@@ -830,6 +830,10 @@ textarea.add__editor-form-input {
 }
 
 .add__editor-form-multiselect {
+    margin-bottom: 1.8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
     .choices {
         font-size: 1.8rem;
         line-height: 1.2;
