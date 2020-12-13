@@ -14238,7 +14238,8 @@ textarea.add__editor-form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-transition: border-color .2s, color .2s;
-  transition: border-color .2s, color .2s; }
+  transition: border-color .2s, color .2s;
+  grid-column: 1 / -1; }
   .add__editor-form-add-more:link, .add__editor-form-add-more:visited {
     color: #D0D8E5; }
   .add__editor-form-add-more svg {

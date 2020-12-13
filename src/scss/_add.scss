@@ -1497,6 +1497,7 @@ textarea.add__editor-form-input {
     padding: 1.7rem 2.4rem;
     flex-shrink: 0;
     transition: border-color .2s, color .2s;
+    grid-column: 1 / -1;
     &:link,
     &:visited {
         color:  #D0D8E5;

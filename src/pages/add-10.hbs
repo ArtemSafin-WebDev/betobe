@@ -1,0 +1,291 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="add">
+    <div class="add__top-panel">
+        <div class="container">
+            <div class="add__top-panel-row">
+                <h1 class="add__top-panel-heading">
+                    Добавление франшизы
+                </h1>
+                <div class="add__top-panel-saved-at">
+                    Сохранено в 14:55
+                </div>
+                <div class="add__top-panel-buttons">
+                    <a href="#" class="add__top-panel-button">
+                        Предпросмотр
+                    </a>
+                    <a href="#" class="add__top-panel-button add__top-panel-button--save">
+                        Опубликовать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add__progress">
+        <div class="progress">
+            <div class="progress__bar">
+                <div class="progress__bar-static">
+
+                </div>
+                <div class="progress__bar-dynamic" style="--progress: 60%;">
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="progress__text">
+                    Заполните ваш профиль на 80% и получите доступ к расширенной<br> информации о франшизах.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add__content">
+        <div class="container">
+            <div class="add__stages">
+                <a href="#" class="add__stages-link active">
+                    <span class="add__stages-link-number">
+                        1
+                    </span>
+                    Общая информация
+                </a>
+                <span class="add__stages-divider">
+
+                </span>
+
+                <a href="add-settings.html" class="add__stages-link">
+                    <span class="add__stages-link-number">
+                        2
+                    </span>
+                    Настройки
+                </a>
+                <span class="add__stages-divider">
+
+                </span>
+
+                <a href="add-publication.html" class="add__stages-link">
+                    <span class="add__stages-link-number">
+                        3
+                    </span>
+                    Публикация
+                </a>
+            </div>
+            {{> add-menu }}
+
+            <div class="add__layout">
+                <div class="add__layout-main">
+                    <div class="add__editor">
+                        <form action="/" class="add__editor-form" id="editor-form">
+                            <div class="add__editor-form-top-row add__editor-form-top-row--add-1">
+                                <h3 class="add__editor-form-heading">
+                                    отзывы
+
+                                    <div class="add__editor-form-heading-details">
+                                        <svg width="22" height="22" aria-hidden="true" class="icon-details">
+                                            <use xlink:href="#details"></use>
+                                        </svg>
+                                        <div class="add__editor-form-heading-details-dropdown">
+                                            <div class="add__editor-form-heading-details-dropdown-inner">
+                                                Примечание
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h3>
+                                <div class="add__editor-form-layout">
+                                    <div class="add__editor-form-layout-left-col">
+                                        <label class="add__editor-form-input-wrapper">
+                                            <div class="add__editor-form-input-text">
+                                                Заголовок
+                                            </div>
+                                            <input type="text" class="add__editor-form-input">
+                                        </label>
+                                        <label class="add__editor-form-input-wrapper">
+                                            <div class="add__editor-form-input-text">
+                                                Текст
+                                            </div>
+                                            <textarea name="comment" class="add__editor-form-input">
+
+                                            </textarea>
+                                        </label>
+                                        <div class="add__editor-form-repeater">
+                                            <div class="add__editor-form-repeater-card">
+                                                <div class="add__editor-form-repeater-card-label">
+                                                    видеоотзыв
+                                                </div>
+                                                <button class="add__editor-form-repeater-card-remove">
+                                                    <svg width="22" height="22" aria-hidden="true" class="icon-remove">
+                                                        <use xlink:href="#remove"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <textarea name="comment" class="add__editor-form-input"
+                                                        placeholder="Цитата"></textarea>
+                                                </div>
+
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="ФИО франчайзи">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Контакты">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Ссылка на видео">
+                                                </div>
+
+
+                                            </div>
+                                            <div class="add__editor-form-repeater-card">
+                                                <div class="add__editor-form-repeater-card-label">
+                                                    видеоотзыв
+                                                </div>
+                                                <button class="add__editor-form-repeater-card-remove">
+                                                    <svg width="22" height="22" aria-hidden="true" class="icon-remove">
+                                                        <use xlink:href="#remove"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <textarea name="comment" class="add__editor-form-input"
+                                                        placeholder="Цитата"></textarea>
+                                                </div>
+
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="ФИО франчайзи">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Контакты">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Ссылка на видео">
+                                                </div>
+
+
+                                            </div>
+                                            <div class="add__editor-form-repeater-card">
+                                                <div class="add__editor-form-repeater-card-label">
+                                                    видеоотзыв
+                                                </div>
+                                                <button class="add__editor-form-repeater-card-remove">
+                                                    <svg width="22" height="22" aria-hidden="true" class="icon-remove">
+                                                        <use xlink:href="#remove"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <textarea name="comment" class="add__editor-form-input"
+                                                        placeholder="Цитата"></textarea>
+                                                </div>
+
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="ФИО франчайзи">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Контакты">
+                                                </div>
+                                                <div class="add__editor-form-repeater-row">
+                                                    <input type="text" class="add__editor-form-input"
+                                                        placeholder="Ссылка на видео">
+                                                </div>
+
+
+                                            </div>
+
+                                            <a href="#" class="add__editor-form-add-more">
+                                                <svg width="22" height="22" aria-hidden="true" class="icon-add">
+                                                    <use xlink:href="#add"></use>
+                                                </svg>
+                                                Добавить блок
+                                            </a>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="add__editor-form-bottom-row">
+                                <div class="add__editor-form-bottom-row-block">
+                                    <div class="add__editor-form-bottom-row-block-left-col">
+                                        <h3 class="add__editor-form-heading">
+                                            Настройки
+                                        </h3>
+                                    </div>
+                                    <div class="add__editor-form-bottom-row-block-right-col">
+                                        <label class="add__editor-form-checkbox">
+                                            <input type="checkbox" name="only-auth"
+                                                class="add__editor-form-checkbox-input">
+                                            <span class="add__editor-form-checkbox-mark">
+
+                                            </span>
+                                            <span class="add__editor-form-checkbox-text">
+                                                Показывать блок только авторизованным
+                                            </span>
+                                        </label>
+                                        <label class="add__editor-form-checkbox">
+                                            <input type="checkbox" name="only-auth"
+                                                class="add__editor-form-checkbox-input">
+                                            <span class="add__editor-form-checkbox-mark">
+
+                                            </span>
+                                            <span class="add__editor-form-checkbox-text">
+                                                Скрыть блок
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="add__layout-sidebar">
+                    <div class="add__preview">
+                        <h3 class="add__preview-heading">
+                            помощь
+                        </h3>
+                        <div class="add__preview-text">
+                            <p>
+                                Уважаемые франчайзеры! Для Вашего удобства мы собрали правила и рекомендации по работе с
+                                каталогом, можете посмотреть видео
+                            </p>
+                        </div>
+                        <div class="add__preview-image-container">
+                            <img src="img/add/8.jpg" alt="" class="add__preview-image">
+                        </div>
+                    </div>
+                    <div class="add__nav-btns">
+                        <a href="add-10.html" class="add__nav-btn">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-prev">
+                                <use xlink:href="#arrow-prev"></use>
+                            </svg>
+                            Назад
+
+                        </a>
+                        <a href="add-11.html" class="add__nav-btn add__nav-btn--next">
+                            Далее
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-next">
+                                <use xlink:href="#arrow-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}
