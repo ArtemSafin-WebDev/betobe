@@ -106,7 +106,6 @@
     padding-top: 5.5rem;
     padding-bottom: 10rem;
 
-
     @include breakpoint(mobile) {
         padding-top: 3rem;
         padding-bottom: 5rem;
@@ -149,7 +148,6 @@
     @include breakpoint(mobile) {
         font-size: 1.6rem;
     }
-    
 }
 
 .add__stages-link-number {
@@ -186,7 +184,7 @@
     @include breakpoint(mobile) {
         width: 1px;
         height: 2rem;
-        margin: .4rem 0;
+        margin: 0.4rem 0;
         border: none;
         margin-left: 1.3rem;
         border-left: 1px dashed #c4d8f5;
@@ -216,7 +214,6 @@
     flex-wrap: nowrap;
     position: relative;
 
-
     @include breakpoint(mobile) {
         margin: 0 calc(-1 * var(--content-padding));
         padding: 0 var(--content-padding);
@@ -245,7 +242,6 @@
             fill: var(--primary-color);
         }
     }
-
 
     @include breakpoint(mobile) {
         display: none;
@@ -344,7 +340,7 @@
 
     @include breakpoint(mobile) {
         padding: 1.8rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }
 
@@ -442,7 +438,6 @@
     justify-content: center;
     transition: background-color 0.2s, color 0.2s;
 
-
     &:last-child {
         margin-right: 0;
     }
@@ -492,7 +487,6 @@
         }
     }
 
-
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         padding: 1.4rem 2.4rem;
@@ -538,7 +532,7 @@
     border-radius: 1rem;
 
     @include breakpoint(mobile) {
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }
 
@@ -616,12 +610,11 @@
         color: rgba(black, 0.4);
     }
 
-
     @include breakpoint(mobile) {
         height: 4.2rem;
         font-size: 16px;
         padding: 0 1.2rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }
 
@@ -771,7 +764,7 @@
 
         @include breakpoint(mobile) {
             font-size: 14px;
-            padding: .6rem 1rem;
+            padding: 0.6rem 1rem;
             margin-right: 0.8rem;
             margin-top: 0.3rem;
             margin-bottom: 0.3rem;
@@ -888,17 +881,13 @@
         @include breakpoint(mobile) {
             width: 1.6rem;
             height: 1.6rem;
-            margin-right: .8rem;
+            margin-right: 0.8rem;
         }
     }
 
-
     @include breakpoint(mobile) {
-
         padding: 1.2rem 1.6rem;
     }
-
-
 }
 
 .add__editor-file-upload-remove {
@@ -974,9 +963,8 @@
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.2s;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
-
 
     @include breakpoint(mobile) {
         width: 2rem;
@@ -986,11 +974,8 @@
         &::before {
             width: 1.3rem;
             height: 1.3rem;
-           
         }
     }
-
-    
 }
 
 .add__editor-form-checkbox-input {
@@ -1008,7 +993,164 @@
     line-height: 120%;
     padding-top: 0.3rem;
 
+    &--grey {
+        color: #8a8a8a;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 0.2rem;
+    }
+}
+
+.add__change-order {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4.2rem;
+    margin-bottom: 1.7rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include breakpoint(mobile) {
+        border-radius: 0.4rem;
+        padding: 1.8rem;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.add__publication-block {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4.2rem;
+    @include breakpoint(mobile) {
+        border-radius: 0.4rem;
+        padding: 1.8rem;
+        flex-direction: column;
+        .add__top-panel-button {
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            flex-shrink: 1;
+        }
+    }
+}
+
+.add__settings-block {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4.2rem;
+    margin-bottom: 1.7rem;
+    display: flex;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include breakpoint(mobile) {
+        border-radius: 0.4rem;
+        padding: 1.8rem;
+        flex-direction: column;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.add__settings-block-left-col {
+    width: 27rem;
+    flex-shrink: 0;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin-bottom: 2rem;
+    }
+}
+
+.add__settings-block-right-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.add__settings-block-message {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #8a8a8a;
+
+    a {
+        border-bottom: 1px solid rgba(#3384fe, 0.2);
+        transition: color 0.2s, border-color 0.2s;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        &:hover {
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+.add__editor-order-list-item {
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.add__editor-order-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1.4rem 3rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.4rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    background-color: #fff;
+    color: #000000;
+    user-select: none;
+    svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        fill: #ced6e3;
+    }
+    &:link,
+    &:visited {
+        color: #000000;
+    }
+
+    &.disabled {
+        color: #9eadc8;
+    }
+
+    &:hover {
+        background: #e7f0ff;
+        border-color: #e7f0ff;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1rem 1.4rem;
+        font-size: 1.2rem;
+    }
+}
+
+.add__publication-message {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 3rem;
+    color: #9EADC8;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+
     }
 }

@@ -2,6 +2,9 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import detectIt from 'detect-it';
 import { MOBILE_WIDTH } from './constants';
+import Sortable from "sortablejs";
+
+
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Add() {
@@ -60,5 +63,27 @@ export default function Add() {
                 }
             });
         }
+    }
+
+
+    const blocksOrder = document.querySelector('.js-blocks-order');
+
+    if (blocksOrder) {
+
+        window.blocksOrderOptions = {
+           
+            
+        }
+
+        if (!window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+            // blocksOrderOptions.handle = '.icon-list-burger';
+            blocksOrderOptions.easing = "cubic-bezier(1, 0, 0, 1)";
+            blocksOrderOptions.animation = 250;
+
+        }
+
+        const sortable = new Sortable(blocksOrder, window.blocksOrderOptions);
+
+        window.blocksOrder = sortable;
     }
 }

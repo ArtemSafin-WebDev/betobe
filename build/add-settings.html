@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Редактирование пользователя - Betobe
+        Настройки - Добавление франшизы
     </title>
 </head>
 
@@ -172,517 +172,318 @@
             </div>
         </header>        <main class="page-main">
 
-<nav class="settings-nav">
-    <div class="container">
-        <div class="settings-nav__row">
-            <a href="#" class="settings-nav__link active">
-                Мой профиль 
-            </a>
-            <a href="#" class="settings-nav__link">
-                МОИ ФРАНШИЗЫ
-            </a>
-            <a href="#" class="settings-nav__link">
-                Настройки
-            </a>
-        </div>
-    </div>
-</nav>
-<div class="progress">
-    <div class="progress__bar">
-        <div class="progress__bar-static">
-
-        </div>
-        <div class="progress__bar-dynamic" style="--progress: 60%;">
-
-        </div>
-    </div>
-    <div class="container">
-        <div class="progress__text">
-            Заполните ваш профиль на 80% и получите доступ к расширенной<br> информации о франшизах.
-        </div>
-    </div>
-</div>
-
-<section class="account">
-    <form action="/" class="account__edit-form" enctype="multipart/form-data" method="POST" data-need-validation>
-
-
-        <div class="account__header">
-            <div class="account-header__bg">
-                <img src="img/account-header.jpg" alt="" class="account-header__bg-image">
-
-            </div>
-
-            <div class="container">
-                <div class="account__header-top-row account__header-top-row--edit">
-                    <label class="account__header-change-bg">
-                        <svg width="12" height="12" aria-hidden="true" class="icon-pencil">
-                            <use xlink:href="#pencil"></use>
-                        </svg>
-                        Сменить фон
-                        <input type="file" name="background" class="account__header-change-bg-input js-change-bg-input" accept="image/*">
-                    </label>
-
-                    <div class="account__header-controls">
-                        <a href="#" class="account__header-controls-btn">
-                            Предпросмотр
-                        </a>
-                        <button type="submit" class="account__header-controls-btn account__header-controls-btn--save">
-                            Сохранить
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<section class="add">
+    <div class="add__top-panel">
         <div class="container">
-            <div class="account__intro">
-                <div class="account__photo-container">
-                    <label class="account__load-photo-link">
-                        <input type="file" name="photo" class="account__load-photo-link-file-input js-load-profile-photo" accept="image/*">
-                        <svg width="50" height="50" aria-hidden="true" class="icon-load-photo">
-                            <use xlink:href="#load-photo"></use>
-                        </svg>
-                        Загрузить фото
-                    </label>
-                </div>
-                <h1 class="account__intro-name">
-
-                    <input type="text" class="account__intro-name-input" value="Альберт Гайнуллин" readonly>
-                    <button class="account__intro-name-edit-btn js-edit-name">
-                        <svg width="18" height="18" aria-hidden="true" class="icon-pencil">
-                            <use xlink:href="#pencil"></use>
-                        </svg>
-                    </button>
-
-
+            <div class="add__top-panel-row">
+                <h1 class="add__top-panel-heading">
+                    Добавление франшизы
                 </h1>
-                <div class="account__intro-description">
-                    <div class="account__intro-edit-description">
-                        <div class="account__edit-input-wrapper">
-                            <input type="text" class="account__edit-input" placeholder="Краткая подпись">
-                        </div>
-                    </div>
-
-
+                <div class="add__top-panel-saved-at">
+                    Сохранено в 14:55
                 </div>
-            </div>
-            <div class="inner-container">
-                <div class="account__info account__info--edit">
-                    <div class="account__about">
-
-
-                        <h2 class="franchise-description__heading">
-                            о себе
-                        </h2>
-                        <div class="account__about-layout">
-                            <div class="account__about-description">
-                                <textarea name="about" class="account__edit-input"
-                                    placeholder="Опишите свой опыт, компетенции или любую другую информацию, полезную для других пользователей"></textarea>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="account__contact-data">
-                        <ul class="account__contact-data-list">
-                            <li class="account__contact-data-list-item">
-                                <label class="account__contact-data-label">
-                                    <span class="account__contact-data-label-text">
-                                        E-mail
-                                    </span>
-                                    <div class="account__edit-input-wrapper">
-                                        <input type="email" name="email" class="account__edit-input"
-                                            placeholder="E-mail" required>
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
-                                            <use xlink:href="#warning"></use>
-                                        </svg>
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
-                                            <use xlink:href="#success"></use>
-                                        </svg>
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="account__contact-data-list-item">
-                                <label class="account__contact-data-label">
-                                    <span class="account__contact-data-label-text">
-                                        Телефон
-                                    </span>
-                                    <div class="account__edit-input-wrapper">
-                                        <input type="tel" name="phone" class="account__edit-input js-phone-input"
-                                            placeholder="Телефон" required data-parsley-phone>
-
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
-                                            <use xlink:href="#warning"></use>
-                                        </svg>
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
-                                            <use xlink:href="#success"></use>
-                                        </svg>
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="account__contact-data-list-item">
-                                <label class="account__contact-data-label">
-                                    <span class="account__contact-data-label-text">
-                                        Пол
-                                    </span>
-                                    <div class="account__edit-input-wrapper">
-                                        <div class="custom-select">
-                                            <select name="gender" class="js-custom-select">
-                                                <option value="m">Мужской</option>
-                                                <option value="f">Женский</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </label>
-                            </li>
-
-                            <li class="account__contact-data-list-item">
-                                <label class="account__contact-data-label">
-                                    <span class="account__contact-data-label-text">
-                                        Город
-                                    </span>
-                                    <div class="account__edit-input-wrapper">
-                                        <input type="text" name="city" class="account__edit-input" placeholder="Город"
-                                            required>
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-warning">
-                                            <use xlink:href="#warning"></use>
-                                        </svg>
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-success">
-                                            <use xlink:href="#success"></use>
-                                        </svg>
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="account__contact-data-list-item">
-                                <label class="account__contact-data-label">
-                                    <span class="account__contact-data-label-text">
-                                        Дата рождения
-                                    </span>
-                                    <div class="account__edit-input-wrapper">
-                                        <input type="tel" name="date-of-birth" class="account__edit-input js-date-input"
-                                            required data-parsley-date placeholder="Дата рождения">
-                                        <svg width="20" height="20" aria-hidden="true" class="icon-calendar">
-                                            <use xlink:href="#calendar"></use>
-                                        </svg>
-
-                                    </div>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="account__connected-accounts">
-                        <h2 class="franchise-description__heading">
-                            связанные аккаунты
-                        </h2>
-                        <ul class="account__connected-accounts-list">
-                            <li class="account__connected-accounts-list-item">
-                                <a href="#"
-                                    class="account__connected-accounts-link account__connected-accounts-link--facebook active">
-                                    <span class="account__connected-accounts-link-content">
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-facebook">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                        Facebook
-                                    </span>
-
-                                    <span class="account__connected-accounts-status">
-                                        biktagirov
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-unsubscribe">
-                                            <use xlink:href="#unsubscribe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="account__connected-accounts-list-item">
-                                <a href="#"
-                                    class="account__connected-accounts-link account__connected-accounts-link--vk active">
-                                    <span class="account__connected-accounts-link-content">
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-vk">
-                                            <use xlink:href="#vk"></use>
-                                        </svg>
-                                        Вконтакте
-                                    </span>
-
-                                    <span class="account__connected-accounts-status">
-                                        biktagirov
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-unsubscribe">
-                                            <use xlink:href="#unsubscribe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="account__connected-accounts-list-item">
-                                <a href="#"
-                                    class="account__connected-accounts-link account__connected-accounts-link--google">
-                                    <span class="account__connected-accounts-link-content">
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-google">
-                                            <use xlink:href="#google"></use>
-                                        </svg>
-                                        Google
-                                    </span>
-
-                                    <span class="account__connected-accounts-status">
-                                        Связать
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="account__connected-accounts-list-item">
-                                <a href="#"
-                                    class="account__connected-accounts-link account__connected-accounts-link--instagram">
-                                    <span class="account__connected-accounts-link-content">
-                                        <svg width="18" height="18" aria-hidden="true" class="icon-instagram">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                        Instagram
-                                    </span>
-
-                                    <span class="account__connected-accounts-status">
-                                        Связать
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="account__edit-competencies js-edit-competencies">
-                        <h3 class="franchise-description__heading">
-                            компетенции
-
-                            <div class="franchise-description__heading-details">
-                                <svg width="22" height="22" aria-hidden="true" class="icon-details">
-                                    <use xlink:href="#details"></use>
-                                </svg>
-                                <div class="franchise-description__heading-details-dropdown">
-                                    <div class="franchise-description__heading-details-dropdown-inner">
-                                        Примечание
-                                    </div>
-                                </div>
-                            </div>
-                        </h3>
-                        <ul class="account__edit-competencies-list">
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="5">
-                                <h4 class="account__edit-competencies-name">
-                                    Работа с людьми
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="3">
-                                <h4 class="account__edit-competencies-name">
-                                    Продажи
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
-                                <h4 class="account__edit-competencies-name">
-                                    Бизнес-процессы
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
-                                <h4 class="account__edit-competencies-name">
-                                    Склад/закупки
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="3">
-                                <h4 class="account__edit-competencies-name">
-                                    Мерчандайзинг
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="5">
-                                <h4 class="account__edit-competencies-name">
-                                    Финансы
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
-                                <h4 class="account__edit-competencies-name">
-                                    Маркетинг
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="account__edit-competencies-list-item">
-                                <input type="hidden" name="total" class="account__edit-competencies-total" value="0">
-                                <h4 class="account__edit-competencies-name">
-                                    Дизайн
-                                </h4>
-                                <div class="account__edit-competencies-btns">
-                                    <button class="account__edit-competencies-btn">
-                                        1
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        2
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        3
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        4
-                                    </button>
-                                    <button class="account__edit-competencies-btn">
-                                        5
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </form>
-</section>
-
-<section class="add-franchise">
-    <div class="container">
-        <div class="inner-container">
-            <div class="add-franchise__content">
-                <div class="add-franchise__left-col">
-                    <h2 class="add-franchise__heading">
-                        Sed ut perspiciatis unde<br> omnis iste natus error 
-                    </h2>
-                    <a href="#" class="add-franchise__link">
-                        Добавить франшизу
+                <div class="add__top-panel-buttons">
+                    <a href="#" class="add__top-panel-button">
+                        Предпросмотр
+                    </a>
+                    <a href="#" class="add__top-panel-button add__top-panel-button--save">
+                        Опубликовать
                     </a>
                 </div>
-                <div class="add-franchise__right-col">
-                    <img src="img/add-franchise.png" alt="" class="add-franchise__image">
+            </div>
+        </div>
+    </div>
+    <div class="add__progress">
+        <div class="progress">
+            <div class="progress__bar">
+                <div class="progress__bar-static">
+
+                </div>
+                <div class="progress__bar-dynamic" style="--progress: 60%;">
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="progress__text">
+                    Заполните ваш профиль на 80% и получите доступ к расширенной<br> информации о франшизах.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add__content">
+        <div class="container">
+            <div class="add__stages">
+                <a href="#" class="add__stages-link">
+                    <span class="add__stages-link-number">
+                        1
+                    </span>
+                    Общая информация
+                </a>
+                <span class="add__stages-divider">
+
+                </span>
+
+                <a href="add-settings.html" class="add__stages-link active">
+                    <span class="add__stages-link-number">
+                        2
+                    </span>
+                    Настройки
+                </a>
+                <span class="add__stages-divider">
+
+                </span>
+
+                <a href="add-publication.html" class="add__stages-link">
+                    <span class="add__stages-link-number">
+                        3
+                    </span>
+                    Публикация
+                </a>
+            </div>
+
+
+            <div class="add__layout">
+                <div class="add__layout-main">
+                    <div class="add__change-order">
+                        <h3 class="add__editor-form-heading">
+                            Настройте порядок блока
+                        </h3>
+                        <ul class="add__editor-order-list js-blocks-order">
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    первый экран
+
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    описание и ключевые цифры
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    Требуемые компетенции
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    о продукте
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    Состав франшизы
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    Управляющая компания
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    География (карта)
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    Финансовые условия
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    пример расчета прибыли
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    Форма обратной связи
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    Заявка
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    Видео
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card disabled">
+                                    вопрос-ответ
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    основатели
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    отзывы
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="add__editor-order-list-item">
+                                <a href="#" class="add__editor-order-card">
+                                    Заявка 2
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-list-burger">
+                                        <use xlink:href="#list-burger"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="add__settings-block">
+                        <div class="add__settings-block-left-col">
+                            <h3 class="add__editor-form-heading">
+                                Уведомления рассылки
+                            </h3>
+                        </div>
+                        <div class="add__settings-block-right-col">
+                            <form action="/" method="POST" class="add__settings-block-form">
+                                <label class="add__editor-form-checkbox">
+                                    <input type="checkbox" name="only-auth" class="add__editor-form-checkbox-input"
+                                        checked>
+                                    <span class="add__editor-form-checkbox-mark">
+
+                                    </span>
+                                    <span class="add__editor-form-checkbox-text add__editor-form-checkbox-text--grey">
+                                        Рассылка Betobe
+                                    </span>
+                                </label>
+                                <label class="add__editor-form-checkbox">
+                                    <input type="checkbox" name="only-auth" class="add__editor-form-checkbox-input">
+                                    <span class="add__editor-form-checkbox-mark">
+
+                                    </span>
+                                    <span class="add__editor-form-checkbox-text add__editor-form-checkbox-text--grey">
+                                        Готовый бизнес и франчайзинг
+                                    </span>
+                                </label>
+                                <label class="add__editor-form-checkbox">
+                                    <input type="checkbox" name="only-auth" class="add__editor-form-checkbox-input">
+                                    <span class="add__editor-form-checkbox-mark">
+
+                                    </span>
+                                    <span class="add__editor-form-checkbox-text add__editor-form-checkbox-text--grey">
+                                        События в личном кабинете
+                                    </span>
+                                </label>
+                                <label class="add__editor-form-checkbox">
+                                    <input type="checkbox" name="only-auth" class="add__editor-form-checkbox-input"
+                                        checked>
+                                    <span class="add__editor-form-checkbox-mark">
+
+                                    </span>
+                                    <span class="add__editor-form-checkbox-text add__editor-form-checkbox-text--grey">
+                                        Получать по электронной почте уведомлений
+                                    </span>
+                                </label>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="add__settings-block">
+                        <div class="add__settings-block-left-col">
+                            <h3 class="add__editor-form-heading">
+                                Удалить франшизу
+                            </h3>
+                        </div>
+                        <div class="add__settings-block-right-col">
+                            <div class="add__settings-block-message">
+                                При желании вы можете <a href="#">
+                                    удалить свою франшизу
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add__layout-sidebar">
+                    <div class="add__preview">
+                        <h3 class="add__preview-heading">
+                            помощь
+                        </h3>
+                        <div class="add__preview-text">
+                            <p>
+                                Уважаемые франчайзеры! Для Вашего удобства мы собрали правила и рекомендации по работе с
+                                каталогом, можете посмотреть видео
+                            </p>
+                        </div>
+                        <div class="add__preview-image-container">
+                            <img src="img/add/1.jpg" alt="" class="add__preview-image">
+                        </div>
+                    </div>
+                    <div class="add__nav-btns">
+                        <a href="#" class="add__nav-btn">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-prev">
+                                <use xlink:href="#arrow-prev"></use>
+                            </svg>
+                            Назад
+
+                        </a>
+                        <a href="#" class="add__nav-btn add__nav-btn--next">
+                            Далее
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-next">
+                                <use xlink:href="#arrow-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
         </main>
