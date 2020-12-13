@@ -1302,6 +1302,8 @@ textarea.add__editor-form-input {
     padding-left: 19rem;
     margin-bottom: 4rem;
 
+   
+
     @include breakpoint(mobile) {
         padding: 0;
         margin: 3rem 0;
@@ -1317,9 +1319,46 @@ textarea.add__editor-form-input {
     padding: 1.8rem;
     padding-top: 2.4rem;
 
+    &--row {
+        display: flex;
+        grid-gap: initial;
+        grid-column: 1 / -1;
+
+        & ~ .add__editor-form-add-more {
+            grid-column: 1 / -1;
+        }
+        @include breakpoint(mobile) {
+            flex-direction: column;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 1.4rem;
         padding-top: 2rem;
+    }
+}
+
+
+.add__editor-form-repeater-card-left-col {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.add__editor-form-repeater-card-right-col {
+    width: 21rem;
+    flex-shrink: 0;
+    margin-left: 1.8rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
     }
 }
 
