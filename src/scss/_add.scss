@@ -1407,6 +1407,12 @@ textarea.add__editor-form-input {
 
 .add__editor-form-repeater-row {
     margin-bottom: 1.2rem;
+
+    .add__editor-form-input {
+        @include placeholder {
+            color: #8B9AB7;
+        }
+    }
     .add__editor-file-upload {
         width: 100%;
     }

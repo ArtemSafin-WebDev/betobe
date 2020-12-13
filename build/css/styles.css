@@ -14146,6 +14146,14 @@ textarea.add__editor-form-input {
 
 .add__editor-form-repeater-row {
   margin-bottom: 1.2rem; }
+  .add__editor-form-repeater-row .add__editor-form-input::-webkit-input-placeholder {
+    color: #8B9AB7; }
+  .add__editor-form-repeater-row .add__editor-form-input:-moz-placeholder {
+    color: #8B9AB7; }
+  .add__editor-form-repeater-row .add__editor-form-input::-moz-placeholder {
+    color: #8B9AB7; }
+  .add__editor-form-repeater-row .add__editor-form-input:-ms-input-placeholder {
+    color: #8B9AB7; }
   .add__editor-form-repeater-row .add__editor-file-upload {
     width: 100%; }
   .add__editor-form-repeater-row:last-child {
