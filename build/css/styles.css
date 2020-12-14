@@ -4718,7 +4718,7 @@ select:-webkit-autofill:focus {
   z-index: 100; }
   @media only screen and (max-width: 767px) {
     .franchise-catalog__card-actions-dropdown {
-      padding-top: .5rem; } }
+      padding-top: 0.5rem; } }
 
 .franchise-catalog__card-actions-dropdown-inner {
   background: #ffffff;
@@ -5520,7 +5520,10 @@ select:-webkit-autofill:focus {
   width: 100%;
   border-collapse: collapse;
   display: block; }
-  .franchise-catalog__card-specs-ratings-table thead, .franchise-catalog__card-specs-ratings-table tbody, .franchise-catalog__card-specs-ratings-table th, .franchise-catalog__card-specs-ratings-table td {
+  .franchise-catalog__card-specs-ratings-table thead,
+  .franchise-catalog__card-specs-ratings-table tbody,
+  .franchise-catalog__card-specs-ratings-table th,
+  .franchise-catalog__card-specs-ratings-table td {
     display: block; }
   .franchise-catalog__card-specs-ratings-table tr {
     display: grid;
@@ -5544,7 +5547,14 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.6rem;
-  white-space: nowrap; }
+  white-space: nowrap;
+  position: relative;
+  cursor: default; }
+  .franchise-catalog__card-specs-ratings-progress-text:hover .franchise-catalog__card-specs-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity .2s ease .1s, visibility .2s ease .1s;
+    transition: opacity .2s ease .1s, visibility .2s ease .1s; }
   .franchise-description__competencies .franchise-catalog__card-specs-ratings-progress-text {
     font-weight: 400; }
     @media only screen and (max-width: 767px) {
@@ -5556,6 +5566,76 @@ select:-webkit-autofill:focus {
     .franchise-catalog__card-specs-ratings-progress-text {
       font-size: 1.4rem;
       line-height: 1.6; } }
+
+.franchise-catalog__card-specs-dropdown {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-right: 3rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .2s, visibility 0s linear .2s;
+  transition: opacity .2s, visibility 0s linear .2s;
+  z-index: 30; }
+  @media only screen and (max-width: 767px) {
+    .franchise-catalog__card-specs-dropdown {
+      display: none; } }
+
+.franchise-catalog__card-specs-dropdown-inner {
+  background: #ffffff;
+  -webkit-filter: drop-shadow(0 0.64rem 6.4rem rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 0.64rem 6.4rem rgba(0, 0, 0, 0.1));
+  border-radius: 1rem;
+  padding: 2.8rem;
+  padding-left: 3.8rem;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 49rem;
+  position: relative;
+  white-space: initial; }
+  .franchise-catalog__card-specs-dropdown-inner::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.2rem 0 1.2rem 1.2rem;
+    border-color: transparent transparent transparent #ffffff; }
+
+.franchise-catalog__card-specs-dropdown-image {
+  width: 11.4rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 2.5rem; }
+
+.franchise-catalog__card-specs-dropdown-content {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.franchise-catalog__card-specs-dropdown-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem; }
+
+.franchise-catalog__card-specs-dropdown-text {
+  font-size: 1.7rem;
+  line-height: 140%; }
 
 .franchise-catalog__card-specs-ratings-progress-bar {
   border-radius: 0.3rem;
