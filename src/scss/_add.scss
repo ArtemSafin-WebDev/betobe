@@ -1048,9 +1048,13 @@ textarea.add__editor-form-input {
 
 .add__editor-form-bottom-row-block {
     display: flex;
-
+    margin-bottom: 6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
     @include breakpoint(mobile) {
         flex-direction: column;
+        margin-bottom: 3rem;
     }
 }
 
@@ -1139,6 +1143,10 @@ textarea.add__editor-form-input {
 
     &--grey {
         color: #8a8a8a;
+    }
+
+    &--light {
+        color: #8A9EBF;
     }
 
     @include breakpoint(mobile) {
@@ -1465,6 +1473,9 @@ textarea.add__editor-form-input {
 
 .add__editor-form-materials {
     margin-bottom: 4rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
     }
@@ -1475,6 +1486,11 @@ textarea.add__editor-form-input {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 1.8rem;
     margin-bottom: 1.8rem;
+    align-items: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
