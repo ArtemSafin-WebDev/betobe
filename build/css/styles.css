@@ -13631,7 +13631,8 @@ textarea.add__editor-form-input {
     background: transparent;
     padding: 0;
     margin: 0;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    width: auto; }
     @media only screen and (max-width: 767px) {
       .add__editor-form-multiselect .choices__input {
         font-size: 16px; } }
@@ -13769,6 +13770,9 @@ textarea.add__editor-form-input {
   @media only screen and (max-width: 767px) {
     .add__editor-file-upload {
       padding: 1.2rem 1.6rem; } }
+
+.add__editor-file-upload-text-grey {
+  color: #8B9AB7; }
 
 .add__editor-file-upload-remove {
   -ms-flex-negative: 0;
@@ -14123,21 +14127,21 @@ textarea.add__editor-form-input {
   letter-spacing: 0.08em;
   max-width: calc(100% - 2rem);
   background-color: #fff;
-  margin-top: -.75rem;
-  padding: 0 .4rem; }
+  margin-top: -0.75rem;
+  padding: 0 0.4rem; }
 
 .add__editor-form-repeater-card-remove {
   position: absolute;
-  right: -.8rem;
+  right: -0.8rem;
   top: 0;
-  margin-top: -.6rem; }
+  margin-top: -0.6rem; }
   .add__editor-form-repeater-card-remove svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: #ced6e3;
+    fill: #c4d8f5;
     display: block;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .add__editor-form-repeater-card-remove:hover svg {
     fill: var(--primary-color); }
 
@@ -14149,13 +14153,13 @@ textarea.add__editor-form-input {
     padding-left: 1.4rem;
     padding-right: 1.4rem; }
     .add__editor-form-repeater-row .add__editor-form-input::-webkit-input-placeholder {
-      color: #8B9AB7; }
+      color: #8b9ab7; }
     .add__editor-form-repeater-row .add__editor-form-input:-moz-placeholder {
-      color: #8B9AB7; }
+      color: #8b9ab7; }
     .add__editor-form-repeater-row .add__editor-form-input::-moz-placeholder {
-      color: #8B9AB7; }
+      color: #8b9ab7; }
     .add__editor-form-repeater-row .add__editor-form-input:-ms-input-placeholder {
-      color: #8B9AB7; }
+      color: #8b9ab7; }
   .add__editor-form-repeater-row .add__editor-file-upload {
     width: 100%;
     padding-left: 1.4rem;
@@ -14236,16 +14240,16 @@ textarea.add__editor-form-input {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  border: 1px solid #D0D8E5;
-  border-radius: .4rem;
+  border: 1px solid #d0d8e5;
+  border-radius: 0.4rem;
   padding: 1.7rem 2.4rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-transition: border-color .2s, color .2s;
-  transition: border-color .2s, color .2s;
+  -webkit-transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
   grid-column: 1 / -1; }
   .add__editor-form-add-more:link, .add__editor-form-add-more:visited {
-    color: #D0D8E5; }
+    color: #d0d8e5; }
   .add__editor-form-add-more svg {
     width: 1.4rem;
     height: 1.4rem;

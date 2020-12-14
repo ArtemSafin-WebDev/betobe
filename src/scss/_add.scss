@@ -783,7 +783,6 @@ textarea.add__editor-form-input {
     min-height: 27.4rem;
     overflow: hidden;
 
-    
     input[type='file'] {
         position: absolute;
         left: 0;
@@ -870,6 +869,7 @@ textarea.add__editor-form-input {
         padding: 0;
         margin: 0;
         font-size: 1.8rem;
+        width: auto;
         @include breakpoint(mobile) {
             font-size: 16px;
         }
@@ -1031,6 +1031,9 @@ textarea.add__editor-form-input {
     }
 }
 
+.add__editor-file-upload-text-grey {
+    color: #8B9AB7;
+}
 .add__editor-file-upload-remove {
     flex-shrink: 0;
     margin-left: 1rem;
@@ -1306,8 +1309,6 @@ textarea.add__editor-form-input {
     padding-left: 19rem;
     margin-bottom: 4rem;
 
-   
-
     @include breakpoint(mobile) {
         padding: 0;
         margin: 3rem 0;
@@ -1341,7 +1342,6 @@ textarea.add__editor-form-input {
         padding-top: 2rem;
     }
 }
-
 
 .add__editor-form-repeater-card-left-col {
     width: 50%;
@@ -1378,23 +1378,22 @@ textarea.add__editor-form-input {
     letter-spacing: 0.08em;
     max-width: calc(100% - 2rem);
     background-color: #fff;
-    margin-top: -.75rem;
-    padding: 0 .4rem;
+    margin-top: -0.75rem;
+    padding: 0 0.4rem;
 }
-
 
 .add__editor-form-repeater-card-remove {
     position: absolute;
-    right: -.8rem;
+    right: -0.8rem;
     top: 0;
-    margin-top: -.6rem;
+    margin-top: -0.6rem;
 
     svg {
         width: 1.5rem;
         height: 1.5rem;
-        fill:  #ced6e3;
+        fill: #c4d8f5;
         display: block;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &:hover {
@@ -1403,7 +1402,6 @@ textarea.add__editor-form-input {
         }
     }
 }
-
 
 .add__editor-form-repeater-row {
     margin-bottom: 1.2rem;
@@ -1414,7 +1412,7 @@ textarea.add__editor-form-input {
         padding-left: 1.4rem;
         padding-right: 1.4rem;
         @include placeholder {
-            color: #8B9AB7;
+            color: #8b9ab7;
         }
     }
     .add__editor-file-upload {
@@ -1433,7 +1431,6 @@ textarea.add__editor-form-input {
     @include breakpoint(mobile) {
         flex-direction: column;
     }
-
 }
 
 .add__editor-form-gallery-left-col {
@@ -1463,10 +1460,8 @@ textarea.add__editor-form-input {
 
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        
     }
 }
-
 
 .add__editor-form-materials {
     margin-bottom: 4rem;
@@ -1481,13 +1476,10 @@ textarea.add__editor-form-input {
     grid-gap: 1.8rem;
     margin-bottom: 1.8rem;
 
-
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-
 }
-
 
 .add__editor-form-add-more {
     display: flex;
@@ -1498,15 +1490,15 @@ textarea.add__editor-form-input {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    border: 1px solid #D0D8E5;
-    border-radius: .4rem;
+    border: 1px solid #d0d8e5;
+    border-radius: 0.4rem;
     padding: 1.7rem 2.4rem;
     flex-shrink: 0;
-    transition: border-color .2s, color .2s;
+    transition: border-color 0.2s, color 0.2s;
     grid-column: 1 / -1;
     &:link,
     &:visited {
-        color:  #D0D8E5;
+        color: #d0d8e5;
     }
     svg {
         width: 1.4rem;
@@ -1514,7 +1506,6 @@ textarea.add__editor-form-input {
         margin-right: 1rem;
         fill: currentColor;
     }
-
 
     &:hover {
         color: var(--primary-color);
