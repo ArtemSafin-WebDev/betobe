@@ -13744,9 +13744,6 @@ textarea.add__editor-form-input {
   -ms-flex-item-align: start;
       align-self: flex-start;
   justify-self: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative; }
   .add__editor-file-upload input[type='file'] {
     position: absolute;
@@ -14146,16 +14143,23 @@ textarea.add__editor-form-input {
 
 .add__editor-form-repeater-row {
   margin-bottom: 1.2rem; }
-  .add__editor-form-repeater-row .add__editor-form-input::-webkit-input-placeholder {
-    color: #8B9AB7; }
-  .add__editor-form-repeater-row .add__editor-form-input:-moz-placeholder {
-    color: #8B9AB7; }
-  .add__editor-form-repeater-row .add__editor-form-input::-moz-placeholder {
-    color: #8B9AB7; }
-  .add__editor-form-repeater-row .add__editor-form-input:-ms-input-placeholder {
-    color: #8B9AB7; }
+  .add__editor-form-repeater-row .add__editor-form-input {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem; }
+    .add__editor-form-repeater-row .add__editor-form-input::-webkit-input-placeholder {
+      color: #8B9AB7; }
+    .add__editor-form-repeater-row .add__editor-form-input:-moz-placeholder {
+      color: #8B9AB7; }
+    .add__editor-form-repeater-row .add__editor-form-input::-moz-placeholder {
+      color: #8B9AB7; }
+    .add__editor-form-repeater-row .add__editor-form-input:-ms-input-placeholder {
+      color: #8B9AB7; }
   .add__editor-form-repeater-row .add__editor-file-upload {
-    width: 100%; }
+    width: 100%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem; }
   .add__editor-form-repeater-row:last-child {
     margin-bottom: 0; }
 
