@@ -1508,3 +1508,12 @@
         }
     }
 }
+
+
+.franchise-catalog__card-details {
+    .franchise-intro__tags {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
