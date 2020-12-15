@@ -11227,7 +11227,7 @@ textarea.franchise-contact__form-input {
   font-size: 1.8rem;
   color: #a2a7af;
   text-align: left;
-  padding: 0.8rem 1.7rem;
+  padding: 0.5rem 1.7rem;
   margin-right: 1px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -11254,28 +11254,30 @@ textarea.franchise-contact__form-input {
       background: #3686ff; }
     .modals__modal-reviews-form-main-rating-btn.active:nth-child(5) {
       background: #1673ff; }
-  .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active {
-    color: white; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(1) {
-      background: #b4d3ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(2) {
-      background: #9fc6ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(3) {
-      background: #9bc4ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(4) {
-      background: #85b7ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(5) {
-      background: #67a5ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(6) {
-      background: #559bff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(7) {
-      background: #3a8bff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(8) {
-      background: #2d84ff; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(9) {
-      background: #1d7afd; }
-    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(10) {
-      background: #006aff; }
+  .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn {
+    padding: 0.8rem 1.7rem; }
+    .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active {
+      color: white; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(1) {
+        background: #b4d3ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(2) {
+        background: #9fc6ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(3) {
+        background: #9bc4ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(4) {
+        background: #85b7ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(5) {
+        background: #67a5ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(6) {
+        background: #559bff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(7) {
+        background: #3a8bff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(8) {
+        background: #2d84ff; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(9) {
+        background: #1d7afd; }
+      .modals__modal-reviews-form-main-rating--long .modals__modal-reviews-form-main-rating-btn.active:nth-child(10) {
+        background: #006aff; }
   .modals__modal-reviews-form-main-rating-btn:hover .modals__modal-reviews-form-main-rating-btn-dropdown {
     opacity: 1;
     visibility: visible;
@@ -11465,7 +11467,9 @@ textarea.franchise-contact__form-input {
   padding: 1.4rem 2.4rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  color: white; }
+  color: white;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s; }
   .modals__modal-reviews-form-submit:hover {
     background: #4cad62; }
   @media only screen and (max-width: 767px) {

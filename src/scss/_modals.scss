@@ -420,7 +420,7 @@
     font-size: 1.8rem;
     color: #a2a7af;
     text-align: left;
-    padding: 0.8rem 1.7rem;
+    padding: 0.5rem 1.7rem;
     margin-right: 1px;
     flex-grow: 1;
     position: relative;
@@ -455,6 +455,8 @@
     }
 
     .modals__modal-reviews-form-main-rating--long & {
+
+        padding: 0.8rem 1.7rem;
         &.active {
             color: white;
             &:nth-child(1) {
@@ -679,7 +681,7 @@
     padding: 1.4rem 2.4rem;
     flex-shrink: 0;
     color: white;
-
+    transition: background-color .2s;
     &:hover {
         background: #4cad62;
     }
