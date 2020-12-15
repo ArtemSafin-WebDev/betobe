@@ -37,6 +37,8 @@ import LoadAccountImages from './loadAccountImages';
 import DateInput from './dateInput';
 import Add from './add';
 import ChatAndNotifications from './chatAndNotifications';
+import ModalReviewsAccordions from './modalReviewsAccordions';
+import ModalReviewsRating from './modalReviewsRating';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -79,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     DateInput();
     Add();
     ChatAndNotifications();
+    ModalReviewsAccordions();
+    ModalReviewsRating();
 });
 
 window.addEventListener('load', function() {
