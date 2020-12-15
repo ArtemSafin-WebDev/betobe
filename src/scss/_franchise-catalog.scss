@@ -1152,7 +1152,7 @@
 
 .franchise-catalog__card-details {
     @include breakpoint(mobile) {
-        margin-top: 2.4rem;
+        margin-top: 1.4rem;
         background: #ebf3ff;
         border-radius: 0.4rem;
     }
@@ -1377,7 +1377,7 @@
         .franchise-catalog__card-specs-dropdown {
             opacity: 1;
             visibility: visible;
-            transition: opacity .2s ease .1s, visibility .2s ease .1s;
+            transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s;
         }
     }
     .franchise-description__competencies & {
@@ -1403,9 +1403,8 @@
     padding-right: 3rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .2s, visibility 0s linear .2s;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
     z-index: 30;
-
 
     @include breakpoint(mobile) {
         display: none;
@@ -1444,7 +1443,6 @@
     margin-right: 2.5rem;
 }
 
-
 .franchise-catalog__card-specs-dropdown-content {
     width: 50%;
     flex-grow: 1;
@@ -1457,7 +1455,6 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
-    
 }
 
 .franchise-catalog__card-specs-dropdown-text {
@@ -1489,5 +1486,25 @@
 
     @include breakpoint(mobile) {
         height: 0.4rem;
+    }
+}
+
+.franchise-catalog__card-mobile-details-btn {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+        border-radius: 0.4rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        padding: 1.3rem 2rem;
+        &:link,
+        &:visited {
+            color: white;
+        }
     }
 }
