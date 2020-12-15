@@ -11285,7 +11285,7 @@ textarea.franchise-contact__form-input {
     transition: opacity 0.3s ease, visibility 0.3s ease; }
   @media only screen and (max-width: 767px) {
     .modals__modal-reviews-form-main-rating-btn {
-      padding: 0.4rem .4rem;
+      padding: 0.4rem 0.4rem;
       font-size: 1.4rem; } }
 
 .modals__modal-reviews-form-main-rating-btn-dropdown {
@@ -11454,7 +11454,7 @@ textarea.franchise-contact__form-input {
     .modals__modal-reviews-form-textarea {
       font-size: 16px;
       margin-bottom: 2rem;
-      padding: .8rem 1.4rem; } }
+      padding: 0.8rem 1.4rem; } }
 
 .modals__modal-reviews-form-submit {
   background: #63ba76;
@@ -11468,14 +11468,45 @@ textarea.franchise-contact__form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   color: white;
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
   .modals__modal-reviews-form-submit:hover {
     background: #4cad62; }
   @media only screen and (max-width: 767px) {
     .modals__modal-reviews-form-submit {
       font-size: 1.6rem;
       padding: 1.2rem 1.8rem; } }
+
+.modals__modal-reviews-form-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
+
+.modals__modal-reviews-form-success-image {
+  width: 26rem;
+  margin: 0 auto;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-reviews-form-success-image {
+      width: 16rem; } }
+
+.modals__modal-reviews-form-success-text {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3.4rem;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .modals__modal-reviews-form-success-text {
+      font-size: 1.6rem;
+      line-height: 1.3; }
+      .modals__modal-reviews-form-success-text br {
+        display: none; } }
 
 .change-browser {
   position: fixed;
