@@ -10,7 +10,9 @@
     flex-wrap: wrap;
 
     @include breakpoint(mobile) {
-        min-height: 6rem;
+        min-height: auto;
+        padding: 1.8rem 0;
+        
     }
 }
 

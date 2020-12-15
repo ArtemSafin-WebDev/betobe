@@ -36,6 +36,7 @@ import EditCompetencies from './editCompetencies';
 import LoadAccountImages from './loadAccountImages';
 import DateInput from './dateInput';
 import Add from './add';
+import ChatAndNotifications from './chatAndNotifications';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     LoadAccountImages();
     DateInput();
     Add();
+    ChatAndNotifications();
 });
 
 window.addEventListener('load', function() {

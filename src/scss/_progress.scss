@@ -26,7 +26,7 @@
 .progress__bar-dynamic {
     background-image: url('../img/dark-blue-progress.svg');
     clip-path: polygon(0% 0%, var(--progress, 0%) 0%, var(--progress, 0%) 100%, 0% 100%);
-    transition: clip-path .3s;
+    transition: clip-path 0.3s;
 }
 .progress__bar {
     position: absolute;
@@ -49,6 +49,29 @@
     position: relative;
     z-index: 80;
 
+    &--regular {
+        font-weight: 400;
+        font-size: 1.8rem;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        b {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 120%;
+            @include breakpoint(mobile) {
+                font-size: 1.8rem;
+            }
+        }
+    }
 
     @include breakpoint(mobile) {
         min-height: 9rem;

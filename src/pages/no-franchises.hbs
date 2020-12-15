@@ -1,0 +1,54 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<nav class="settings-nav">
+    <div class="container">
+        <div class="settings-nav__row">
+            <a href="#" class="settings-nav__link active">
+                Мой профиль
+            </a>
+            <a href="#" class="settings-nav__link">
+                МОИ ФРАНШИЗЫ
+            </a>
+            <a href="#" class="settings-nav__link">
+                Настройки
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="progress">
+    <div class="progress__bar">
+        <div class="progress__bar-static">
+
+        </div>
+        <div class="progress__bar-dynamic" style="--progress: 60%;">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="progress__text progress__text--regular">
+            <p>
+                <b>У вас пока нет франшиз.</b>
+            </p>
+            <p>
+                Но самое время создать первую.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<section class="no-franchises">
+    <div class="container">
+        <div class="no-franchises__content">
+            <img src="img/no-franchises.png" alt="" class="no-franchises__image">
+
+            <a href="#" class="no-franchises__link">
+                Добавить франшизу
+            </a>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
