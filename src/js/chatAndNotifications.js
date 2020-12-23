@@ -63,10 +63,13 @@ export default function ChatAndNotifications() {
         if (insideNotifications || insideChat) {
             return;
         } else {
-            chatBtn.parentElement.classList.remove('active');
-            chatOpen = false;
-            notificationsBtn.parentElement.classList.remove('active');
-            notificationsOpen = false;
+
+            if (chatOpen && notificationsBtn && chatBtn) {
+                chatBtn.parentElement.classList.remove('active');
+                chatOpen = false;
+                notificationsBtn.parentElement.classList.remove('active');
+                notificationsOpen = false;
+            }
         }
     })
 }
