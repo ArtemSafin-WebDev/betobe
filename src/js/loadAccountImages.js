@@ -64,10 +64,10 @@ export default function LoadAccountImages() {
 
     const addLoadPhoto = Array.from(document.querySelectorAll('.js-add-load-photo'));
 
-    addLoadPhoto.forEach(element => {
+    function initializeAddLoadPhoto(element) {
         const input = element.querySelector('input[type="file"]');
         const content = element.querySelector('.add__editor-image-upload-with-preview');
-        const clearBtn = element.querySelector('.add__editor-image-upload-with-preview-clear')
+        const clearBtn = element.querySelector('.add__editor-image-upload-with-preview-clear');
         let photo = null;
 
         input.addEventListener('change', () => {
@@ -96,7 +96,6 @@ export default function LoadAccountImages() {
             }
         });
 
-
         clearBtn.addEventListener('click', event => {
             event.preventDefault();
             input.value = null;
@@ -105,14 +104,18 @@ export default function LoadAccountImages() {
                 photo.remove();
                 photo = null;
             }
-        })
+        });
+    }
 
+    window.betobeAPI.initializeAddLoadPhoto = initializeAddLoadPhoto;
 
+    addLoadPhoto.forEach(element => {
+        initializeAddLoadPhoto(element);
     });
 
     const addFileUploads = Array.from(document.querySelectorAll('.js-add-file-upload'));
 
-    addFileUploads.forEach(element => {
+    function initializeAddFileUpload(element) {
         const input = element.querySelector('input[type="file"]');
         const label = element.querySelector('.add__editor-file-upload-text');
 
@@ -121,5 +124,11 @@ export default function LoadAccountImages() {
                 label.textContent = input.files[0].name;
             }
         });
+    }
+
+    window.betobeAPI.initializeAddFileUpload = initializeAddFileUpload;
+
+    addFileUploads.forEach(element => {
+        initializeAddFileUpload(element);
     });
 }

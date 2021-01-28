@@ -250,7 +250,15 @@
     bottom: 2rem;
     right: 2rem;
     z-index: 200;
-    transition: background-color .2s;
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color .2s, opacity .3s, visibility 0s linear .3s;
+
+    .show-scroll-top & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, background-color .2s, visibility .3s;
+    }
     svg {
         width: 1.8rem;
         height: 1.8rem;

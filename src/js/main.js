@@ -41,6 +41,7 @@ import ModalReviewsAccordions from './modalReviewsAccordions';
 import ModalReviewsRating from './modalReviewsRating';
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.betobeAPI = {};
     polyfills();
     detectTouch();
     PopularsSlider();

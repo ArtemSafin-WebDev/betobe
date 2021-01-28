@@ -669,7 +669,7 @@
 
 .add__editor-form-input {
     display: block;
-    width: 100%;
+    width: calc(100% - 1.8rem);
     font: inherit;
     background: #ebf3ff;
     border-radius: 0.4rem;
@@ -681,6 +681,7 @@
     margin-left: 1.8rem;
     &:first-of-type {
         margin-left: 0;
+        width: 100%;
     }
     @include placeholder {
         color: rgba(black, 0.4);
@@ -700,6 +701,7 @@
         border-radius: 0.4rem;
         margin: 0;
         margin-bottom: 1rem;
+        width: 100%;
         &:last-of-type {
             margin-bottom: 0;
         }

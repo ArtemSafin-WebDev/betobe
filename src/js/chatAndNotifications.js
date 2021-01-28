@@ -70,6 +70,11 @@ export default function ChatAndNotifications() {
                 notificationsBtn.parentElement.classList.remove('active');
                 notificationsOpen = false;
             }
+
+            if (notificationsOpen && notificationsBtn) {
+                notificationsBtn.parentElement.classList.remove('active');
+                notificationsOpen = false;
+            }
         }
     })
 }
