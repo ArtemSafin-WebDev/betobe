@@ -39,6 +39,7 @@ import Add from './add';
 import ChatAndNotifications from './chatAndNotifications';
 import ModalReviewsAccordions from './modalReviewsAccordions';
 import ModalReviewsRating from './modalReviewsRating';
+import CodeMask from './codeMask';
 
 document.addEventListener('DOMContentLoaded', function() {
     window.betobeAPI = {};
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ChatAndNotifications();
     ModalReviewsAccordions();
     ModalReviewsRating();
+    CodeMask();
 });
 
 window.addEventListener('load', function() {

@@ -31,6 +31,7 @@
 
 
 @mixin noScrollbar {
+    scrollbar-width: none;
     &::-webkit-scrollbar * {
         background: transparent;
     }
