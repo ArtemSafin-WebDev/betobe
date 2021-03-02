@@ -21,11 +21,13 @@ export default function FiltersButtonActivity() {
 
                     // console.log('Initial form data equal to the new form data')
                   
-                    submitBtn.setAttribute('disabled', '');
+                    // submitBtn.setAttribute('disabled', '');
+                    submitBtn.classList.add('disabled')
                 } else {
 
                     // console.log('Initial form data not equal to the new form data')
-                    submitBtn.removeAttribute('disabled');
+                    // submitBtn.removeAttribute('disabled');
+                    submitBtn.classList.remove('disabled')
                 }
 
                 // const filledInputs = inputs.filter(element => {

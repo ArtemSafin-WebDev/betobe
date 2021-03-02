@@ -1078,4 +1078,58 @@
             </div>
         </div>
     </div>
+    <div class="modals__modal" id="delete-modal">
+        <div class="modals__modal-content modals__modal-content--delete">
+            <button class="modals__modal-close modals__modal-close--blue js-modal-close">
+                <svg width="15" height="15" aria-hidden="true" class="icon-cross-straight">
+                    <use xlink:href="#cross-straight"></use>
+                </svg>
+            </button>
+            <div class="modals__delete-modal">
+                <form action="/" method="POST" class="modals__delete-modal-form" id="delete-modal-form">
+                    <img src="img/delete-modal-illustration.svg" alt="" class="modals__delete-modal-illustration">
+                    <div class="modals__delete-modal-content">
+                        <h3 class="modals__delete-modal-heading">
+                            Вы действительно хотите удалить франшизу?
+                        </h3>
+                        <div class="modals__delete-modal-btns">
+                            <button class="modals__delete-modal-btn" type="submit">
+                                Да
+                            </button>
+                            <button class="modals__delete-modal-btn modals__delete-modal-btn--blue js-modal-close"
+                                type="button">
+                                Нет
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="modals__modal" id="delete-success-modal">
+        <div class="modals__modal-content modals__modal-content--delete">
+            <button class="modals__modal-close modals__modal-close--blue js-modal-close">
+                <svg width="15" height="15" aria-hidden="true" class="icon-cross-straight">
+                    <use xlink:href="#cross-straight"></use>
+                </svg>
+            </button>
+            <div class="modals__delete-modal">
+                <div class="modals__delete-modal-success">
+
+
+                    <img src="img/delete-success-illustration.svg" alt="" class="modals__delete-modal-illustration modals__delete-modal-illustration--large">
+                    <div class="modals__delete-modal-content">
+                        <h3 class="modals__delete-modal-heading">
+                            Ваша франшиза удалена
+                        </h3>
+                        <a href="#" class="modals__go-back">
+                            Вернуться на главную
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

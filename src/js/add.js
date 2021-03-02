@@ -11,6 +11,7 @@ export default function Add() {
     if (addSteps) {
         const scrollContainer = document.querySelector('.add__steps-links');
         const nextBtn = document.querySelector('.add__steps-next-btn');
+        const prevBtn = document.querySelector('.add__steps-prev-btn');
         const touchContainer = document.querySelector('.add__steps-content');
         const links = Array.from(document.querySelectorAll('.add__steps-link'));
         const scrollStep = 300;
@@ -29,6 +30,31 @@ export default function Add() {
             console.log('Clicked next btn');
             gsap.to(scrollContainer, { duration: 0.6, scrollTo: { x: scrollContainer.scrollLeft + scrollStep, autoKill: false }, ease: 'power2' });
         });
+        prevBtn.addEventListener('click', event => {
+            event.preventDefault();
+            console.log('Clicked prev btn');
+            gsap.to(scrollContainer, { duration: 0.6, scrollTo: { x: scrollContainer.scrollLeft - scrollStep, autoKill: false }, ease: 'power2' });
+        });
+
+        const handleArrowsActivity = () => {
+            prevBtn.classList.remove('disabled');
+            nextBtn.classList.remove('disabled');
+            if (scrollContainer.scrollLeft === 0) {
+                prevBtn.classList.add('disabled');
+            }
+
+            if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth - 2) {
+                nextBtn.classList.add('disabled');
+            }
+        }
+
+      
+
+        handleArrowsActivity();
+
+        scrollContainer.addEventListener('scroll', () => {
+            handleArrowsActivity();
+        });
 
         if (!detectIt.hasTouch) {
             let startX = 0;
@@ -42,9 +68,8 @@ export default function Add() {
                 pointerDown = true;
                 scrollX = scrollContainer.scrollLeft;
                 startX = event.pageX;
-                filterLinksClicks = true;
 
-                console.log('Drag started', startX)
+                console.log('Drag started', startX);
             };
 
             const dragMove = event => {
@@ -54,9 +79,14 @@ export default function Add() {
                 moveX = event.pageX;
                 const offset = startX - moveX;
 
+                if (offset > 5) {
+                    filterLinksClicks = true;
+                    console.log('Enabling links filtering');
+                }
+
                 scrollContainer.scrollLeft = scrollX + 1 * offset;
 
-                console.log('Drag move', offset)
+                console.log('Drag move', offset);
             };
 
             const dragEnd = event => {
@@ -64,15 +94,13 @@ export default function Add() {
                     event.preventDefault();
                 }
 
-
                 if (filterLinksClicks) {
                     setTimeout(() => {
                         filterLinksClicks = false;
                         console.log('Disabling links filtering');
                     }, 200);
-    
                 }
-              
+
                 if (!pointerDown) {
                     return;
                 }
@@ -113,14 +141,15 @@ export default function Add() {
             //     }, 200);
             // });
 
-            // touchContainer.addEventListener('click', event => {
-            //     if (event.target.matches('a') || event.target.closest('a')) {
-            //         if (filterLinksClicks) {
-            //             event.preventDefault();
-            //             event.stopPropagation();
-            //         }
-            //     }
-            // });
+            touchContainer.addEventListener('click', event => {
+                if (event.target.matches('a') || event.target.closest('a')) {
+                    if (filterLinksClicks) {
+                        console.log('Link click filtered');
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                }
+            });
         }
     }
 

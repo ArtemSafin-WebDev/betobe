@@ -1,0 +1,63 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="registration-code">
+    <div class="container">
+        <div class="inner-container">
+            <div class="registration-code__row">
+                <div class="registration-code__left-col">
+
+                    <h2 class="registration-code__heading">
+                        Вход в Betobe
+                    </h2>
+                    <div class="registration-code__info">
+                        <div class="registration-code__content">
+                            <p>
+                                Это займет 2 минуты
+                            </p>
+                            <ul>
+                                <li>
+                                    Более 1000 франшиз в одном месте
+                                </li>
+                                <li>
+                                    Мы знаем всё о франшиза
+                                </li>
+                                <li>
+                                    Агрегатор честных франшиз
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="img/login-illustration.svg" alt="" class="registration-code__image">
+                    </div>
+
+                </div>
+                <div class="registration-code__right-col">
+                    <form action="/" method="POST" class="registration-code__form">
+                        <div class="registration-code__form-country">
+                            <div class="custom-select">
+                                <select name="country-code" class="js-custom-select">
+                                    <option value="+7">
+                                        +7
+                                    </option>
+                                    <option value="+9">
+                                        +9
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="registration-code__form-number">
+                            <input type="tel" name="phone" class="registration-code__form-number-input js-code-mask">
+                        </div>
+                        <button class="registration-code__form-submit">
+                            Выслать код
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

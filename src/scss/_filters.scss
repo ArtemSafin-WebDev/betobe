@@ -421,7 +421,7 @@
     padding: 2rem;
 
     @include breakpoint(mobile) {
-        padding: 1.4rem;
+        padding: 1.8rem;
     }
 }
 
@@ -953,7 +953,8 @@
         background-color: black;
     }
 
-    &[disabled] {
+
+    &.disabled {
         cursor: default;
         background-color: #ebf3ff;
         color: var(--primary-color);
@@ -1050,6 +1051,8 @@
     height: 3.6rem;
     padding: 0 1.2rem;
     margin-bottom: 1.4rem;
+
+    display: none;
 
     &:last-child {
         margin-bottom: 0;
