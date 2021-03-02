@@ -653,6 +653,11 @@ textarea.account__edit-input {
     margin: 0 auto;
     text-align: center;
     align-self: center;
+    transition: color .2s, background-color .2s;
+    &:not([readonly]) {
+        background: #ebf3ff;
+        border-radius: 0.4rem;
+    }
 }
 
 .account__intro-description {
@@ -702,14 +707,12 @@ textarea.account__edit-input {
     }
 
     &:not(.account__info--edit) {
-        
         & > * {
             grid-area: initial;
         }
 
         .franchise-description__buttons {
             grid-column: 1 / -1;
-           
         }
 
         .account__about {

@@ -8,6 +8,7 @@ export default function EditName() {
             element.classList.toggle('active');
             if (input.hasAttribute('readonly')) {
                 input.removeAttribute('readonly')
+                input.focus();
             } else {
                 input.setAttribute('readonly', '');
             }

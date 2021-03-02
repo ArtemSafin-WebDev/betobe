@@ -13918,7 +13918,12 @@ textarea.account__edit-input {
   margin: 0 auto;
   text-align: center;
   -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+  -webkit-transition: color .2s, background-color .2s;
+  transition: color .2s, background-color .2s; }
+  .account__intro-name-input:not([readonly]) {
+    background: #ebf3ff;
+    border-radius: 0.4rem; }
 
 .account__intro-description {
   font-size: 2rem;
